@@ -11,6 +11,7 @@ import { WellDetailComponent }       from './components/well-detail.component';
 import { WellSequencingComponent }   from './components/well-sequencing.component';
 import { RtSurveillanceComponent }   from './components/rt-surveillance.component';
 import { RecommendationComponent }   from './components/recommendation.component';
+import { SplashComponent }           from './components/splash.component';
 
 type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recommend';
 
@@ -21,11 +22,14 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
     CommonModule, FormsModule,
     WellMapComponent, PriorityChartComponent, LogicChartComponent,
     WellTableComponent, WellDetailComponent, WellSequencingComponent,
-    RtSurveillanceComponent, RecommendationComponent
+    RtSurveillanceComponent, RecommendationComponent, SplashComponent
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-  <div class="app" *ngIf="ds.loaded(); else loading">
+  <!-- ── Splash screen ── -->
+  <app-splash *ngIf="showSplash()" (done)="showSplash.set(false)"/>
+
+  <div class="app" *ngIf="!showSplash() && (ds.loaded()); else loading">
 
     <!-- ── TOPBAR ──────────────────────────────────────────── -->
     <header class="topbar">
@@ -212,7 +216,7 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
   </div>
 
   <ng-template #loading>
-    <div class="loading-state" style="height:100vh">
+    <div class="loading-state" style="height:100vh" *ngIf="!showSplash()">
       <div class="spin"></div>Loading well data…
     </div>
   </ng-template>
@@ -316,6 +320,7 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
 export class AppComponent implements OnInit {
   ds = inject(DataService);
 
+  showSplash   = signal(true);
   activeTab    = signal<Tab>('decide');
   selectedWell = signal('');
   priorityFilter  = signal('');
