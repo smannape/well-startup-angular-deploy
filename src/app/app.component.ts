@@ -45,7 +45,7 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence';
           <span class="brand-sep">/</span>
           <span class="brand-sub">DECISION CONSOLE</span>
         </div>
-        <span class="brand-pill">HAL · ESP · WK</span>
+        <span class="brand-pill">HAL · MN · UG · WK</span>
       </div>
       <div class="topbar-meta" *ngIf="ds.kpis() as k">
         <span>Inventory <b>{{k.total_wells_inventory}}</b></span>
@@ -115,10 +115,10 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence';
             </select>
           </div>
           <div class="filter-row">
-            <label>Team</label>
-            <select [ngModel]="teamFilter()" (ngModelChange)="teamFilter.set($event)">
-              <option value="">All Teams</option>
-              <option *ngFor="let t of dTeams">{{t}}</option>
+            <label>Field</label>
+            <select [ngModel]="fieldFilter()" (ngModelChange)="fieldFilter.set($event)">
+              <option value="">All Fields</option>
+              <option *ngFor="let f of dFields">{{f}}</option>
             </select>
           </div>
         </div>
@@ -314,7 +314,7 @@ export class AppComponent implements OnInit {
   priorityFilter  = signal('');
   facilityFilter  = signal('');
   reservoirFilter = signal('');
-  teamFilter      = signal('');
+  fieldFilter     = signal('');
   searchFilter    = signal('');
 
   colors = PRIORITY_COLORS;
@@ -328,20 +328,20 @@ export class AppComponent implements OnInit {
     { id: 'sequence' as Tab, num:'5', label:'Sequencing',sub:'· Launch Order' },
   ];
 
-  get dFacilities() { return [...new Set(this.ds.wells().map(w=>w.facility))].sort(); }
-  get dReservoirs()  { return [...new Set(this.ds.wells().map(w=>w.reservoir))].sort(); }
-  get dTeams()       { return [...new Set(this.ds.wells().map(w=>w.team))].sort(); }
+  get dFacilities() { return [...new Set(this.ds.wells().map(w=>w.facility).filter(Boolean))].sort(); }
+  get dReservoirs()  { return [...new Set(this.ds.wells().map(w=>w.reservoir).filter(Boolean))].sort(); }
+  get dFields()      { return [...new Set(this.ds.wells().map(w=>w.field).filter(Boolean))].sort(); }
 
   filtered = computed(() => {
     const p=this.priorityFilter(), f=this.facilityFilter(),
-          r=this.reservoirFilter(), t=this.teamFilter(), s=this.searchFilter().toLowerCase();
+          r=this.reservoirFilter(), fl=this.fieldFilter(), s=this.searchFilter().toLowerCase();
     return this.ds.wells()
       .filter(w =>
-        (!p || w.priority===p) &&
-        (!f || w.facility===f) &&
-        (!r || w.reservoir===r) &&
-        (!t || w.team===t) &&
-        (!s || w.well_name.toLowerCase().includes(s))
+        (!p  || w.priority===p) &&
+        (!f  || w.facility===f) &&
+        (!r  || w.reservoir===r) &&
+        (!fl || w.field===fl) &&
+        (!s  || w.well_name.toLowerCase().includes(s))
       )
       .sort((a,b) => a.priority.localeCompare(b.priority) || (b.startup_score||0)-(a.startup_score||0));
   });
