@@ -1,158 +1,223 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-logic-chart',
   standalone: true,
+  imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="lc-wrap">
-      <div class="lc-title">Orient · Startup Scoring Logic</div>
-      <div class="lc-subtitle">How each closed well receives its startup priority score</div>
-      <div class="lc-flow">
+    <div class="sk-root">
 
-        <!-- Column 1: Inputs -->
-        <div class="lc-col">
-          <div class="col-head">Raw Inputs</div>
-          <div class="lc-node input" *ngFor="let n of inputs">
-            <span class="node-icon">{{n.icon}}</span>
-            <div>
-              <div class="node-label">{{n.label}}</div>
-              <div class="node-sub">{{n.sub}}</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Arrow -->
-        <div class="lc-arrow-col">
-          <div class="arrow-line"></div>
-          <span class="arrow-head">▶</span>
-        </div>
-
-        <!-- Column 2: Factors -->
-        <div class="lc-col">
-          <div class="col-head">Scoring Factors</div>
-          <div class="lc-node factor" *ngFor="let f of factors">
-            <div class="factor-weight" [style.color]="f.wcolor">{{f.weight}}</div>
-            <div>
-              <div class="node-label">{{f.label}}</div>
-              <div class="node-sub">{{f.sub}}</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Arrow -->
-        <div class="lc-arrow-col">
-          <div class="arrow-line"></div>
-          <span class="arrow-head">▶</span>
-        </div>
-
-        <!-- Column 3: Score box -->
-        <div class="lc-col center-col">
-          <div class="col-head">Final Score</div>
-          <div class="score-box">
-            <div class="score-title">Startup Score</div>
-            <div class="score-formula">
-              <span class="pos">+100</span> × Potential<br>
-              <span class="pos">+30</span> × Freshness<br>
-              <span class="neg">−25</span> × Severity<br>
-              <span class="neg">−15</span> × WO Burden<br>
-              <span class="neg">−10</span> × WC Risk<br>
-              <span class="neg">−10</span> × Equip Risk
-            </div>
-            <div class="score-range">Range: 0 – 100+</div>
-          </div>
-        </div>
-
-        <!-- Arrow -->
-        <div class="lc-arrow-col">
-          <div class="arrow-line"></div>
-          <span class="arrow-head">▶</span>
-        </div>
-
-        <!-- Column 4: Buckets -->
-        <div class="lc-col">
-          <div class="col-head">Priority Bucket</div>
-          <div class="lc-bucket" *ngFor="let b of buckets" [style.background]="b.color" [style.border-color]="b.color">
-            <span class="bucket-p">{{b.p}}</span>
-            <span class="bucket-label">{{b.label}}</span>
-            <span class="bucket-score">score {{b.range}}</span>
-          </div>
-        </div>
-
+      <div class="sk-header">
+        <span class="sk-title">Startup Scoring — Signal Flow</span>
+        <span class="sk-sub">Input signals (left) → weighted score → priority bucket (right) · band width = contribution</span>
       </div>
+
+      <div class="sk-body">
+        <svg [attr.viewBox]="'0 0 '+W+' '+H" preserveAspectRatio="xMidYMid meet" class="sk-svg">
+
+          <!-- ── Flows (behind nodes) ── -->
+          <path *ngFor="let f of flows"
+            [attr.d]="f.d"
+            [attr.fill]="f.color"
+            [attr.opacity]="f.op"/>
+
+          <!-- ── Input nodes (left) ── -->
+          <g *ngFor="let n of inputNodes">
+            <rect [attr.x]="LX" [attr.y]="n.y" [attr.width]="NW" [attr.height]="n.h"
+              fill="#1e160d" stroke="#4a3820" stroke-width="1" rx="2"/>
+            <text [attr.x]="LX + NW/2" [attr.y]="n.y + n.h * 0.36"
+              text-anchor="middle" dominant-baseline="middle"
+              font-size="13" font-family="sans-serif">{{n.icon}}</text>
+            <text [attr.x]="LX + NW/2" [attr.y]="n.y + n.h * 0.67"
+              text-anchor="middle" dominant-baseline="middle"
+              fill="#c8b48a" font-size="9" font-family="JetBrains Mono,monospace"
+              letter-spacing="0.03em">{{n.label}}</text>
+          </g>
+
+          <!-- ── Weight badges (right edge of each input node) ── -->
+          <g *ngFor="let n of inputNodes">
+            <rect [attr.x]="LX + NW + 3" [attr.y]="n.y + n.h/2 - 7"
+              width="40" height="14" rx="2"
+              [attr.fill]="n.pos ? '#1d3320' : '#3a1810'"/>
+            <text [attr.x]="LX + NW + 23" [attr.y]="n.y + n.h/2 + 1"
+              text-anchor="middle" dominant-baseline="middle"
+              [attr.fill]="n.pos ? '#6dd47e' : '#ef8a6a'"
+              font-size="8.5" font-family="JetBrains Mono,monospace" font-weight="700">{{n.wLabel}}</text>
+          </g>
+
+          <!-- ── Centre: score formula ── -->
+          <rect [attr.x]="CX - 46" [attr.y]="MT"
+            width="92" [attr.height]="H - MT - MB"
+            fill="#ff7a1a04" stroke="#2a2014" stroke-width="1" rx="3"/>
+          <text [attr.x]="CX" [attr.y]="MT + 10"
+            text-anchor="middle" dominant-baseline="middle"
+            fill="#4a3820" font-size="7.5" letter-spacing="0.18em"
+            font-family="JetBrains Mono,monospace">STARTUP SCORE</text>
+          <line [attr.x1]="CX - 36" [attr.y1]="MT + 16"
+                [attr.x2]="CX + 36" [attr.y2]="MT + 16"
+                stroke="#2a2014" stroke-width="0.8"/>
+          <text *ngFor="let row of formula"
+            [attr.x]="CX" [attr.y]="row.y"
+            text-anchor="middle" dominant-baseline="middle"
+            [attr.fill]="row.pos ? '#6dd47e' : '#ef8a6a'"
+            font-size="8.5" font-family="JetBrains Mono,monospace" font-weight="600">{{row.text}}</text>
+
+          <!-- ── Priority nodes (right) ── -->
+          <g *ngFor="let p of priorityNodes">
+            <rect [attr.x]="RX" [attr.y]="p.y" [attr.width]="NW" [attr.height]="p.h"
+              [attr.fill]="p.color" rx="2"/>
+            <!-- P label -->
+            <text [attr.x]="RX + NW/2" [attr.y]="p.y + (p.h > 30 ? p.h*0.36 : p.h/2)"
+              text-anchor="middle" dominant-baseline="middle"
+              fill="#1a1612" font-size="11" font-weight="700"
+              font-family="JetBrains Mono,monospace">{{p.p}}</text>
+            <!-- well count -->
+            <text *ngIf="p.h > 28"
+              [attr.x]="RX + NW/2" [attr.y]="p.y + p.h * 0.68"
+              text-anchor="middle" dominant-baseline="middle"
+              fill="#1a1612" font-size="8" font-family="Inter,sans-serif">{{p.count}} wells</text>
+            <!-- label to the right -->
+            <text [attr.x]="RX + NW + 5" [attr.y]="p.y + p.h/2"
+              dominant-baseline="middle"
+              [attr.fill]="p.color" font-size="8.5"
+              font-family="Inter,sans-serif">{{p.label}}</text>
+          </g>
+
+          <!-- ── Column headers ── -->
+          <text [attr.x]="LX + NW/2" [attr.y]="MT - 6"
+            text-anchor="middle" dominant-baseline="auto"
+            fill="#5a4830" font-size="7.5" letter-spacing="0.16em"
+            font-family="JetBrains Mono,monospace">INPUT SIGNALS</text>
+          <text [attr.x]="RX + NW/2" [attr.y]="MT - 6"
+            text-anchor="middle" dominant-baseline="auto"
+            fill="#5a4830" font-size="7.5" letter-spacing="0.16em"
+            font-family="JetBrains Mono,monospace">PRIORITY BUCKET</text>
+
+        </svg>
+      </div>
+
     </div>
   `,
   styles: [`
-    .lc-wrap { padding:16px 20px; height:100%; overflow-y:auto; }
-    .lc-title { font-size:13px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
-      color:var(--orange-400); margin-bottom:4px; }
-    .lc-subtitle { font-size:11px; color:var(--beige-400); margin-bottom:20px; letter-spacing:.06em; }
-
-    .lc-flow { display:flex; align-items:center; gap:0; min-width:720px; }
-
-    .lc-col { display:flex; flex-direction:column; gap:8px; min-width:160px; }
-    .center-col { min-width:180px; }
-
-    .col-head { font-size:9px; letter-spacing:.2em; text-transform:uppercase;
-      color:var(--beige-500); margin-bottom:4px; padding-bottom:4px;
-      border-bottom:1px solid var(--border-1); }
-
-    .lc-node { display:flex; align-items:flex-start; gap:8px;
-      background:var(--bg-2); border:1px solid var(--border-2);
-      border-radius:3px; padding:8px 10px; }
-    .lc-node.input { border-color:var(--beige-500); }
-    .lc-node.factor { border-color:var(--orange-700); }
-    .node-icon { font-size:14px; flex-shrink:0; margin-top:1px; }
-    .node-label { font-size:11px; color:var(--beige-100); font-weight:500; }
-    .node-sub { font-size:10px; color:var(--beige-400); margin-top:2px; }
-    .factor-weight { font-family:"JetBrains Mono",monospace; font-size:13px; font-weight:700;
-      flex-shrink:0; min-width:36px; padding-top:1px; }
-
-    .lc-arrow-col { display:flex; align-items:center; padding:0 8px; flex-shrink:0; }
-    .arrow-line { width:28px; height:2px; background:var(--border-2); }
-    .arrow-head { color:var(--beige-400); font-size:12px; margin-left:-2px; }
-
-    .score-box { background:#ff7a1a14; border:2px solid var(--orange-500);
-      border-radius:4px; padding:14px 16px; text-align:center; }
-    .score-title { font-size:13px; font-weight:700; color:var(--orange-400);
-      letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
-    .score-formula { font-family:"JetBrains Mono",monospace; font-size:11px;
-      line-height:1.9; color:var(--beige-200); text-align:left; display:inline-block; }
-    .pos { color:var(--good); font-weight:700; }
-    .neg { color:var(--bad); font-weight:700; }
-    .score-range { margin-top:10px; font-size:10px; color:var(--beige-400);
-      letter-spacing:.1em; text-transform:uppercase; }
-
-    .lc-bucket { display:flex; align-items:center; gap:8px;
-      border-radius:3px; padding:8px 12px; border:1px solid; opacity:0.9; }
-    .bucket-p { font-size:12px; font-weight:700; color:#1a1612;
-      font-family:"JetBrains Mono",monospace; flex-shrink:0; }
-    .bucket-label { font-size:11px; color:#1a1612; font-weight:600; flex:1; }
-    .bucket-score { font-size:9px; color:#1a1612; opacity:0.7;
-      letter-spacing:.06em; font-family:"JetBrains Mono",monospace; }
+    .sk-root  { display:flex; flex-direction:column; height:100%; overflow:hidden;
+                padding:8px 10px 4px; box-sizing:border-box; }
+    .sk-header{ flex-shrink:0; margin-bottom:5px; }
+    .sk-title { font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+                color:var(--orange-400); }
+    .sk-sub   { display:block; font-size:9.5px; color:var(--beige-400); margin-top:2px;
+                letter-spacing:.04em; }
+    .sk-body  { flex:1; min-height:0; overflow:hidden; }
+    .sk-svg   { display:block; width:100%; height:100%; }
   `]
 })
 export class LogicChartComponent {
-  inputs = [
-    { icon: '🛢', label: 'Latest Oil / PGOR',  sub: 'BOPD from last well test' },
-    { icon: '💧', label: 'Water Cut %',         sub: 'Latest WC measurement' },
-    { icon: '⚡', label: 'ESP Run Life',         sub: 'Days since last changeout' },
-    { icon: '🔧', label: 'Workover History',    sub: 'Count + last WO date' },
-    { icon: '📋', label: 'Closure Reason',      sub: 'Operator-coded reason' },
-  ];
-  factors = [
-    { weight: '+100', wcolor: '#6dd47e', label: 'Production Potential', sub: 'Normalised expected BOPD' },
-    { weight: '+30',  wcolor: '#6dd47e', label: 'Freshness',            sub: 'Recency of last well test' },
-    { weight: '−25',  wcolor: '#ef5a3a', label: 'Reason Severity',      sub: '1 (GC only) → 5 (major)' },
-    { weight: '−15',  wcolor: '#ef5a3a', label: 'WO Burden',            sub: 'Workover frequency score' },
-    { weight: '−10',  wcolor: '#ef5a3a', label: 'WC Risk',              sub: 'High WC penalty factor' },
-    { weight: '−10',  wcolor: '#ef5a3a', label: 'Equipment Risk',       sub: 'ESP run life penalty' },
-  ];
-  buckets = [
-    { p: 'P1', label: 'Quick Win',    range: '> 80',  color: '#ffb83d' },
-    { p: 'P2', label: 'Surface Intv', range: '60–79', color: '#ff9849' },
-    { p: 'P3', label: 'Rigless WO',   range: '40–59', color: '#cf6b3a' },
-    { p: 'P4', label: 'Rig WO',       range: '20–39', color: '#8a4a2b' },
-    { p: 'P5', label: 'Hold / RE',    range: '< 20',  color: '#665544' },
-  ];
+
+  /* ── SVG canvas ─────────────────────────────────────── */
+  readonly W  = 640;
+  readonly H  = 250;
+  readonly MT = 22;   // margin top (room for column headers)
+  readonly MB = 8;
+  readonly NW = 110;  // node width
+  readonly LX = 8;    // left column x
+  readonly RX = 522;  // right column x  (640 - 8 - 110)
+  readonly CX = 315;  // centre of flow area  ((8+110 + 522) / 2)
+
+  inputNodes:    any[] = [];
+  priorityNodes: any[] = [];
+  flows:         any[] = [];
+  formula:       any[] = [];
+
+  constructor() { this.build(); }
+
+  build() {
+    const usable = this.H - this.MT - this.MB;   // 220
+    const gap    = 5;
+
+    /* ── Input nodes ──────────────────────────────────── */
+    const inputDefs = [
+      { icon: '🛢', label: 'Oil Rate / PGOR', wLabel: '+130', pos: true  },
+      { icon: '📋', label: 'Closure Reason',  wLabel:  '−25', pos: false },
+      { icon: '🔧', label: 'WO History',      wLabel:  '−15', pos: false },
+      { icon: '💧', label: 'Water Cut %',     wLabel:  '−10', pos: false },
+      { icon: '⚡', label: 'ESP Run Life',    wLabel:  '−10', pos: false },
+    ];
+    const iH = (usable - gap * (inputDefs.length - 1)) / inputDefs.length;
+    this.inputNodes = inputDefs.map((d, i) => ({
+      ...d,
+      y: this.MT + i * (iH + gap),
+      h: iH,
+    }));
+
+    /* ── Priority nodes (sized by actual well count) ──── */
+    const priDefs = [
+      { p: 'P1', count: 12, color: '#ffb83d', label: 'Quick Win'    },
+      { p: 'P2', count: 18, color: '#ff9849', label: 'Surface Intv' },
+      { p: 'P3', count: 25, color: '#cf6b3a', label: 'Rigless WO'   },
+      { p: 'P4', count: 24, color: '#8a4a2b', label: 'Rig WO'       },
+      { p: 'P5', count: 43, color: '#5a4434', label: 'Hold / RE'    },
+    ];
+    const totalWells = priDefs.reduce((s, p) => s + p.count, 0); // 122
+    const totalPH    = usable - gap * (priDefs.length - 1);       // 200
+
+    let pY = this.MT;
+    this.priorityNodes = priDefs.map(p => {
+      const h = (p.count / totalWells) * totalPH;
+      const node = { ...p, y: pY, h };
+      pY += h + gap;
+      return node;
+    });
+
+    /* ── Scoring formula rows (centre panel) ─────────── */
+    const fRows = [
+      { text: '+100 × Potential', pos: true  },
+      { text:  '+30 × Freshness', pos: true  },
+      { text:  '−25 × Severity',  pos: false },
+      { text:  '−15 × WO Burden', pos: false },
+      { text:   '−10 × WC Risk',  pos: false },
+      { text: '−10 × Equip Risk', pos: false },
+    ];
+    const rowH  = (usable - 24) / fRows.length;
+    this.formula = fRows.map((r, i) => ({
+      ...r,
+      y: this.MT + 24 + i * rowH + rowH / 2,
+    }));
+
+    /* ── Sankey flows ─────────────────────────────────── */
+    const srcOff = this.inputNodes.map(() => 0);
+    const tgtOff = this.priorityNodes.map(() => 0);
+    this.flows   = [];
+
+    // Control-point x values for smoother S-curves
+    const cp1 = this.LX + this.NW + 52;
+    const cp2 = this.RX - 52;
+
+    for (let i = 0; i < this.inputNodes.length; i++) {
+      for (let j = 0; j < this.priorityNodes.length; j++) {
+        const inp = this.inputNodes[i];
+        const pri = this.priorityNodes[j];
+        const fH  = inp.h * (pri.count / totalWells);
+
+        const sy0 = inp.y + srcOff[i];
+        const sy1 = sy0  + fH;
+        const ty0 = pri.y + tgtOff[j];
+        const ty1 = ty0  + fH;
+
+        const x0 = this.LX + this.NW;
+        const x1 = this.RX;
+
+        const d =
+          `M${x0},${sy0} C${cp1},${sy0} ${cp2},${ty0} ${x1},${ty0}` +
+          `L${x1},${ty1} C${cp2},${ty1} ${cp1},${sy1} ${x0},${sy1}Z`;
+
+        // Positive inputs slightly brighter, negative slightly dimmer
+        const op = inp.pos ? 0.38 : 0.26;
+        this.flows.push({ d, color: pri.color, op });
+
+        srcOff[i] += fH;
+        tgtOff[j] += fH;
+      }
+    }
+  }
 }

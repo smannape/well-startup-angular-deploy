@@ -18,21 +18,21 @@ import { Well, PRIORITY_COLORS } from '../models/well.model';
         <div class="seq-filters">
           <div class="filter-grp">
             <label>Gathering Center</label>
-            <select [(ngModel)]="gcFilter">
+            <select [(ngModel)]="gcFilter" (ngModelChange)="applyFilters()">
               <option value="">All GCs</option>
               <option *ngFor="let f of facilities" [value]="f">{{f}}</option>
             </select>
           </div>
           <div class="filter-grp">
             <label>Priority</label>
-            <select [(ngModel)]="priorityFilter">
+            <select [(ngModel)]="priorityFilter" (ngModelChange)="applyFilters()">
               <option value="">All Priorities</option>
               <option *ngFor="let p of priorities" [value]="p">{{p}}</option>
             </select>
           </div>
           <div class="filter-grp">
             <label>Reservoir</label>
-            <select [(ngModel)]="reservoirFilter">
+            <select [(ngModel)]="reservoirFilter" (ngModelChange)="applyFilters()">
               <option value="">All Reservoirs</option>
               <option *ngFor="let r of reservoirs" [value]="r">{{r}}</option>
             </select>
