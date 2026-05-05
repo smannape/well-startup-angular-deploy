@@ -1,0 +1,88 @@
+/* ── Palantir Gotham theme variables ───────────────────────────────────── */
+:root {
+  --bg-0: #1a1612;
+  --bg-1: #221c16;
+  --bg-2: #2b231b;
+  --bg-3: #362c22;
+
+  --beige-50:  #f5ecd9;
+  --beige-100: #ece1c7;
+  --beige-200: #d8c8a3;
+  --beige-300: #b8a785;
+  --beige-400: #8a7a5d;
+  --beige-500: #5e533e;
+
+  --orange-300: #ffb775;
+  --orange-400: #ff9849;
+  --orange-500: #ff7a1a;
+  --orange-600: #e85d00;
+  --orange-700: #b34000;
+
+  --p1: #ffb83d;
+  --p2: #ff9849;
+  --p3: #cf6b3a;
+  --p4: #8a4a2b;
+  --p5: #4a3a30;
+
+  --border-1: #3a2f23;
+  --border-2: #4a3d2c;
+  --grid:      #322820;
+
+  --good: #6dd47e;
+  --warn: #ffb83d;
+  --bad:  #ef5a3a;
+
+  --shadow: 0 1px 0 #00000040, 0 8px 24px #00000060;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: var(--bg-0);
+  color: var(--beige-100);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+code, pre, .mono {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+::-webkit-scrollbar            { width: 8px; height: 8px; }
+::-webkit-scrollbar-track      { background: var(--bg-1); }
+::-webkit-scrollbar-thumb      { background: var(--border-2); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover{ background: var(--orange-700); }
+
+button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+select, input {
+  font: inherit; color: var(--beige-100);
+  background: var(--bg-2); border: 1px solid var(--border-2);
+  padding: 6px 8px; border-radius: 2px; outline: none;
+  font-size: 12px;
+}
+select:focus, input:focus {
+  border-color: var(--orange-500);
+  box-shadow: 0 0 0 1px var(--orange-500);
+}
+
+.priority-pill {
+  display: inline-block; padding: 2px 7px;
+  border-radius: 2px; font-size: 10px; font-weight: 700;
+  letter-spacing: .14em; color: #1a1612;
+  font-family: "Inter", sans-serif;
+}
+
+.loading-state {
+  display: flex; align-items: center; justify-content: center;
+  height: 100%; color: var(--beige-400);
+  font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+  gap: 12px;
+}
+.spin {
+  width: 16px; height: 16px; border-radius: 50%;
+  border: 2px solid var(--orange-700); border-top-color: var(--orange-400);
+  animation: spin .9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
