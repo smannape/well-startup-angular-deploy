@@ -3,14 +3,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './services/data.service';
 import { Well, PRIORITY_COLORS, PRIORITY_DESC } from './models/well.model';
-import { WellMapComponent }         from './components/well-map.component';
-import { PriorityChartComponent }   from './components/priority-chart.component';
-import { LogicChartComponent }      from './components/logic-chart.component';
-import { WellTableComponent }       from './components/well-table.component';
-import { WellDetailComponent }      from './components/well-detail.component';
-import { WellSequencingComponent }  from './components/well-sequencing.component';
+import { WellMapComponent }          from './components/well-map.component';
+import { PriorityChartComponent }    from './components/priority-chart.component';
+import { LogicChartComponent }       from './components/logic-chart.component';
+import { WellTableComponent }        from './components/well-table.component';
+import { WellDetailComponent }       from './components/well-detail.component';
+import { WellSequencingComponent }   from './components/well-sequencing.component';
+import { RtSurveillanceComponent }   from './components/rt-surveillance.component';
+import { RecommendationComponent }   from './components/recommendation.component';
 
-type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence';
+type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recommend';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +20,8 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence';
   imports: [
     CommonModule, FormsModule,
     WellMapComponent, PriorityChartComponent, LogicChartComponent,
-    WellTableComponent, WellDetailComponent, WellSequencingComponent
+    WellTableComponent, WellDetailComponent, WellSequencingComponent,
+    RtSurveillanceComponent, RecommendationComponent
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -66,12 +69,16 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence';
       </button>
     </nav>
 
-    <!-- ── SEQUENCING TAB (full-width) ─────────────────────── -->
+    <!-- ── FULL-WIDTH TABS ──────────────────────────────────── -->
     <app-well-sequencing *ngIf="activeTab()==='sequence'"
       [wells]="ds.wells()" class="seq-full"/>
+    <app-rt-surveillance *ngIf="activeTab()==='rt'"
+      [wells]="ds.wells()" class="seq-full"/>
+    <app-recommendation  *ngIf="activeTab()==='recommend'"
+      [wells]="ds.wells()" [woMap]="ds.woMap()" class="seq-full"/>
 
     <!-- ── MAIN 3-COL LAYOUT ───────────────────────────────── -->
-    <div class="main" *ngIf="activeTab()!=='sequence'">
+    <div class="main" *ngIf="!isFullWidth()">
 
       <!-- LEFT: Filters + Priority -->
       <aside class="left">
@@ -321,12 +328,18 @@ export class AppComponent implements OnInit {
   pDesc  = PRIORITY_DESC;
 
   tabs = [
-    { id: 'observe'  as Tab, num:'1', label:'Observe',   sub:'· Inventory & Signals' },
-    { id: 'orient'   as Tab, num:'2', label:'Orient',    sub:'· Cause & Severity' },
-    { id: 'decide'   as Tab, num:'3', label:'Decide',    sub:'· Priority & Plan' },
-    { id: 'act'      as Tab, num:'4', label:'Act',       sub:'· Startup Queue' },
-    { id: 'sequence' as Tab, num:'5', label:'Sequencing',sub:'· Launch Order' },
+    { id: 'observe'   as Tab, num:'1', label:'Observe',       sub:'· Inventory & Signals' },
+    { id: 'orient'    as Tab, num:'2', label:'Orient',        sub:'· Cause & Severity' },
+    { id: 'decide'    as Tab, num:'3', label:'Decide',        sub:'· Priority & Plan' },
+    { id: 'act'       as Tab, num:'4', label:'Act',           sub:'· Startup Queue' },
+    { id: 'sequence'  as Tab, num:'5', label:'Sequencing',    sub:'· Launch Order' },
+    { id: 'rt'        as Tab, num:'6', label:'RT Surveillance',sub:'· ESP Telemetry' },
+    { id: 'recommend' as Tab, num:'7', label:'Recommendation',sub:'· Intervention Guide' },
   ];
+
+  isFullWidth = computed(() =>
+    (['sequence','rt','recommend'] as Tab[]).includes(this.activeTab()));
+
 
   get dFacilities() { return [...new Set(this.ds.wells().map(w=>w.facility).filter(Boolean))].sort(); }
   get dReservoirs()  { return [...new Set(this.ds.wells().map(w=>w.reservoir).filter(Boolean))].sort(); }
