@@ -73,7 +73,7 @@ import { CommonModule } from '@angular/common';
         <div class="sp-row"><span class="sk">WO HISTORY</span><span class="sv ok">■ 620 REC</span></div>
         <div class="sp-row"><span class="sk">API CALIBRATION</span><span class="sv ok">■ ACTIVE</span></div>
         <div class="sp-row"><span class="sk">RECOMMENDATIONS</span><span class="sv ok">■ READY</span></div>
-        <div class="sp-row"><span class="sk">RT TELEMETRY</span><span class="sv warn">□ OFFLINE</span></div>
+        <div class="sp-row"><span class="sk">POST START-IN</span><span class="sv warn">□ OFFLINE</span></div>
         <div class="sp-div">──────────────────</div>
         <div class="sp-head sub">RECOVERABLE OIL</div>
         <div class="sp-big">79,461 BOPD</div>

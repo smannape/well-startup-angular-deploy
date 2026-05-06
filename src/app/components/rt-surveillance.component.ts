@@ -21,15 +21,15 @@ interface WellRow { well: Well; readings: TagReading[]; overallStatus: 'ok' | 'w
       <!-- ── Demo banner ── -->
       <div class="demo-banner">
         <span class="demo-dot"></span>
-        RT CONNECTION OFFLINE — Demo values derived from last stored well parameters.
-        Live SCADA feed will replace these values once integration is active.
+        POST START-IN SURVEILLANCE — Demo values derived from last stored well parameters.
+        Live SCADA feed will replace these values once RT integration is active.
         <span class="demo-ts">Snapshot: 30-Apr-2026 00:00 AST</span>
       </div>
 
       <!-- ── Header + filters ── -->
       <div class="rt-header">
         <div class="rt-title-area">
-          <div class="rt-title">Real-Time Surveillance</div>
+          <div class="rt-title">Post Start-In Surveillance</div>
           <div class="rt-sub">ESP Telemetry — FLP · PDP · PIP · Intake Temp · Discharge Temp · Frequency</div>
         </div>
         <div class="rt-filters">

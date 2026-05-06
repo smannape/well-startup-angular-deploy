@@ -71,7 +71,13 @@
       "y": 3212459.45,
       "startup_score": 107.03,
       "priority": "P1",
-      "priority_label": "Quick Win"
+      "priority_label": "Quick Win",
+      "h2s_ppm": 40000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Producer well (5071 bpd net oil), Hi H₂S concentration and Hi GOR",
+      "recommendation_review": "To open casing gradually before start-up with low Hz",
+      "erl_pct": 124.0
     },
     {
       "well_name": "MN-0205ST7",
@@ -101,7 +107,7 @@
       "perf_top": 10190.0,
       "perf_bottom": 10200.0,
       "perforation_count": 5,
-      "api_gravity": 34.0,
+      "api_gravity": 29.0,
       "formations": "MM",
       "wo_count": 2,
       "pe_comment": "",
@@ -111,7 +117,13 @@
       "y": 3212867.78,
       "startup_score": 76.43,
       "priority": "P1",
-      "priority_label": "Quick Win"
+      "priority_label": "Quick Win",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Commissioned on 29-Jan-26",
+      "recommendation_review": "Open casing gradually before start-up to and release gas",
+      "erl_pct": 8.0
     },
     {
       "well_name": "MN-0331ST2",
@@ -151,7 +163,13 @@
       "y": 3214281.0,
       "startup_score": 76.06,
       "priority": "P1",
-      "priority_label": "Quick Win"
+      "priority_label": "Quick Win",
+      "h2s_ppm": 39000.0,
+      "well_category": "Grounded",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration and Hi GOR",
+      "recommendation_review": "Grounded well, To keep S/D and to be started as the last batch if required start-up",
+      "erl_pct": 94.0
     },
     {
       "well_name": "MN-0359ST1",
@@ -181,7 +199,7 @@
       "perf_top": 10450.0,
       "perf_bottom": 10465.0,
       "perforation_count": 5,
-      "api_gravity": 31.14,
+      "api_gravity": 31.1,
       "formations": "MM",
       "wo_count": 1,
       "pe_comment": "",
@@ -191,7 +209,13 @@
       "y": 3212580.15,
       "startup_score": 72.05,
       "priority": "P1",
-      "priority_label": "Quick Win"
+      "priority_label": "Quick Win",
+      "h2s_ppm": 15000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Upthrust",
+      "remarks_review": "PAD well, last PGORT done on 26-Jul-25 , not able to conduct PGORT\n due to nearby rig",
+      "recommendation_review": "Confirm pressure equalized , no NF,  SCSSV & SSV are open",
+      "erl_pct": 75.0
     },
     {
       "well_name": "MN-0326",
@@ -221,7 +245,7 @@
       "perf_top": 10761.0,
       "perf_bottom": 10823.0,
       "perforation_count": 0,
-      "api_gravity": 29.0,
+      "api_gravity": 28.0,
       "formations": "MM",
       "wo_count": 2,
       "pe_comment": "",
@@ -231,7 +255,13 @@
       "y": 3211485.0,
       "startup_score": 66.82,
       "priority": "P1",
-      "priority_label": "Quick Win"
+      "priority_label": "Quick Win",
+      "h2s_ppm": 38000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Running with Hi load and Hi H₂S concentration",
+      "recommendation_review": "Start with low frequency",
+      "erl_pct": 35.0
     },
     {
       "well_name": "UG-0163ST1",
@@ -261,7 +291,7 @@
       "perf_top": 0,
       "perf_bottom": 0,
       "perforation_count": 0,
-      "api_gravity": 22.98,
+      "api_gravity": 23.0,
       "formations": "",
       "wo_count": 1,
       "pe_comment": "",
@@ -271,7 +301,13 @@
       "y": 3197387.17,
       "startup_score": 65.91,
       "priority": "P1",
-      "priority_label": "Quick Win"
+      "priority_label": "Quick Win",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 12.0
     },
     {
       "well_name": "UG-0112ST1",
@@ -311,7 +347,13 @@
       "y": 3194471.31,
       "startup_score": 60.2,
       "priority": "P1",
-      "priority_label": "Quick Win"
+      "priority_label": "Quick Win",
+      "h2s_ppm": 15000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 10.0
     },
     {
       "well_name": "MN-0307",
@@ -351,7 +393,13 @@
       "y": 3211112.0,
       "startup_score": 56.19,
       "priority": "P1",
-      "priority_label": "Quick Win"
+      "priority_label": "Quick Win",
+      "h2s_ppm": 35000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Faulty Pd, Natural flow",
+      "recommendation_review": "Before start-up confirm back spin or NF, open casing gradually before start-up",
+      "erl_pct": 79.0
     },
     {
       "well_name": "UG-0271H",
@@ -391,7 +439,13 @@
       "y": 3196395.187,
       "startup_score": 49.22,
       "priority": "P1",
-      "priority_label": "Quick Win"
+      "priority_label": "Quick Win",
+      "h2s_ppm": 10000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "CIP connected in FL due to heavy crude",
+      "recommendation_review": null,
+      "erl_pct": 175.0
     },
     {
       "well_name": "UG-0110ST3",
@@ -421,7 +475,7 @@
       "perf_top": 9554.0,
       "perf_bottom": 10495.0,
       "perforation_count": 0,
-      "api_gravity": 26.2,
+      "api_gravity": 25.0,
       "formations": "MO",
       "wo_count": 1,
       "pe_comment": "",
@@ -431,7 +485,13 @@
       "y": 3204874.96,
       "startup_score": 47.57,
       "priority": "P1",
-      "priority_label": "Quick Win"
+      "priority_label": "Quick Win",
+      "h2s_ppm": 12000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 137.0
     },
     {
       "well_name": "UG-0377ST1",
@@ -461,7 +521,7 @@
       "perf_top": 9250.0,
       "perf_bottom": 10662.0,
       "perforation_count": 0,
-      "api_gravity": 21.0,
+      "api_gravity": 21.3,
       "formations": "MM",
       "wo_count": 1,
       "pe_comment": "",
@@ -471,7 +531,13 @@
       "y": 3195638.078,
       "startup_score": 43.93,
       "priority": "P1",
-      "priority_label": "Quick Win"
+      "priority_label": "Quick Win",
+      "h2s_ppm": 13000.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Well is flowing in stable condition and all surface and sub-surface parameters except fluctuations in vibration (Vx & Vy) and sudden increase in Amps before OL trips.\nBH flusing done but ESP tripped again due to O/L (Kept S/D for change VSD).",
+      "recommendation_review": "Change surface equipment",
+      "erl_pct": 64.0
     },
     {
       "well_name": "UG-0356",
@@ -511,7 +577,13 @@
       "y": 3194805.54,
       "startup_score": 43.75,
       "priority": "P1",
-      "priority_label": "Quick Win"
+      "priority_label": "Quick Win",
+      "h2s_ppm": 18000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": null,
+      "erl_pct": 149.0
     },
     {
       "well_name": "UG-0119ST1",
@@ -551,7 +623,13 @@
       "y": 3195703.53,
       "startup_score": 42.62,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 6000.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Running with Hi Tm",
+      "recommendation_review": null,
+      "erl_pct": 61.0
     },
     {
       "well_name": "UG-0301HST2",
@@ -591,7 +669,13 @@
       "y": 3195243.9,
       "startup_score": 42.23,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy crude",
+      "recommendation_review": "Start with low frequency",
+      "erl_pct": 174.0
     },
     {
       "well_name": "UG-0331ST1",
@@ -621,7 +705,7 @@
       "perf_top": 9378.0,
       "perf_bottom": 10596.0,
       "perforation_count": 0,
-      "api_gravity": 26.8,
+      "api_gravity": 24.6,
       "formations": "MM",
       "wo_count": 1,
       "pe_comment": "",
@@ -631,7 +715,13 @@
       "y": 3194545.38,
       "startup_score": 40.91,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "CIP connected in casing",
+      "recommendation_review": null,
+      "erl_pct": 65.0
     },
     {
       "well_name": "UG-0277H",
@@ -671,7 +761,13 @@
       "y": 3195917.75,
       "startup_score": 39.99,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 20000.0,
+      "well_category": "Grounded",
+      "pump_status_review": "Within Range",
+      "remarks_review": "CIP connected in casing (Fluid shot done on 17-Apr-26 PIP 1536 Psi)",
+      "recommendation_review": "To be started from location with low frequency",
+      "erl_pct": 78.0
     },
     {
       "well_name": "UG-0370",
@@ -711,7 +807,13 @@
       "y": 3197599.264,
       "startup_score": 38.18,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "CIP already connected in FL (No CT)",
+      "recommendation_review": null,
+      "erl_pct": 34.0
     },
     {
       "well_name": "UG-0111ST1",
@@ -741,7 +843,7 @@
       "perf_top": 9153.0,
       "perf_bottom": 10526.0,
       "perforation_count": 0,
-      "api_gravity": 20.7,
+      "api_gravity": 23.7,
       "formations": "MM",
       "wo_count": 1,
       "pe_comment": "",
@@ -751,7 +853,13 @@
       "y": 3197359.68,
       "startup_score": 37.43,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 15000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 68.0
     },
     {
       "well_name": "UG-0233HST1",
@@ -791,7 +899,13 @@
       "y": 3199735.133,
       "startup_score": 37.28,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 19000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": null,
+      "erl_pct": 19.0
     },
     {
       "well_name": "MN-0208",
@@ -821,7 +935,7 @@
       "perf_top": 10808.0,
       "perf_bottom": 10850.0,
       "perforation_count": 0,
-      "api_gravity": 30.59,
+      "api_gravity": 30.2,
       "formations": "MM",
       "wo_count": 4,
       "pe_comment": "",
@@ -831,7 +945,13 @@
       "y": 3216860.08,
       "startup_score": 36.2,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 35000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": "Recommends to open casing before start-up",
+      "erl_pct": 34.0
     },
     {
       "well_name": "UG-0221H",
@@ -871,7 +991,13 @@
       "y": 3198341.0,
       "startup_score": 35.79,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 20000.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Faulty Pd",
+      "recommendation_review": "check back spin and to be started with low Hz",
+      "erl_pct": 187.0
     },
     {
       "well_name": "MN-0160ST3",
@@ -911,7 +1037,13 @@
       "y": 3215355.658,
       "startup_score": 34.39,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 35000.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Upthrust",
+      "remarks_review": "Has NF,Closed casing has pressure 1000 psi, running with Hi WHP",
+      "recommendation_review": "To keep it S/D for natural flow, remove blanking plug and release casing pressure gradually",
+      "erl_pct": 75.0
     },
     {
       "well_name": "MN-0230H",
@@ -941,7 +1073,7 @@
       "perf_top": 7455.0,
       "perf_bottom": 8486.0,
       "perforation_count": 0,
-      "api_gravity": 22.3,
+      "api_gravity": 21.5,
       "formations": "WS",
       "wo_count": 2,
       "pe_comment": "",
@@ -951,7 +1083,13 @@
       "y": 3211840.44,
       "startup_score": 33.42,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 0.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Pd faulty and running with Hi Tm, CIP connected in FL",
+      "recommendation_review": "Required BH flushing before start-up",
+      "erl_pct": 64.0
     },
     {
       "well_name": "MN-0239",
@@ -991,7 +1129,13 @@
       "y": 3210131.117,
       "startup_score": 33.42,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 50000.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration and Hi GOR",
+      "recommendation_review": "Release gas, confirm casing is open and  start ESP with low frequency",
+      "erl_pct": 37.0
     },
     {
       "well_name": "UG-0228ST1",
@@ -1031,7 +1175,13 @@
       "y": 3199602.0,
       "startup_score": 33.08,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 20000.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Running with Hi motor load, CIP connected in casing",
+      "recommendation_review": "Start with low frequency",
+      "erl_pct": 66.0
     },
     {
       "well_name": "UG-0391",
@@ -1071,7 +1221,13 @@
       "y": 3197641.76,
       "startup_score": 31.92,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 15000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "PAD well",
+      "recommendation_review": "Confirm SCSSV & SSV",
+      "erl_pct": 15.0
     },
     {
       "well_name": "UG-0378ST1",
@@ -1101,7 +1257,7 @@
       "perf_top": 9272.0,
       "perf_bottom": 9931.0,
       "perforation_count": 0,
-      "api_gravity": 27.72,
+      "api_gravity": 21.6,
       "formations": "MO",
       "wo_count": 1,
       "pe_comment": "",
@@ -1111,7 +1267,13 @@
       "y": 3200965.0,
       "startup_score": 31.87,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 30000.0,
+      "well_category": "Grounded",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Two CIP connected due to heavy crude (net oil 1400 bpd),\n(Fluid shot done on 17-Apr-26 PIP 1513 Psi)",
+      "recommendation_review": "To be started from location with low frequency",
+      "erl_pct": 123.0
     },
     {
       "well_name": "MN-0394",
@@ -1141,7 +1303,7 @@
       "perf_top": 0,
       "perf_bottom": 0,
       "perforation_count": 0,
-      "api_gravity": 21.31,
+      "api_gravity": 21.0,
       "formations": "",
       "wo_count": 1,
       "pe_comment": "",
@@ -1151,7 +1313,13 @@
       "y": 3214622.46,
       "startup_score": 30.29,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 600.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "PAD well S/D on 27-Nov-25 due to nearby rig on location",
+      "recommendation_review": "Recommended for BH flushing before start-up",
+      "erl_pct": 29.0
     },
     {
       "well_name": "MN-0379ST1",
@@ -1191,7 +1359,13 @@
       "y": 3210304.0,
       "startup_score": 29.5,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 14000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": "Confirm casing open for gas release",
+      "erl_pct": 110.0
     },
     {
       "well_name": "MN-0238",
@@ -1221,7 +1395,7 @@
       "perf_top": 10656.0,
       "perf_bottom": 10681.0,
       "perforation_count": 5,
-      "api_gravity": 20.16,
+      "api_gravity": 30.0,
       "formations": "MM",
       "wo_count": 6,
       "pe_comment": "",
@@ -1231,7 +1405,13 @@
       "y": 3212663.0,
       "startup_score": 29.48,
       "priority": "P2",
-      "priority_label": "Surface Intervention"
+      "priority_label": "Surface Intervention",
+      "h2s_ppm": 50000.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration and Hi GOR",
+      "recommendation_review": "Release gas on far pit and manual start ESP with low frequency",
+      "erl_pct": 82.0
     },
     {
       "well_name": "MN-0070",
@@ -1271,7 +1451,13 @@
       "y": 3209692.587,
       "startup_score": 29.21,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 35000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Running with Current control mode",
+      "recommendation_review": null,
+      "erl_pct": 80.0
     },
     {
       "well_name": "MN-0312",
@@ -1301,7 +1487,7 @@
       "perf_top": 10307.0,
       "perf_bottom": 10384.0,
       "perforation_count": 0,
-      "api_gravity": 29.71,
+      "api_gravity": 29.7,
       "formations": "MM",
       "wo_count": 4,
       "pe_comment": "",
@@ -1311,7 +1497,13 @@
       "y": 3209841.52,
       "startup_score": 27.87,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 40000.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Slugging well, running with Hi Tm",
+      "recommendation_review": "to be started manually with low frequency and install  CIP",
+      "erl_pct": 54.0
     },
     {
       "well_name": "MN-0353",
@@ -1351,7 +1543,13 @@
       "y": 3208296.99,
       "startup_score": 26.54,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": "Start-up with low frequency on far pit to confirm flow (MTR to be De-rated)",
+      "erl_pct": 21.0
     },
     {
       "well_name": "MN-0204H",
@@ -1381,7 +1579,7 @@
       "perf_top": 10320.0,
       "perf_bottom": 10335.0,
       "perforation_count": 5,
-      "api_gravity": 30.0,
+      "api_gravity": 22.5,
       "formations": "MM",
       "wo_count": 11,
       "pe_comment": "",
@@ -1391,7 +1589,13 @@
       "y": 3215382.338,
       "startup_score": 25.72,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 40000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "DWO due to Hi WC",
+      "recommendation_review": null,
+      "erl_pct": 19.0
     },
     {
       "well_name": "MN-0001",
@@ -1431,7 +1635,13 @@
       "y": 3215503.41,
       "startup_score": 24.5,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 70000.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration and Hi GOR(1366 SCF/STB)",
+      "recommendation_review": "Start manually with low frequency and confirm casing is open",
+      "erl_pct": 33.0
     },
     {
       "well_name": "MN-0216",
@@ -1471,7 +1681,13 @@
       "y": 3210041.102,
       "startup_score": 23.75,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 12000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": null,
+      "erl_pct": 30.0
     },
     {
       "well_name": "UG-0164ST1",
@@ -1511,7 +1727,13 @@
       "y": 3201562.54,
       "startup_score": 23.47,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 10000.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "CIP connected due to Hi FLP",
+      "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage",
+      "erl_pct": 21.0
     },
     {
       "well_name": "UG-0324ST2",
@@ -1551,7 +1773,13 @@
       "y": 3197144.93,
       "startup_score": 23.13,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 20000.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Running with Hi Tm, CIP connected in casing",
+      "recommendation_review": "Manual start-up with low frequency",
+      "erl_pct": 52.0
     },
     {
       "well_name": "MN-0368",
@@ -1581,7 +1809,7 @@
       "perf_top": 10297.0,
       "perf_bottom": 10315.0,
       "perforation_count": 5,
-      "api_gravity": 30.41,
+      "api_gravity": 30.4,
       "formations": "MM",
       "wo_count": 2,
       "pe_comment": "",
@@ -1591,7 +1819,13 @@
       "y": 3209061.62,
       "startup_score": 23.1,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 35000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": "Confirm casing open for gas release",
+      "erl_pct": 65.0
     },
     {
       "well_name": "UG-0259",
@@ -1621,7 +1855,7 @@
       "perf_top": 9112.0,
       "perf_bottom": 9128.0,
       "perforation_count": 15,
-      "api_gravity": 24.59,
+      "api_gravity": 23.0,
       "formations": "MM",
       "wo_count": 3,
       "pe_comment": "",
@@ -1631,7 +1865,13 @@
       "y": 3197801.27,
       "startup_score": 22.92,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": "Recommended to install CIP",
+      "erl_pct": 70.0
     },
     {
       "well_name": "UG-0266",
@@ -1671,7 +1911,13 @@
       "y": 3204600.04,
       "startup_score": 22.59,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Running with Hi VSD load",
+      "recommendation_review": "Start with low frequency",
+      "erl_pct": 77.0
     },
     {
       "well_name": "MN-0311",
@@ -1711,7 +1957,13 @@
       "y": 3211697.62,
       "startup_score": 21.52,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 50000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "CIP connected in FL",
+      "recommendation_review": "Relocate CIP from FL to CT and\n restart CIP before one day from start-up ESP with Hi dosage",
+      "erl_pct": 156.0
     },
     {
       "well_name": "MN-0354",
@@ -1741,7 +1993,7 @@
       "perf_top": 7506.2,
       "perf_bottom": 7640.8,
       "perforation_count": 0,
-      "api_gravity": 20.7,
+      "api_gravity": 21.0,
       "formations": "MF",
       "wo_count": 2,
       "pe_comment": "",
@@ -1751,7 +2003,13 @@
       "y": 3213191.03,
       "startup_score": 19.38,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": "Start-up with low frequency on far pit to confirm flow",
+      "erl_pct": 126.0
     },
     {
       "well_name": "MN-0325",
@@ -1791,7 +2049,13 @@
       "y": 3215429.0,
       "startup_score": 19.13,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 0.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": null,
+      "erl_pct": 247.0
     },
     {
       "well_name": "UG-0219",
@@ -1831,7 +2095,13 @@
       "y": 3199332.909,
       "startup_score": 18.24,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 15.0
     },
     {
       "well_name": "UG-0165ST1",
@@ -1871,7 +2141,13 @@
       "y": 3204370.52,
       "startup_score": 18.0,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 6000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": null,
+      "erl_pct": 59.0
     },
     {
       "well_name": "UG-0179",
@@ -1911,7 +2187,13 @@
       "y": 3197923.65,
       "startup_score": 17.82,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 30000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration, CIP already connected in casing (No CT)",
+      "recommendation_review": null,
+      "erl_pct": 46.0
     },
     {
       "well_name": "UG-0190",
@@ -1941,7 +2223,7 @@
       "perf_top": 9015.0,
       "perf_bottom": 9095.0,
       "perforation_count": 15,
-      "api_gravity": 21.31,
+      "api_gravity": 21.0,
       "formations": "MM-MO",
       "wo_count": 6,
       "pe_comment": "",
@@ -1951,7 +2233,13 @@
       "y": 3195550.447,
       "startup_score": 17.77,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 36.0
     },
     {
       "well_name": "UG-0395",
@@ -1981,7 +2269,7 @@
       "perf_top": 10803.0,
       "perf_bottom": 11400.0,
       "perforation_count": 0,
-      "api_gravity": 20.49,
+      "api_gravity": 20.5,
       "formations": "RL",
       "wo_count": 1,
       "pe_comment": "",
@@ -1991,7 +2279,13 @@
       "y": 3193926.91,
       "startup_score": 17.18,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 0.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Downthrust",
+      "remarks_review": "Low PIP, viscous and heavy crude RL formation",
+      "recommendation_review": "Buildup pressure, Connect CIP in casing (Manual start-up with low frequency on pit ) , \nstimulation job and down size the pump",
+      "erl_pct": 44.0
     },
     {
       "well_name": "UG-0205",
@@ -2031,7 +2325,13 @@
       "y": 3199184.523,
       "startup_score": 17.01,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 20000.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Running with Hi Tm, CIP connected in FL",
+      "recommendation_review": "BH Flushing",
+      "erl_pct": 12.0
     },
     {
       "well_name": "MN-0338",
@@ -2061,7 +2361,7 @@
       "perf_top": 8100.0,
       "perf_bottom": 8533.0,
       "perforation_count": 5,
-      "api_gravity": 19.84,
+      "api_gravity": 20.0,
       "formations": "WS",
       "wo_count": 1,
       "pe_comment": "",
@@ -2071,7 +2371,13 @@
       "y": 3212093.3,
       "startup_score": 16.89,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy and viscous crude",
+      "recommendation_review": "Start-up with low frequency on far pit to confirm flow",
+      "erl_pct": 179.0
     },
     {
       "well_name": "MN-0350",
@@ -2111,7 +2417,13 @@
       "y": 3216134.99,
       "startup_score": 16.82,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": "Start-up with low frequency on far pit to confirm flow",
+      "erl_pct": 36.0
     },
     {
       "well_name": "MN-0268ST1",
@@ -2151,7 +2463,13 @@
       "y": 3212306.0,
       "startup_score": 16.74,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 25000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "PAD well, S/D since 25-Dec-25 ,It has heavy crude",
+      "recommendation_review": "Required BH flushing and confirm SCSSV & SSV are open before start-up",
+      "erl_pct": 60.0
     },
     {
       "well_name": "MN-0342ST1",
@@ -2181,7 +2499,7 @@
       "perf_top": 6193.0,
       "perf_bottom": 8721.0,
       "perforation_count": 0,
-      "api_gravity": 22.05,
+      "api_gravity": 22.1,
       "formations": "MF",
       "wo_count": 3,
       "pe_comment": "",
@@ -2191,7 +2509,13 @@
       "y": 3215219.3,
       "startup_score": 16.33,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Low Pi",
+      "recommendation_review": "Buildup pressure and start manually on far pit to confirm flow",
+      "erl_pct": 34.0
     },
     {
       "well_name": "MN-0337",
@@ -2221,7 +2545,7 @@
       "perf_top": 7283.0,
       "perf_bottom": 7400.0,
       "perforation_count": 5,
-      "api_gravity": 19.96,
+      "api_gravity": 20.0,
       "formations": "WS",
       "wo_count": 3,
       "pe_comment": "",
@@ -2231,7 +2555,13 @@
       "y": 3208752.32,
       "startup_score": 15.86,
       "priority": "P3",
-      "priority_label": "Rigless WO"
+      "priority_label": "Rigless WO",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy and viscous crude,WS formation and CIP connected to CT",
+      "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage, Start with low HZ",
+      "erl_pct": 71.0
     },
     {
       "well_name": "MN-0235",
@@ -2271,7 +2601,13 @@
       "y": 3211797.968,
       "startup_score": 15.03,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 23000.0,
+      "well_category": "Grounded",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": "Required BH flushing before start-up and start with low Hz",
+      "erl_pct": 97.0
     },
     {
       "well_name": "MN-0222H",
@@ -2311,7 +2647,13 @@
       "y": 3212731.64,
       "startup_score": 14.65,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy and viscous crude, CIP connected to CT",
+      "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage and start with low Hz in far pit",
+      "erl_pct": 52.0
     },
     {
       "well_name": "UG-0017",
@@ -2351,7 +2693,13 @@
       "y": 3196520.112,
       "startup_score": 14.65,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 10000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 40.0
     },
     {
       "well_name": "UG-0196",
@@ -2391,7 +2739,13 @@
       "y": 3198386.946,
       "startup_score": 14.41,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 18000.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Running with Hi Tm, CIP connected in casing",
+      "recommendation_review": "Recommended to install CT",
+      "erl_pct": 32.0
     },
     {
       "well_name": "MN-0386",
@@ -2431,7 +2785,13 @@
       "y": 3215249.31,
       "startup_score": 13.95,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 0.0,
+      "well_category": "Low Pi",
+      "pump_status_review": "Downthrust",
+      "remarks_review": "Low inflow , DWO due to no flow",
+      "recommendation_review": "Stimulation job and down size the pump",
+      "erl_pct": 19.0
     },
     {
       "well_name": "UG-0246",
@@ -2471,7 +2831,13 @@
       "y": 3197393.0,
       "startup_score": 12.54,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 30000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi WC (94%), Casing NRV passing",
+      "recommendation_review": "Recommends for WO plan",
+      "erl_pct": 12.0
     },
     {
       "well_name": "MN-0318H",
@@ -2511,7 +2877,13 @@
       "y": 3212920.8,
       "startup_score": 12.52,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 0.0,
+      "well_category": "Low Pi",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy and viscous crude, running with Hi frequency",
+      "recommendation_review": "Buildup pressure and To be started manually with low frequency in far pit",
+      "erl_pct": 255.0
     },
     {
       "well_name": "UG-0367",
@@ -2541,7 +2913,7 @@
       "perf_top": 9102.0,
       "perf_bottom": 10740.0,
       "perforation_count": 0,
-      "api_gravity": 18.6,
+      "api_gravity": 21.7,
       "formations": "MO",
       "wo_count": 1,
       "pe_comment": "",
@@ -2551,7 +2923,13 @@
       "y": 3199457.0,
       "startup_score": 12.5,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 50000.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration, CIP already connected in FL (No CT)",
+      "recommendation_review": null,
+      "erl_pct": 139.0
     },
     {
       "well_name": "MN-0243H",
@@ -2581,7 +2959,7 @@
       "perf_top": 6661.0,
       "perf_bottom": 8596.0,
       "perforation_count": 0,
-      "api_gravity": 22.61,
+      "api_gravity": 22.6,
       "formations": "MF",
       "wo_count": 2,
       "pe_comment": "",
@@ -2591,7 +2969,13 @@
       "y": 3211608.444,
       "startup_score": 11.86,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 1000.0,
+      "well_category": "Low Pi",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy and viscous crude",
+      "recommendation_review": "Pressure buildup and Manual start ESP on far pit",
+      "erl_pct": 230.0
     },
     {
       "well_name": "UG-0074ST1",
@@ -2631,7 +3015,13 @@
       "y": 3198966.74,
       "startup_score": 11.77,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 50000.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy crude (No CT) with Hi H₂S concentration",
+      "recommendation_review": "Install CIP in casing",
+      "erl_pct": 59.0
     },
     {
       "well_name": "MN-0339",
@@ -2661,7 +3051,7 @@
       "perf_top": 8328.0,
       "perf_bottom": 8406.0,
       "perforation_count": 15,
-      "api_gravity": 21.14,
+      "api_gravity": 21.1,
       "formations": "WS",
       "wo_count": 1,
       "pe_comment": "",
@@ -2671,7 +3061,13 @@
       "y": 3210827.0,
       "startup_score": 11.57,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 5.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy and viscous crude, Pd suspected faulty, Hi Tm after start-up",
+      "recommendation_review": "Start-up with low frequency on far pit to confirm flow",
+      "erl_pct": 179.0
     },
     {
       "well_name": "MN-0072",
@@ -2711,7 +3107,13 @@
       "y": 3208857.67,
       "startup_score": 11.34,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 15000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Upthrust",
+      "remarks_review": null,
+      "recommendation_review": null,
+      "erl_pct": 103.0
     },
     {
       "well_name": "MN-0257H",
@@ -2741,7 +3143,7 @@
       "perf_top": 7246.0,
       "perf_bottom": 8776.0,
       "perforation_count": 0,
-      "api_gravity": 21.47,
+      "api_gravity": 21.0,
       "formations": "MF",
       "wo_count": 3,
       "pe_comment": "",
@@ -2751,7 +3153,13 @@
       "y": 3215083.2,
       "startup_score": 11.23,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 0.0,
+      "well_category": "Low Pi",
+      "pump_status_review": "Downthrust",
+      "remarks_review": "It has MPFM, Heavy and viscous crude, CIP connected to CT",
+      "recommendation_review": "Pressure build-up and Start CIP before one day\n from start-up ESP with Hi dosage",
+      "erl_pct": 243.0
     },
     {
       "well_name": "MN-0349",
@@ -2781,7 +3189,7 @@
       "perf_top": 7231.0,
       "perf_bottom": 7290.0,
       "perforation_count": 5,
-      "api_gravity": 20.2,
+      "api_gravity": 19.5,
       "formations": "WS",
       "wo_count": 2,
       "pe_comment": "",
@@ -2791,7 +3199,13 @@
       "y": 3215759.98,
       "startup_score": 10.8,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": "Start-up with low frequency on far pit to confirm flow",
+      "erl_pct": 9.0
     },
     {
       "well_name": "UG-0100",
@@ -2821,7 +3235,7 @@
       "perf_top": 8798.0,
       "perf_bottom": 8850.0,
       "perforation_count": 25,
-      "api_gravity": 20.81,
+      "api_gravity": 20.0,
       "formations": "MM-MO",
       "wo_count": 12,
       "pe_comment": "",
@@ -2831,7 +3245,13 @@
       "y": 3199112.34,
       "startup_score": 10.17,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 99.0
     },
     {
       "well_name": "MN-0291HST2",
@@ -2861,7 +3281,7 @@
       "perf_top": 8772.0,
       "perf_bottom": 9637.0,
       "perforation_count": 0,
-      "api_gravity": 21.47,
+      "api_gravity": 21.5,
       "formations": "BS",
       "wo_count": 3,
       "pe_comment": "",
@@ -2871,7 +3291,13 @@
       "y": 3216274.0,
       "startup_score": 9.89,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 0.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Running with Hi Tm, heavy and viscous crude, CIP connected to CT",
+      "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage",
+      "erl_pct": 237.0
     },
     {
       "well_name": "MN-0316H",
@@ -2901,7 +3327,7 @@
       "perf_top": 6157.0,
       "perf_bottom": 8168.0,
       "perforation_count": 0,
-      "api_gravity": 22.0,
+      "api_gravity": 22.5,
       "formations": "MF",
       "wo_count": 2,
       "pe_comment": "",
@@ -2911,7 +3337,13 @@
       "y": 3214375.06,
       "startup_score": 9.0,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 0.0,
+      "well_category": "Low Pi",
+      "pump_status_review": "Downthrust",
+      "remarks_review": "Heavy and viscous crude",
+      "recommendation_review": "Buildup pressure and start manually on far pit to confirm flow",
+      "erl_pct": 250.0
     },
     {
       "well_name": "UG-0292H",
@@ -2951,7 +3383,13 @@
       "y": 3196144.0,
       "startup_score": 8.5,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 10000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration, Ki WC 89.9 %",
+      "recommendation_review": "Install NRV and To confirm pressure equalized before start-up",
+      "erl_pct": 88.0
     },
     {
       "well_name": "UG-0101",
@@ -2981,7 +3419,7 @@
       "perf_top": 8601.0,
       "perf_bottom": 8607.0,
       "perforation_count": 12,
-      "api_gravity": 24.68,
+      "api_gravity": 26.6,
       "formations": "RL",
       "wo_count": 11,
       "pe_comment": "",
@@ -2991,7 +3429,13 @@
       "y": 3192175.58,
       "startup_score": 8.43,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 2000.0,
+      "well_category": "Low Pi",
+      "pump_status_review": "Within Range",
+      "remarks_review": "I limit running mode, Problematic well",
+      "recommendation_review": "Release gas on far pit and keep casing open",
+      "erl_pct": 51.0
     },
     {
       "well_name": "MN-0119ST1",
@@ -3021,7 +3465,7 @@
       "perf_top": 6370.0,
       "perf_bottom": 6400.0,
       "perforation_count": 12,
-      "api_gravity": 0.0,
+      "api_gravity": 20.0,
       "formations": "LB",
       "wo_count": 5,
       "pe_comment": "",
@@ -3031,7 +3475,13 @@
       "y": 3214937.028,
       "startup_score": 7.83,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 100.0,
+      "well_category": "New Commission",
+      "pump_status_review": "Within Range",
+      "remarks_review": "S/D since 25-Dec-25 ,It has heavy crude",
+      "recommendation_review": "Required BH flushing before start-up",
+      "erl_pct": 22.0
     },
     {
       "well_name": "MN-0168",
@@ -3061,7 +3511,7 @@
       "perf_top": 9958.0,
       "perf_bottom": 9982.0,
       "perforation_count": 0,
-      "api_gravity": 33.61,
+      "api_gravity": 33.4,
       "formations": "UM",
       "wo_count": 11,
       "pe_comment": "",
@@ -3071,7 +3521,13 @@
       "y": 3211588.816,
       "startup_score": 7.64,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 60000.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Frequent Hi Tm trips, Hi H₂S concentration and Hi GOR",
+      "recommendation_review": "Check natural flow and release gas and open casing gradually before start-up",
+      "erl_pct": 75.0
     },
     {
       "well_name": "MN-0157H",
@@ -3111,7 +3567,13 @@
       "y": 3215677.293,
       "startup_score": 7.47,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy and viscous crude",
+      "recommendation_review": "Required BH flushing before start-up",
+      "erl_pct": 48.0
     },
     {
       "well_name": "UG-0369",
@@ -3141,7 +3603,7 @@
       "perf_top": 9591.0,
       "perf_bottom": 10142.0,
       "perforation_count": 0,
-      "api_gravity": 17.44,
+      "api_gravity": 18.4,
       "formations": "MM-MO",
       "wo_count": 1,
       "pe_comment": "",
@@ -3151,7 +3613,13 @@
       "y": 3197892.529,
       "startup_score": 7.38,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 17000.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "CIP already connected in FL (No CT)",
+      "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage",
+      "erl_pct": 144.0
     },
     {
       "well_name": "UG-0178",
@@ -3191,7 +3659,13 @@
       "y": 3196270.42,
       "startup_score": 7.14,
       "priority": "P4",
-      "priority_label": "Rig WO"
+      "priority_label": "Rig WO",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Running with Hi Tm, CIP connected due to heavy crude (No CT),",
+      "recommendation_review": null,
+      "erl_pct": 36.0
     },
     {
       "well_name": "UG-0183H",
@@ -3221,7 +3695,7 @@
       "perf_top": 8745.0,
       "perf_bottom": 10440.0,
       "perforation_count": 0,
-      "api_gravity": 25.32,
+      "api_gravity": 25.3,
       "formations": "RL",
       "wo_count": 6,
       "pe_comment": "",
@@ -3231,7 +3705,13 @@
       "y": 3193949.92,
       "startup_score": 6.63,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 10000.0,
+      "well_category": "Low Pi",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Viscous and heavy crude RL formation",
+      "recommendation_review": "to be started on far pit with low Hz",
+      "erl_pct": 100.0
     },
     {
       "well_name": "MN-0320",
@@ -3271,7 +3751,13 @@
       "y": 3216584.62,
       "startup_score": 5.59,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 0.0,
+      "well_category": "Low Pi",
+      "pump_status_review": "Downthrust",
+      "remarks_review": "Heavy and viscous crude, running with Hi frequency and MPFM Connected",
+      "recommendation_review": "Buildup pressure and To be started manually with low frequency in far pit",
+      "erl_pct": 144.0
     },
     {
       "well_name": "MN-0009",
@@ -3311,7 +3797,13 @@
       "y": 3214668.51,
       "startup_score": 5.38,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Stable well with heavy crude",
+      "recommendation_review": "Start with low frequency",
+      "erl_pct": 165.0
     },
     {
       "well_name": "UG-0214",
@@ -3341,7 +3833,7 @@
       "perf_top": 8786.0,
       "perf_bottom": 8806.0,
       "perforation_count": 15,
-      "api_gravity": 24.5,
+      "api_gravity": null,
       "formations": "MM-MO, MO",
       "wo_count": 5,
       "pe_comment": "",
@@ -3351,7 +3843,13 @@
       "y": 3199542.404,
       "startup_score": 4.96,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": null,
+      "well_category": "New Commission",
+      "pump_status_review": "Within Range",
+      "remarks_review": null,
+      "recommendation_review": null,
+      "erl_pct": 112.0
     },
     {
       "well_name": "UG-0191",
@@ -3391,7 +3889,13 @@
       "y": 3198541.974,
       "startup_score": 4.77,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi WC (96%)",
+      "recommendation_review": "Recommends for WO plan",
+      "erl_pct": 25.0
     },
     {
       "well_name": "UG-0211",
@@ -3431,7 +3935,13 @@
       "y": 3198502.0,
       "startup_score": 4.65,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 20000.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "85 % WC",
+      "recommendation_review": "Confirm pressure equalized and start with low Hz",
+      "erl_pct": 88.0
     },
     {
       "well_name": "MN-0308",
@@ -3461,7 +3971,7 @@
       "perf_top": 10268.0,
       "perf_bottom": 10286.0,
       "perforation_count": 0,
-      "api_gravity": 29.85,
+      "api_gravity": 23.5,
       "formations": "MM",
       "wo_count": 4,
       "pe_comment": "",
@@ -3471,7 +3981,13 @@
       "y": 3211258.19,
       "startup_score": 4.3,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 40000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "S/D since 25-Dec-25 ,It has heavy crude",
+      "recommendation_review": "Required BH flushing before start-up",
+      "erl_pct": 79.0
     },
     {
       "well_name": "UG-0078",
@@ -3511,7 +4027,13 @@
       "y": 3196838.423,
       "startup_score": 4.2,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 18000.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy crude (No CT)",
+      "recommendation_review": "To be started with low frequency and confirm flow",
+      "erl_pct": 71.0
     },
     {
       "well_name": "MN-0048ST1",
@@ -3551,7 +4073,13 @@
       "y": 3211464.64,
       "startup_score": 4.15,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 0.0,
+      "well_category": "Grounded",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Has Hi Tm & OL trips history and natural flow from casing,",
+      "recommendation_review": "To keep S/D for NF and to be started after\n natural flow stopped with closed casing",
+      "erl_pct": 183.0
     },
     {
       "well_name": "UG-0187",
@@ -3591,7 +4119,13 @@
       "y": 3197887.29,
       "startup_score": 4.12,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 34000.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Running with Hi frequency,  CIP connected to FL",
+      "recommendation_review": "Required BH flushing, Manual start-up with low frequency and to connect CIP in casing",
+      "erl_pct": 99.0
     },
     {
       "well_name": "MN-0196H",
@@ -3621,7 +4155,7 @@
       "perf_top": 7735.0,
       "perf_bottom": 8800.0,
       "perforation_count": 0,
-      "api_gravity": 19.0,
+      "api_gravity": 22.0,
       "formations": "BS",
       "wo_count": 5,
       "pe_comment": "",
@@ -3631,7 +4165,13 @@
       "y": 3214405.38,
       "startup_score": 3.62,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 1200.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "It has MPFM, Heavy and viscous crude, CIP connected to CT",
+      "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage",
+      "erl_pct": 140.0
     },
     {
       "well_name": "UG-0116HST1",
@@ -3661,7 +4201,7 @@
       "perf_top": 9092.0,
       "perf_bottom": 10396.0,
       "perforation_count": 0,
-      "api_gravity": 21.0,
+      "api_gravity": 21.04,
       "formations": "MM-MO",
       "wo_count": 6,
       "pe_comment": "",
@@ -3671,7 +4211,13 @@
       "y": 3194979.84,
       "startup_score": 2.99,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "New commissioning, running with Hi Tm",
+      "recommendation_review": null,
+      "erl_pct": 3.0
     },
     {
       "well_name": "UG-0186H",
@@ -3701,7 +4247,7 @@
       "perf_top": 8778.0,
       "perf_bottom": 10700.0,
       "perforation_count": 0,
-      "api_gravity": 22.64,
+      "api_gravity": 23.0,
       "formations": "RL",
       "wo_count": 5,
       "pe_comment": "",
@@ -3711,7 +4257,13 @@
       "y": 3197340.13,
       "startup_score": 2.94,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 200.0,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "CIP connected on FL due to viscous and heavy crude,  Has frequent Hi Tm trips (RL formation)",
+      "recommendation_review": "Build-up pressure and to be start on pit with low Hz",
+      "erl_pct": 134.0
     },
     {
       "well_name": "UG-0293ST2",
@@ -3741,7 +4293,7 @@
       "perf_top": 0,
       "perf_bottom": 0,
       "perforation_count": 0,
-      "api_gravity": 0,
+      "api_gravity": 25.78,
       "formations": "",
       "wo_count": 1,
       "pe_comment": "",
@@ -3751,7 +4303,13 @@
       "y": 3197265.56,
       "startup_score": 2.59,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 30000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 0.0
     },
     {
       "well_name": "UG-0102ST2",
@@ -3781,7 +4339,7 @@
       "perf_top": 0,
       "perf_bottom": 0,
       "perforation_count": 0,
-      "api_gravity": 0,
+      "api_gravity": 23.0,
       "formations": "",
       "wo_count": 0,
       "pe_comment": "",
@@ -3791,7 +4349,13 @@
       "y": 3196199.69,
       "startup_score": 1.69,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 11.0
     },
     {
       "well_name": "MN-0363",
@@ -3821,7 +4385,7 @@
       "perf_top": 0,
       "perf_bottom": 0,
       "perforation_count": 0,
-      "api_gravity": 0,
+      "api_gravity": 20.5,
       "formations": "",
       "wo_count": 1,
       "pe_comment": "",
@@ -3831,7 +4395,13 @@
       "y": 3212578.76,
       "startup_score": 1.6,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 200.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "NO PGORT",
+      "remarks_review": "PAD well, No PGORT conducted since commissioning\n due to near-by Rig on location",
+      "recommendation_review": "Confirm no back spin,  SCSSV & SSV are open",
+      "erl_pct": 38.0
     },
     {
       "well_name": "UG-0091",
@@ -3861,7 +4431,7 @@
       "perf_top": 8758.0,
       "perf_bottom": 8830.0,
       "perforation_count": 8,
-      "api_gravity": 20.2,
+      "api_gravity": 23.0,
       "formations": "MM-MO",
       "wo_count": 13,
       "pe_comment": "",
@@ -3871,7 +4441,13 @@
       "y": 3192303.845,
       "startup_score": 1.51,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 46.0
     },
     {
       "well_name": "UG-0394ST2",
@@ -3901,7 +4477,7 @@
       "perf_top": 0,
       "perf_bottom": 0,
       "perforation_count": 0,
-      "api_gravity": 0,
+      "api_gravity": 23.4,
       "formations": "",
       "wo_count": 1,
       "pe_comment": "",
@@ -3911,7 +4487,13 @@
       "y": 3197642.709,
       "startup_score": 1.4,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 12000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "PAD well",
+      "recommendation_review": "Confirm SCSSV & SSV",
+      "erl_pct": 25.0
     },
     {
       "well_name": "UG-0363ST1",
@@ -3941,7 +4523,7 @@
       "perf_top": 9343.0,
       "perf_bottom": 10281.0,
       "perforation_count": 0,
-      "api_gravity": 24.2,
+      "api_gravity": 23.6,
       "formations": "MO",
       "wo_count": 2,
       "pe_comment": "",
@@ -3951,7 +4533,13 @@
       "y": 3198336.0,
       "startup_score": 1.11,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 22000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi WC (97%)",
+      "recommendation_review": "Recommends for WO plan",
+      "erl_pct": 75.0
     },
     {
       "well_name": "MN-0355",
@@ -3981,7 +4569,7 @@
       "perf_top": 0,
       "perf_bottom": 0,
       "perforation_count": 0,
-      "api_gravity": 0,
+      "api_gravity": 32.1,
       "formations": "",
       "wo_count": 1,
       "pe_comment": "",
@@ -3991,7 +4579,13 @@
       "y": 3212579.46,
       "startup_score": 0.84,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 32000.0,
+      "well_category": "Normal",
+      "pump_status_review": "NO PGORT",
+      "remarks_review": "PAD well, No PGORT conducted since commissioning\n due to near-by Rig on location",
+      "recommendation_review": "Confirm pressure equalized , no NF,  SCSSV & SSV are open",
+      "erl_pct": 38.0
     },
     {
       "well_name": "UG-0097",
@@ -4021,7 +4615,7 @@
       "perf_top": 8766.0,
       "perf_bottom": 8810.0,
       "perforation_count": 8,
-      "api_gravity": 19.35,
+      "api_gravity": 19.0,
       "formations": "MM-MO",
       "wo_count": 15,
       "pe_comment": "",
@@ -4031,7 +4625,13 @@
       "y": 3199323.12,
       "startup_score": 0.38,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 20000.0,
+      "well_category": "Sensor reading lost",
+      "pump_status_review": "Within Range",
+      "remarks_review": "To check back spin before start-up  (Fluid shot done on 17-Apr-26 PIP 1961 Psi)",
+      "recommendation_review": "To be started with low frequency on far pit to confirm flow",
+      "erl_pct": 22.0
     },
     {
       "well_name": "UG-0031",
@@ -4061,7 +4661,7 @@
       "perf_top": 8555.0,
       "perf_bottom": 8864.0,
       "perforation_count": 0,
-      "api_gravity": 23.82,
+      "api_gravity": 22.3,
       "formations": "MM-MO",
       "wo_count": 17,
       "pe_comment": "",
@@ -4071,7 +4671,13 @@
       "y": 3193422.9,
       "startup_score": 0.21,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 22000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi Motor load 90%",
+      "recommendation_review": "Start with low frequency",
+      "erl_pct": 11.0
     },
     {
       "well_name": "UG-0260ST1",
@@ -4101,7 +4707,7 @@
       "perf_top": 0,
       "perf_bottom": 0,
       "perforation_count": 0,
-      "api_gravity": 0,
+      "api_gravity": 25.6,
       "formations": "",
       "wo_count": 1,
       "pe_comment": "",
@@ -4111,7 +4717,13 @@
       "y": 3196950.0,
       "startup_score": 0.19,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 16.0
     },
     {
       "well_name": "UG-0153ST1",
@@ -4141,7 +4753,7 @@
       "perf_top": 0,
       "perf_bottom": 0,
       "perforation_count": 0,
-      "api_gravity": 0,
+      "api_gravity": 26.4,
       "formations": "",
       "wo_count": 1,
       "pe_comment": "",
@@ -4151,7 +4763,13 @@
       "y": 3197296.24,
       "startup_score": 0.19,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 40000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Upthrust",
+      "remarks_review": "Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 8.0
     },
     {
       "well_name": "MN-0019",
@@ -4191,7 +4809,13 @@
       "y": 3216347.28,
       "startup_score": 0.05,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Two CIP connected due to heavy crude",
+      "recommendation_review": "To be started manually with low frequency in far pit",
+      "erl_pct": 59.0
     },
     {
       "well_name": "MN-0052",
@@ -4221,7 +4845,7 @@
       "perf_top": 6205.0,
       "perf_bottom": 6210.0,
       "perforation_count": 10,
-      "api_gravity": 18.35,
+      "api_gravity": 18.4,
       "formations": "WS",
       "wo_count": 16,
       "pe_comment": "",
@@ -4231,7 +4855,13 @@
       "y": 3216496.0,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy and Viscous crude running with Hi frequency 55 Hz",
+      "recommendation_review": "To be started manually with low frequency in far pit",
+      "erl_pct": 218.0
     },
     {
       "well_name": "MN-0170",
@@ -4271,7 +4901,13 @@
       "y": 3217815.26,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy and viscous crude, CIP connected to CT",
+      "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage",
+      "erl_pct": 237.0
     },
     {
       "well_name": "MN-0175HST1",
@@ -4301,7 +4937,7 @@
       "perf_top": 6390.0,
       "perf_bottom": 8100.0,
       "perforation_count": 0,
-      "api_gravity": 23.48,
+      "api_gravity": 23.5,
       "formations": "MF",
       "wo_count": 3,
       "pe_comment": "",
@@ -4311,7 +4947,13 @@
       "y": 3214228.31,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 0.0,
+      "well_category": "Low Pi",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Heavy and viscous crude",
+      "recommendation_review": null,
+      "erl_pct": 57.0
     },
     {
       "well_name": "MN-0279",
@@ -4381,7 +5023,7 @@
       "perf_top": 8850.0,
       "perf_bottom": 8870.0,
       "perforation_count": 0,
-      "api_gravity": 25.32,
+      "api_gravity": 23.4,
       "formations": "MM-MO",
       "wo_count": 14,
       "pe_comment": "",
@@ -4391,7 +5033,13 @@
       "y": 3204909.546,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 10000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "WC 86%, CIP connected in FL",
+      "recommendation_review": null,
+      "erl_pct": 113.0
     },
     {
       "well_name": "UG-0038AHST1",
@@ -4421,7 +5069,7 @@
       "perf_top": 9137.0,
       "perf_bottom": 10468.0,
       "perforation_count": 0,
-      "api_gravity": 22.47,
+      "api_gravity": 23.0,
       "formations": "MM-MO",
       "wo_count": 9,
       "pe_comment": "",
@@ -4431,7 +5079,13 @@
       "y": 3194031.46,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 18000.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "It was running with CIP before but it removed",
+      "recommendation_review": "To be started with low frequency and confirm flow",
+      "erl_pct": 77.0
     },
     {
       "well_name": "UG-0040",
@@ -4461,7 +5115,7 @@
       "perf_top": 8690.0,
       "perf_bottom": 8724.0,
       "perforation_count": 8,
-      "api_gravity": 23.48,
+      "api_gravity": 23.3,
       "formations": "MM-MO",
       "wo_count": 23,
       "pe_comment": "",
@@ -4471,7 +5125,13 @@
       "y": 3193172.56,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 8000.0,
+      "well_category": "Grounded",
+      "pump_status_review": "Downthrust",
+      "remarks_review": "I limit running mode (Fluid shot done on 17-Apr-26 PIP 810 Psi)",
+      "recommendation_review": "Problematic well to keep S/D more  Build-up (last Pi 810 psi), to be started on far pit to release gas and confirm flow",
+      "erl_pct": 172.0
     },
     {
       "well_name": "UG-0086",
@@ -4501,7 +5161,7 @@
       "perf_top": 8748.0,
       "perf_bottom": 8820.0,
       "perforation_count": 5,
-      "api_gravity": 27.27,
+      "api_gravity": 27.0,
       "formations": "MM-MO",
       "wo_count": 10,
       "pe_comment": "",
@@ -4511,7 +5171,13 @@
       "y": 3205575.196,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 30000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi WC well (98%), with Hi H₂S concentration",
+      "recommendation_review": null,
+      "erl_pct": 26.0
     },
     {
       "well_name": "UG-0093",
@@ -4541,7 +5207,7 @@
       "perf_top": 8794.0,
       "perf_bottom": 8847.0,
       "perforation_count": 0,
-      "api_gravity": 25.0,
+      "api_gravity": 24.0,
       "formations": "MM-MO",
       "wo_count": 10,
       "pe_comment": "",
@@ -4551,7 +5217,13 @@
       "y": 3201145.76,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": null,
+      "well_category": "New Commission",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Waiting for commission FT finished @09:14 on 19-Mar-26",
+      "recommendation_review": "to be started on far pit to clean the well",
+      "erl_pct": 0.0
     },
     {
       "well_name": "UG-0103",
@@ -4591,7 +5263,13 @@
       "y": 3192999.99,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi WC well (91%)",
+      "recommendation_review": null,
+      "erl_pct": 15.0
     },
     {
       "well_name": "UG-0172H",
@@ -4661,7 +5339,7 @@
       "perf_top": 8654.0,
       "perf_bottom": 8660.0,
       "perforation_count": 20,
-      "api_gravity": 20.7,
+      "api_gravity": 23.5,
       "formations": "MM",
       "wo_count": 8,
       "pe_comment": "",
@@ -4671,7 +5349,13 @@
       "y": 3196313.0,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 20000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi WC (90.5%)",
+      "recommendation_review": null,
+      "erl_pct": 61.0
     },
     {
       "well_name": "UG-0371",
@@ -4701,7 +5385,7 @@
       "perf_top": 9203.0,
       "perf_bottom": 12225.0,
       "perforation_count": 0,
-      "api_gravity": 18.24,
+      "api_gravity": null,
       "formations": "RL",
       "wo_count": 4,
       "pe_comment": "",
@@ -4711,7 +5395,13 @@
       "y": 3197198.06,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": null,
+      "well_category": "Problematic",
+      "pump_status_review": "Within Range",
+      "remarks_review": "ESP failed to start after frequent OL trips, observed during BH & CTU flushing Hi WHP, No back spin detected",
+      "recommendation_review": "To change AL method",
+      "erl_pct": 5.0
     },
     {
       "well_name": "UG-0372",
@@ -4741,7 +5431,7 @@
       "perf_top": 9171.0,
       "perf_bottom": 11716.0,
       "perforation_count": 0,
-      "api_gravity": 17.76,
+      "api_gravity": 17.8,
       "formations": "RL",
       "wo_count": 2,
       "pe_comment": "",
@@ -4751,7 +5441,13 @@
       "y": 3198204.09,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 100.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Within Range",
+      "remarks_review": "DWO due to no flow suspecting circulation, WC 86%",
+      "recommendation_review": "Recommends for WSO program due to Hi WC",
+      "erl_pct": 108.0
     },
     {
       "well_name": "MN-0382ST1",
@@ -4781,7 +5477,7 @@
       "perf_top": 8670.0,
       "perf_bottom": 8960.0,
       "perforation_count": 5,
-      "api_gravity": 15.74,
+      "api_gravity": 24.0,
       "formations": "BS",
       "wo_count": 1,
       "pe_comment": "",
@@ -4791,7 +5487,13 @@
       "y": 3214621.91,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 0.0,
+      "well_category": "High Viscous / CT",
+      "pump_status_review": "Upthrust",
+      "remarks_review": "PAD well, it has viscous and heavy crude (CIP connected in FL)",
+      "recommendation_review": "Start-up with low frequency on far pit to confirm flow and \nconfirm SCSSV & SSV are open",
+      "erl_pct": 111.0
     },
     {
       "well_name": "UG-0085",
@@ -4821,7 +5523,7 @@
       "perf_top": 8728.0,
       "perf_bottom": 8732.0,
       "perforation_count": 15,
-      "api_gravity": 18.0,
+      "api_gravity": 20.0,
       "formations": "MM",
       "wo_count": 13,
       "pe_comment": "",
@@ -4831,7 +5533,13 @@
       "y": 3199809.604,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "h2s_ppm": 24000.0,
+      "well_category": "Normal",
+      "pump_status_review": "Within Range",
+      "remarks_review": "Hi WC well (96%)",
+      "recommendation_review": null,
+      "erl_pct": 52.0
     },
     {
       "well_name": "UG-0092",

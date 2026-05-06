@@ -338,7 +338,7 @@ export class AppComponent implements OnInit {
     { id: 'decide'    as Tab, num:'3', label:'Decide',        sub:'· Priority & Plan' },
     { id: 'act'       as Tab, num:'4', label:'Act',           sub:'· Startup Queue' },
     { id: 'sequence'  as Tab, num:'5', label:'Sequencing',    sub:'· Launch Order' },
-    { id: 'rt'        as Tab, num:'6', label:'RT Surveillance',sub:'· ESP Telemetry' },
+    { id: 'rt'        as Tab, num:'6', label:'Post Start-In Surveillance',sub:'· ESP Telemetry' },
     { id: 'recommend' as Tab, num:'7', label:'Recommendation',sub:'· Intervention Guide' },
   ];
 

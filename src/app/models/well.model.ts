@@ -11,6 +11,13 @@ export interface Well {
   formations: string; wo_count: number;
   pe_comment: string; re_comment: string; fd_action_plan: string;
   x: number; y: number;
+  /* ── WK Wells Review fields (from Excel) ── */
+  h2s_ppm?: number | null;
+  well_category?: string | null;
+  pump_status_review?: string | null;
+  remarks_review?: string | null;
+  recommendation_review?: string | null;
+  erl_pct?: number | null;
 }
 
 export interface Kpis {

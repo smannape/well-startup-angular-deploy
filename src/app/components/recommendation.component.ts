@@ -16,6 +16,7 @@ interface Rec {
   title: string;
   detail: string;
   basedOn: string;
+  isReview?: boolean;   // flags cards sourced from KOC well review sheet
 }
 
 const URGENCY_ORDER: Record<Urgency, number> = { critical: 0, high: 1, medium: 2, low: 3 };
@@ -25,6 +26,16 @@ const URGENCY_COLOR: Record<Urgency, string> = {
 const URGENCY_BG: Record<Urgency, string> = {
   critical: '#2a0a0545', high: '#281e0045', medium: '#0f2a1045', low: '#0a1a2a45'
 };
+
+/* Map well_category from KOC review → urgency level */
+function categoryUrgency(cat: string | null | undefined): Urgency {
+  if (!cat) return 'low';
+  const c = cat.toLowerCase();
+  if (c.includes('grounded') || c.includes('problematic')) return 'high';
+  if (c.includes('high viscous') || c.includes('low pi') ||
+      c.includes('sensor') || c.includes('insulation') || c.includes('new commission')) return 'medium';
+  return 'low';
+}
 
 @Component({
   selector: 'app-recommendation',
@@ -39,7 +50,7 @@ const URGENCY_BG: Record<Urgency, string> = {
         <div class="rec-title-area">
           <div class="rec-title">Well Intervention Recommendations</div>
           <div class="rec-sub">
-            Derived from WO history patterns · API gravity · ESP run life · Water cut · Closure reason
+            KOC Well Review · WO history · H₂S concentration · API gravity · ESP run life · Water cut · Closure reason
           </div>
         </div>
         <div class="rec-filters">
@@ -62,6 +73,11 @@ const URGENCY_BG: Record<Urgency, string> = {
             <option value="">All Priorities</option>
             <option *ngFor="let p of priorities" [value]="p">{{p}}</option>
           </select>
+          <select [(ngModel)]="sourceFilter" (ngModelChange)="applyFilter()">
+            <option value="">All Sources</option>
+            <option value="review">KOC Review Only</option>
+            <option value="engine">Rules Engine Only</option>
+          </select>
           <input placeholder="Search well…" [(ngModel)]="search" (ngModelChange)="applyFilter()"
             style="min-width:140px"/>
         </div>
@@ -81,12 +97,17 @@ const URGENCY_BG: Record<Urgency, string> = {
           <span class="sum-v" style="color:var(--beige-200)">{{uniqueWells}}</span>
           <span class="sum-l" style="color:var(--beige-400)">WELLS</span>
         </div>
+        <div class="sum-kpi">
+          <span class="sum-v" style="color:#6dd47e">{{reviewCount}}</span>
+          <span class="sum-l" style="color:var(--beige-400)">KOC REVIEW</span>
+        </div>
       </div>
 
       <!-- ── Recommendation cards ── -->
       <div class="rec-list">
 
         <div class="rec-card" *ngFor="let r of filtered"
+          [class.review-card]="r.isReview"
           [style.border-left-color]="urgencyColor[r.urgency]"
           [style.background]="urgencyBg[r.urgency]">
 
@@ -100,6 +121,7 @@ const URGENCY_BG: Record<Urgency, string> = {
               <span class="rc-badge field-badge">{{r.field}}</span>
             </div>
             <div class="rc-badges-right">
+              <span *ngIf="r.isReview" class="rc-badge review-badge">📋 KOC REVIEW</span>
               <span class="rc-badge urgency-badge"
                 [style.background]="urgencyBg[r.urgency]"
                 [style.color]="urgencyColor[r.urgency]"
@@ -160,6 +182,9 @@ const URGENCY_BG: Record<Urgency, string> = {
       border-top:1px solid var(--border-1); border-right:1px solid var(--border-1);
       border-bottom:1px solid var(--border-1); }
 
+    /* KOC review cards get a subtle top accent */
+    .review-card { border-top-color: rgba(109,212,126,0.25); }
+
     /* ── Card header ── */
     .rc-head { display:flex; align-items:center; justify-content:space-between;
       flex-wrap:wrap; gap:6px; }
@@ -171,11 +196,12 @@ const URGENCY_BG: Record<Urgency, string> = {
 
     .rc-badge { font-size:9px; letter-spacing:.12em; text-transform:uppercase;
       padding:2px 7px; border-radius:2px; font-weight:600; border:1px solid transparent; }
-    .pri-badge   { color:#1a1612; }
-    .gc-badge    { color:var(--beige-200); background:var(--bg-3); border-color:var(--border-2); }
-    .field-badge { color:var(--orange-300); background:var(--bg-3); border-color:var(--orange-700); }
-    .urgency-badge { font-weight:700; }
-    .cat-badge   { color:var(--beige-200); background:var(--bg-3); border-color:var(--border-2); }
+    .pri-badge    { color:#1a1612; }
+    .gc-badge     { color:var(--beige-200); background:var(--bg-3); border-color:var(--border-2); }
+    .field-badge  { color:var(--orange-300); background:var(--bg-3); border-color:var(--orange-700); }
+    .urgency-badge{ font-weight:700; }
+    .cat-badge    { color:var(--beige-200); background:var(--bg-3); border-color:var(--border-2); }
+    .review-badge { color:#6dd47e; background:#0f2a1040; border-color:#6dd47e40; }
 
     .rc-title  { font-size:12px; font-weight:700; color:var(--beige-100);
       letter-spacing:.04em; }
@@ -204,6 +230,7 @@ export class RecommendationComponent implements OnChanges {
   categoryFilter = '';
   gcFilter       = '';
   priFilter      = '';
+  sourceFilter   = '';
   search         = '';
 
   allRecs:  Rec[] = [];
@@ -211,6 +238,9 @@ export class RecommendationComponent implements OnChanges {
 
   get uniqueWells() {
     return new Set(this.filtered.map(r => r.wellName)).size;
+  }
+  get reviewCount() {
+    return this.filtered.filter(r => r.isReview).length;
   }
   countBy(u: Urgency) { return this.filtered.filter(r => r.urgency === u).length; }
 
@@ -237,7 +267,169 @@ export class RecommendationComponent implements OnChanges {
       const base = { wellName: w.well_name, priority: w.priority,
                      facility: w.facility, field: w.field };
 
-      /* ── 1. Closure reason ─────────────────────────────── */
+      /* ══════════════════════════════════════════════════════
+         SECTION A — KOC WELL REVIEW (from WK Wells Review xlsx)
+         These are direct engineer notes — shown first / prominently
+         ══════════════════════════════════════════════════════ */
+
+      /* A1. Direct recommendation from KOC Well Review sheet */
+      if (w.recommendation_review) {
+        const urgency = categoryUrgency(w.well_category);
+        const catLabel = w.well_category || 'Normal';
+        const h2sNote  = w.h2s_ppm && w.h2s_ppm > 0
+          ? ` H₂S: ${(w.h2s_ppm / 1000).toFixed(0)}k PPM.` : '';
+        const erlNote  = w.erl_pct != null
+          ? ` ESP run life: ${w.erl_pct}%.` : '';
+        const pumpNote = w.pump_status_review && w.pump_status_review !== 'Within Range'
+          ? ` Pump status: ${w.pump_status_review}.` : '';
+        const remarksNote = w.remarks_review
+          ? `\nRemarks (KOC): "${w.remarks_review}"` : '';
+
+        recs.push({ ...base, urgency, category: 'KOC Review', categoryIcon: '📋',
+          isReview: true,
+          title: w.recommendation_review,
+          detail: `Well Category: ${catLabel}.${h2sNote}${erlNote}${pumpNote}${remarksNote}`,
+          basedOn: 'KOC WK Wells Review — Apr 2026' });
+      }
+
+      /* A2. Grounded well — even if no explicit recommendation text */
+      if (w.well_category === 'Grounded' && !w.recommendation_review) {
+        recs.push({ ...base, urgency: 'high', category: 'KOC Review', categoryIcon: '📋',
+          isReview: true,
+          title: 'Grounded Well — Electrical Isolation Issue',
+          detail: w.remarks_review
+            ? `Remarks: "${w.remarks_review}". Grounded wells require full electrical checks ` +
+              `(insulation resistance, cable integrity) before any energisation attempt.`
+            : `Grounded well category. Perform MΩ test and cable inspection before startup.`,
+          basedOn: 'KOC WK Wells Review — Apr 2026' });
+      }
+
+      /* ══════════════════════════════════════════════════════
+         SECTION B — H₂S CONCENTRATION (from KOC review data)
+         ══════════════════════════════════════════════════════ */
+
+      if (w.h2s_ppm != null && w.h2s_ppm > 0) {
+        if (w.h2s_ppm >= 30000) {
+          recs.push({ ...base, urgency: 'critical', category: 'H₂S Safety', categoryIcon: '☠️',
+            title: `Extreme H₂S — ${(w.h2s_ppm / 1000).toFixed(0)}k PPM · Mandatory Safety Protocol`,
+            detail: `H₂S concentration of ${w.h2s_ppm.toLocaleString()} PPM is life-threatening. ` +
+              `Before any site activity: (1) All personnel must wear SCBA — no exceptions, ` +
+              `(2) Establish exclusion zone ≥ 100 m upwind, ` +
+              `(3) Continuous H₂S monitoring with calibrated detectors (alarm at 10 PPM), ` +
+              `(4) Muster point confirmed and medic on standby, ` +
+              `(5) KOC HSE H₂S contingency plan must be active and briefed before wellsite entry. ` +
+              `Do not proceed without KOC HSE sign-off.`,
+            basedOn: 'KOC WK Wells Review — H₂S Data' });
+        } else if (w.h2s_ppm >= 10000) {
+          recs.push({ ...base, urgency: 'high', category: 'H₂S Safety', categoryIcon: '⚠️',
+            title: `High H₂S — ${(w.h2s_ppm / 1000).toFixed(0)}k PPM · Enhanced Safety Precautions`,
+            detail: `H₂S at ${w.h2s_ppm.toLocaleString()} PPM requires full H₂S safety protocol: ` +
+              `(1) Personal H₂S monitor mandatory for all personnel, ` +
+              `(2) Wind socks installed and checked, ` +
+              `(3) Buddy system enforced at wellsite, ` +
+              `(4) Ensure casing vent valve is functional to safely bleed gas before opening wellhead. ` +
+              `Brief startup crew on emergency muster and evacuation procedure.`,
+            basedOn: 'KOC WK Wells Review — H₂S Data' });
+        } else if (w.h2s_ppm >= 1000) {
+          recs.push({ ...base, urgency: 'medium', category: 'H₂S Safety', categoryIcon: '⚠️',
+            title: `Elevated H₂S — ${w.h2s_ppm.toLocaleString()} PPM · Standard Precautions`,
+            detail: `H₂S at ${w.h2s_ppm.toLocaleString()} PPM. Use personal H₂S detectors during ` +
+              `all wellsite activities. Ensure wellhead area is well-ventilated. ` +
+              `Brief startup crew and confirm emergency response procedure is known.`,
+            basedOn: 'KOC WK Wells Review — H₂S Data' });
+        }
+      }
+
+      /* ══════════════════════════════════════════════════════
+         SECTION C — WELL CATEGORY (from KOC review data)
+         ══════════════════════════════════════════════════════ */
+
+      if (w.well_category === 'High Viscous / CT') {
+        const hasCT = w.remarks_review && w.remarks_review.toLowerCase().includes('cip');
+        recs.push({ ...base, urgency: 'medium', category: 'Well Condition', categoryIcon: '🧴',
+          title: 'High Viscosity Crude — Chemical Injection Protocol Required',
+          detail: hasCT
+            ? `Viscous crude well (API: ${w.api_gravity || '?'}°). ${w.remarks_review}. ` +
+              `Confirm Chemical Injection Pump (CIP) is connected and operational. ` +
+              `Start at low frequency (30–35 Hz) and gradually increase after establishing flow.`
+            : `Viscous crude well (API: ${w.api_gravity || '?'}°). ` +
+              `Consider installing CIP for continuous downhole diluent injection. ` +
+              `Start at low ESP frequency. Verify flowline is not cold-plugged before startup.`,
+          basedOn: 'KOC WK Wells Review — Well Category' });
+      }
+
+      if (w.well_category === 'Problematic') {
+        recs.push({ ...base, urgency: 'high', category: 'Well Condition', categoryIcon: '🔴',
+          title: `Problematic Well — Detailed Engineering Review Required`,
+          detail: w.remarks_review
+            ? `Classified as Problematic by KOC review. Remarks: "${w.remarks_review}". ` +
+              `Obtain PE/RE sign-off before committing to startup. Define specific startup conditions.`
+            : `Classified as Problematic by KOC review. Do not start without PE/RE engineering review. ` +
+              `Identify root cause of problematic classification before mobilising crew.`,
+          basedOn: 'KOC WK Wells Review — Well Category' });
+      }
+
+      if (w.well_category === 'Low Pi') {
+        recs.push({ ...base, urgency: 'medium', category: 'Well Condition', categoryIcon: '📉',
+          title: `Low Productivity Index — Verify Pump Operating Point`,
+          detail: `Well has low PI. Run a current inflow performance analysis before selecting ` +
+            `ESP operating frequency. Risk of operating in downthrust if frequency is too high ` +
+            `relative to reservoir deliverability. ` +
+            `Recommend pump-off test or step-rate test within first 48 hrs of startup.`,
+          basedOn: 'KOC WK Wells Review — Well Category' });
+      }
+
+      if (w.well_category === 'Sensor reading lost') {
+        recs.push({ ...base, urgency: 'medium', category: 'Well Condition', categoryIcon: '📡',
+          title: `Sensor Lost — Operate Blind Mode Protocol`,
+          detail: `ESP downhole sensor (PDG/MFM) reading is lost. Startup must follow blind-mode ` +
+            `protocol: (1) Monitor surface FLP and wellhead pressure only, ` +
+            `(2) Calculate PIP indirectly from pump curves + surface data, ` +
+            `(3) Flag for sensor replacement at next ESP changeout.`,
+          basedOn: 'KOC WK Wells Review — Well Category' });
+      }
+
+      if (w.well_category === 'New Commission') {
+        recs.push({ ...base, urgency: 'medium', category: 'Well Condition', categoryIcon: '🆕',
+          title: `New Commission — Pre-Startup Commissioning Checklist`,
+          detail: `Well is newly commissioned. Verify: (1) All commissioning punch list items closed, ` +
+            `(2) HAL commissioning certificate obtained, ` +
+            `(3) Wellhead pressure test completed, ` +
+            `(4) First-well-test PGOR submitted to PE within 7 days of startup. ` +
+            `${w.remarks_review ? 'Remarks: "' + w.remarks_review + '".' : ''}`,
+          basedOn: 'KOC WK Wells Review — Well Category' });
+      }
+
+      /* ══════════════════════════════════════════════════════
+         SECTION D — PUMP STATUS (from KOC review data)
+         ══════════════════════════════════════════════════════ */
+
+      if (w.pump_status_review === 'Downthrust') {
+        recs.push({ ...base, urgency: 'high', category: 'ESP', categoryIcon: '⚡',
+          title: `ESP in Downthrust — Frequency Adjustment Required`,
+          detail: `Last PGOR indicates ESP operating in downthrust condition. ` +
+            `Reduce operating frequency by 3–5 Hz increments until PDP/PIP ratio normalises. ` +
+            `Do not startup at previous set frequency — rebalance pump operating point first. ` +
+            `Monitor motor amps and vibration for the first 24 hours.`,
+          basedOn: 'KOC WK Wells Review — Pump Status' });
+      }
+
+      if (w.pump_status_review === 'Upthrust') {
+        recs.push({ ...base, urgency: 'high', category: 'ESP', categoryIcon: '⚡',
+          title: `ESP in Upthrust — High Liquid Rate / Gas Interference`,
+          detail: `Last PGOR shows ESP in upthrust condition — pump is overloaded with liquid ` +
+            `or gas is causing surge. Increase frequency gradually to stabilise, or check for ` +
+            `gas slug interference at intake. Monitor PIP closely after startup. ` +
+            `If upthrust persists >2 hrs, shut in and contact HAL for pump review.`,
+          basedOn: 'KOC WK Wells Review — Pump Status' });
+      }
+
+      /* ══════════════════════════════════════════════════════
+         SECTION E — EXISTING RULES ENGINE (WO history, ESP,
+                     API gravity, water cut, etc.)
+         ══════════════════════════════════════════════════════ */
+
+      /* E1. Closure reason */
       if (w.reason_label === 'ESP Failure') {
         recs.push({ ...base, urgency: 'critical', category: 'ESP', categoryIcon: '⚡',
           title: 'ESP Failure — Pre-Startup Checks Required',
@@ -264,124 +456,109 @@ export class RecommendationComponent implements OnChanges {
           title: 'GC Capacity Restart — Confirm Throughput Availability',
           detail: `Well was shut in due to ${w.facility} gathering capacity constraint only — ` +
             `no downhole issue. Before restart, confirm ${w.facility} has available ` +
-            `liquid and oil handling quota. No surface or downhole intervention required. ` +
-            `Coordinate with GC operations team for production slot.`,
+            `liquid and oil handling quota. No surface or downhole intervention required.`,
           basedOn: 'Closure Reason' });
       }
 
-      /* ── 2. ESP run life ────────────────────────────────── */
+      /* E2. ESP run life */
       if (w.esp_run_life > 900) {
         recs.push({ ...base, urgency: 'critical', category: 'ESP', categoryIcon: '⚡',
           title: `ESP Run Life Critical — ${w.esp_run_life} Days`,
           detail: `ESP has been running ${w.esp_run_life} days, well beyond the KOC ` +
             `P90 failure threshold (~730 days). Pre-emptive changeout is strongly recommended ` +
-            `before startup to avoid in-service failure at peak production rate. ` +
-            `Contact HAL for pump sizing review using current PGOR data.`,
+            `before startup to avoid in-service failure at peak production rate.`,
           basedOn: 'Equipment Data' });
       } else if (w.esp_run_life > 650) {
         recs.push({ ...base, urgency: 'high', category: 'ESP', categoryIcon: '⚡',
           title: `Long ESP Run Life — ${w.esp_run_life} Days`,
           detail: `ESP run life is ${w.esp_run_life} days (approaching P90 failure window). ` +
             `Plan a changeout within the next 3–6 months. ` +
-            `Monitor motor temperature and vibration closely post-startup. ` +
-            `Ensure a pump unit is on standby in HAL yard.`,
+            `Monitor motor temperature and vibration closely post-startup.`,
           basedOn: 'Equipment Data' });
-      } else if (w.esp_run_life > 450 && w.esp_run_life <= 650) {
+      } else if (w.esp_run_life > 450) {
         recs.push({ ...base, urgency: 'medium', category: 'ESP', categoryIcon: '⚡',
           title: `Monitor ESP Run Life — ${w.esp_run_life} Days`,
           detail: `ESP run life is ${w.esp_run_life} days. ` +
-            `Within acceptable operating range but schedule for regular vibration ` +
-            `and current monitoring. Flag for changeout planning in 6–12 months.`,
+            `Within acceptable range — schedule for regular vibration and current monitoring. ` +
+            `Flag for changeout planning in 6–12 months.`,
           basedOn: 'Equipment Data' });
       }
 
-      /* ── 3. API gravity ─────────────────────────────────── */
-      if (w.api_gravity > 0) {
+      /* E3. API gravity — only if not already covered by well_category rules */
+      if (w.api_gravity > 0 && w.well_category !== 'High Viscous / CT') {
         if (w.api_gravity < 22) {
           recs.push({ ...base, urgency: 'high', category: 'Chemical', categoryIcon: '🧪',
             title: `Heavy Oil (${w.api_gravity}° API) — Wax & Viscosity Risk`,
-            detail: `API gravity of ${w.api_gravity}° indicates heavy crude with elevated pour ` +
-              `point and wax deposition risk. Recommend: ` +
-              `(1) Inject paraffin inhibitor downhole before startup, ` +
-              `(2) Verify flowline heat trace / insulation integrity, ` +
-              `(3) Increase ESP frequency gradually — avoid cold-start at low speed. ` +
-              `Consider downhole chemical injection mandrel installation.`,
+            detail: `API gravity of ${w.api_gravity}° indicates heavy crude. ` +
+              `Inject paraffin inhibitor before startup. Verify flowline heat trace integrity. ` +
+              `Start ESP at low frequency — avoid cold-start at minimum speed.`,
             basedOn: 'API Gravity' });
         } else if (w.api_gravity < 27) {
           recs.push({ ...base, urgency: 'medium', category: 'Chemical', categoryIcon: '🧪',
             title: `Medium-Heavy Oil (${w.api_gravity}° API) — Monitor Viscosity`,
             detail: `API gravity of ${w.api_gravity}° is medium-heavy. Monitor flowline ` +
-              `pressure (FLP) post-startup for signs of wax build-up. ` +
-              `If FLP rises >20 psi above baseline within 72 hrs, initiate ` +
-              `paraffin inhibitor batch treatment. Check separator performance.`,
+              `pressure post-startup for wax build-up. If FLP rises >20 psi above baseline ` +
+              `within 72 hrs, initiate paraffin inhibitor batch treatment.`,
             basedOn: 'API Gravity' });
         } else if (w.api_gravity > 38) {
           recs.push({ ...base, urgency: 'medium', category: 'Gas Handling', categoryIcon: '💨',
             title: `Light Oil (${w.api_gravity}° API) — Verify Gas Handling`,
             detail: `API gravity of ${w.api_gravity}° indicates light crude with potentially ` +
-              `high GOR. Verify ${w.facility} separator capacity for additional gas load. ` +
-              `Check ESP gas handler stage performance at expected production rate. ` +
-              `Monitor pump intake pressure (PIP) for gas interference signatures.`,
+              `high GOR. Verify ${w.facility} separator gas handling capacity. ` +
+              `Monitor PIP for gas interference signatures post-startup.`,
             basedOn: 'API Gravity' });
         }
       }
 
-      /* ── 4. Water cut ───────────────────────────────────── */
+      /* E4. Water cut */
       if (w.latest_wc > 85) {
         recs.push({ ...base, urgency: 'high', category: 'Production', categoryIcon: '💧',
           title: `Very High Water Cut — ${w.latest_wc.toFixed(0)}% WC`,
-          detail: `Water cut of ${w.latest_wc.toFixed(1)}% requires careful pump sizing. ` +
-            `Verify ESP is rated for current liquid rate at actual WC. ` +
-            `Confirm ${w.facility} water disposal/injection capacity is not at limit. ` +
-            `Run pump performance curve check against allowable rate of ${w.allowable_rate.toFixed(0)} BLPD.`,
+          detail: `Water cut of ${w.latest_wc.toFixed(1)}% — verify ESP is rated for ` +
+            `current liquid rate at actual WC. Confirm ${w.facility} water disposal capacity. ` +
+            `Pump performance curve check against allowable ${w.allowable_rate.toFixed(0)} BLPD.`,
           basedOn: 'Production Data' });
       } else if (w.latest_wc > 65) {
         recs.push({ ...base, urgency: 'medium', category: 'Production', categoryIcon: '💧',
           title: `High Water Cut — ${w.latest_wc.toFixed(0)}% WC`,
           detail: `Water cut of ${w.latest_wc.toFixed(1)}% — verify pump operating point ` +
-            `is on the correct portion of the pump curve for liquid rate ` +
-            `${w.latest_liquid.toFixed(0)} BLPD. ` +
-            `Monitor PDP and PIP ratio after startup for pump wear indicators.`,
+            `for liquid rate ${w.latest_liquid.toFixed(0)} BLPD. ` +
+            `Monitor PDP/PIP ratio after startup for pump wear indicators.`,
           basedOn: 'Production Data' });
       }
 
-      /* ── 5. WO history analysis ─────────────────────────── */
+      /* E5. WO history count */
       if (w.wo_count >= 6) {
-        const types = wos.map(wo => (wo.activity_type || '').toUpperCase());
-        const rigCount     = types.filter(t => t.includes('WORKOVER')).length;
+        const types      = wos.map(wo => (wo.activity_type || '').toUpperCase());
+        const rigCount   = types.filter(t => t.includes('WORKOVER')).length;
         const riglessCount = types.filter(t => t.includes('RIGLESS')).length;
         recs.push({ ...base, urgency: 'high', category: 'Workover', categoryIcon: '🔧',
           title: `High WO Frequency — ${w.wo_count} Workovers on Record`,
           detail: `${w.wo_count} workovers recorded (${rigCount} rig WOs, ${riglessCount} rigless). ` +
-            `Recurring interventions suggest an underlying mechanical or reservoir issue. ` +
-            `Conduct root-cause analysis before committing to startup. ` +
-            `Review last WO report for unresolved findings.`,
+            `Recurring interventions suggest underlying mechanical or reservoir issue. ` +
+            `Conduct root-cause analysis before committing to startup.`,
           basedOn: 'WO History' });
-      } else if (w.wo_count >= 3 && w.wo_count < 6) {
+      } else if (w.wo_count >= 3) {
         recs.push({ ...base, urgency: 'medium', category: 'Workover', categoryIcon: '🔧',
           title: `Multiple WO History — ${w.wo_count} Interventions`,
           detail: `${w.wo_count} workover interventions on record. Review last WO report ` +
-            `to ensure all identified issues were resolved. ` +
-            `Flag well for enhanced monitoring during first 30 days of production.`,
+            `to ensure all issues were resolved. Flag for enhanced monitoring first 30 days.`,
           basedOn: 'WO History' });
       }
 
-      /* ── 6. Sidetrack in WO history ─────────────────────── */
+      /* E6. Sidetrack history */
       const hasST = wos.some(wo =>
         (wo.activity_type || '').toUpperCase().includes('SIDETRACK') ||
         w.well_name.includes('ST'));
       if (hasST) {
         recs.push({ ...base, urgency: 'medium', category: 'Reservoir', categoryIcon: '📐',
           title: 'Sidetrack Well — Verify Current Completion Integrity',
-          detail: `Well has sidetrack completion history. Before startup: ` +
-            `(1) Confirm the active lateral and perforation interval in WELLVIEW, ` +
-            `(2) Verify cement integrity of the original wellbore is not communicating, ` +
-            `(3) Ensure tubing hanger and packer are holding — run pressure test if last ` +
-            `sidetrack was >2 years ago.`,
+          detail: `Well has sidetrack history. Confirm active lateral and perforation interval, ` +
+            `cement integrity, and packer hold before startup.`,
           basedOn: 'WO History / Well Name' });
       }
 
-      /* ── 7. Recent WO < 120 days ────────────────────────── */
+      /* E7. Recent WO < 120 days */
       if (wos.length > 0) {
         const lastWO      = wos[0];
         const daysSinceWO = this.daysSince(lastWO.end_date || lastWO.start_date || '');
@@ -389,48 +566,44 @@ export class RecommendationComponent implements OnChanges {
           recs.push({ ...base, urgency: 'medium', category: 'Verification', categoryIcon: '✅',
             title: `Recent WO — Verify Post-WO Performance Target`,
             detail: `Last workover (${lastWO.activity_type || 'WO'}) completed ` +
-              `${daysSinceWO} days ago. Verify that post-WO production target was ` +
-              `achieved and all punch list items were closed. ` +
-              `Obtain HAL completion report sign-off before declaring well ready.`,
+              `${daysSinceWO} days ago. Confirm post-WO production target achieved ` +
+              `and all punch list items closed before declaring well ready.`,
             basedOn: 'WO History' });
         }
       }
 
-      /* ── 8. Stale PGOR (>180 days) ──────────────────────── */
+      /* E8. Stale PGOR */
       const pgorAge = this.daysSince(w.latest_pgor_date);
       if (pgorAge > 365) {
         recs.push({ ...base, urgency: 'medium', category: 'Production', categoryIcon: '📊',
           title: `Stale PGOR — ${pgorAge} Days Since Last Well Test`,
           detail: `Last PGOR test was ${w.latest_pgor_date || 'unknown'} (${pgorAge} days ago). ` +
-            `Production forecast may be inaccurate. Schedule a well test within 14 days ` +
-            `of startup to update the PGOR file and validate expected oil rate ` +
+            `Schedule a well test within 14 days of startup to validate expected oil rate ` +
             `of ${w.expected_oil.toFixed(0)} BOPD.`,
           basedOn: 'Production Data' });
-      } else if (pgorAge > 180 && pgorAge <= 365) {
+      } else if (pgorAge > 180) {
         recs.push({ ...base, urgency: 'low', category: 'Production', categoryIcon: '📊',
           title: `PGOR Approaching Expiry — ${pgorAge} Days Old`,
           detail: `PGOR is ${pgorAge} days old. Schedule a fresh well test within ` +
-            `30 days of startup to confirm well performance. Last recorded: ` +
-            `${w.latest_oil.toFixed(0)} BOPD oil, ${w.latest_wc.toFixed(0)}% WC.`,
+            `30 days of startup. Last recorded: ${w.latest_oil.toFixed(0)} BOPD, ${w.latest_wc.toFixed(0)}% WC.`,
           basedOn: 'Production Data' });
       }
 
-      /* ── 9. P5 Hold wells ────────────────────────────────── */
+      /* E9. P5 Hold wells */
       if (w.priority === 'P5') {
         recs.push({ ...base, urgency: 'low', category: 'Reservoir', categoryIcon: '📋',
           title: 'P5 Well — RE Assessment Required Before Startup',
-          detail: `Well is classified P5 (Hold/RE Assessment). Do not proceed with ` +
-            `startup planning until Reservoir Engineering team completes economic ` +
-            `and technical review. RE study should address: reservoir pressure support, ` +
-            `abandonment risk, and incremental recovery justification.`,
+          detail: `Well is classified P5 (Hold/RE Assessment). Do not proceed with startup ` +
+            `planning until Reservoir Engineering completes economic and technical review.`,
           basedOn: 'Priority Score' });
       }
 
     }
 
-    /* Sort: critical → high → medium → low, then by well name */
+    /* Sort: review cards float to top within their urgency tier, then by well name */
     return recs.sort((a, b) =>
       URGENCY_ORDER[a.urgency] - URGENCY_ORDER[b.urgency] ||
+      (b.isReview ? 1 : 0) - (a.isReview ? 1 : 0) ||
       a.wellName.localeCompare(b.wellName));
   }
 
@@ -440,6 +613,8 @@ export class RecommendationComponent implements OnChanges {
     if (this.categoryFilter) r = r.filter(x => x.category === this.categoryFilter);
     if (this.gcFilter)       r = r.filter(x => x.facility === this.gcFilter);
     if (this.priFilter)      r = r.filter(x => x.priority === this.priFilter);
+    if (this.sourceFilter === 'review') r = r.filter(x => x.isReview);
+    if (this.sourceFilter === 'engine') r = r.filter(x => !x.isReview);
     if (this.search)         r = r.filter(x =>
       x.wellName.toLowerCase().includes(this.search.toLowerCase()) ||
       x.title.toLowerCase().includes(this.search.toLowerCase()));
