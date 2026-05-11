@@ -1,6 +1,6 @@
 import { Injectable, signal, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Well, Kpis, WellData, Workover } from '../models/well.model';
+import { Well, Kpis, WellData, Workover, WellTest } from '../models/well.model';
 
 @Injectable({ providedIn: 'root' })
 export class DataService {
@@ -9,6 +9,7 @@ export class DataService {
   wells    = signal<Well[]>([]);
   kpis     = signal<Kpis | null>(null);
   woMap    = signal<Record<string, Workover[]>>({});
+  testMap  = signal<Record<string, WellTest[]>>({});
   loaded   = signal(false);
 
   load() {
@@ -19,6 +20,9 @@ export class DataService {
     });
     this.http.get<Record<string, Workover[]>>('assets/data/workovers.json').subscribe(d => {
       this.woMap.set(d);
+    });
+    this.http.get<Record<string, WellTest[]>>('assets/data/well_tests.json').subscribe(d => {
+      this.testMap.set(d);
     });
   }
 }

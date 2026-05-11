@@ -9,11 +9,11 @@ import { LogicChartComponent }       from './components/logic-chart.component';
 import { WellTableComponent }        from './components/well-table.component';
 import { WellDetailComponent }       from './components/well-detail.component';
 import { WellSequencingComponent }   from './components/well-sequencing.component';
-import { RtSurveillanceComponent }   from './components/rt-surveillance.component';
+import { WellPerformanceComponent }  from './components/well-performance.component';
 import { RecommendationComponent }   from './components/recommendation.component';
 import { SplashComponent }           from './components/splash.component';
 
-type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'rt' | 'recommend';
+type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'performance' | 'recommend';
 type PriorityMode = 'v1' | 'v2';
 
 @Component({
@@ -23,7 +23,7 @@ type PriorityMode = 'v1' | 'v2';
     CommonModule, FormsModule,
     WellMapComponent, PriorityChartComponent, LogicChartComponent,
     WellTableComponent, WellDetailComponent, WellSequencingComponent,
-    RtSurveillanceComponent, RecommendationComponent, SplashComponent
+    WellPerformanceComponent, RecommendationComponent, SplashComponent
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -71,8 +71,8 @@ type PriorityMode = 'v1' | 'v2';
     </nav>
 
     <!-- ── FULL-WIDTH TABS ── -->
-    <app-rt-surveillance *ngIf="activeTab()==='rt'"
-      [wells]="ds.wells()" class="seq-full"/>
+    <app-well-performance *ngIf="activeTab()==='performance'"
+      [wells]="ds.wells()" [testMap]="ds.testMap()" class="seq-full"/>
     <app-recommendation  *ngIf="activeTab()==='recommend'"
       [wells]="ds.wells()" [woMap]="ds.woMap()" class="seq-full"/>
 
@@ -408,7 +408,7 @@ export class AppComponent implements OnInit {
     { id: 'orient'    as Tab, num:'2', label:'Orient',        sub:'· Cause & Severity' },
     { id: 'decide'    as Tab, num:'3', label:'Decide',        sub:'· Priority & Plan' },
     { id: 'act'       as Tab, num:'4', label:'Act',           sub:'· Queue & Sequencing' },
-    { id: 'rt'        as Tab, num:'5', label:'Post Start-In Surveillance',sub:'· ESP Telemetry' },
+    { id: 'performance' as Tab, num:'5', label:'Well Performance', sub:'· Test History Charts' },
     { id: 'recommend' as Tab, num:'6', label:'Recommendation',sub:'· Intervention Guide' },
   ];
 

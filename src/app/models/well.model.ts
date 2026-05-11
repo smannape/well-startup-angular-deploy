@@ -48,6 +48,21 @@ export interface Workover {
   purpose: string; summary: string;
 }
 
+export interface WellTest {
+  date: string;
+  wh_press: number | null;
+  wh_temp: number | null;
+  flow_line_pressure: number | null;
+  liquid_daily_rate: number | null;
+  oil_daily_rate: number | null;
+  gas_daily_rate: number | null;
+  water_cut_percent: number | null;
+  gas_oil_ratio: number | null;
+  pip: number | null;
+  pdp: number | null;
+  frequency: number | null;
+}
+
 export const PRIORITY_COLORS: Record<string, string> = {
   P1: '#ffb83d', P2: '#ff9849', P3: '#cf6b3a', P4: '#8a4a2b', P5: '#4a3a30'
 };
