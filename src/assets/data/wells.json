@@ -311,7 +311,7 @@
     {
       "well_name": "UG-0163ST1",
       "field": "UG",
-      "reservoir": "Mauddud Oolite",
+      "reservoir": "Minagish Oolite",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -364,7 +364,7 @@
     {
       "well_name": "UG-0112ST1",
       "field": "UG",
-      "reservoir": "Mauddud Oolite",
+      "reservoir": "Minagish Oolite",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -894,7 +894,7 @@
     {
       "well_name": "UG-0370",
       "field": "UG",
-      "reservoir": "Mauddud Oolite",
+      "reservoir": "Minagish Oolite",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1424,7 +1424,7 @@
     {
       "well_name": "UG-0378ST1",
       "field": "UG",
-      "reservoir": "Mauddud Oolite",
+      "reservoir": "Minagish Oolite",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1954,7 +1954,7 @@
     {
       "well_name": "UG-0164ST1",
       "field": "UG",
-      "reservoir": "Mauddud Oolite",
+      "reservoir": "Minagish Oolite",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2431,7 +2431,7 @@
     {
       "well_name": "UG-0165ST1",
       "field": "UG",
-      "reservoir": "Mauddud Oolite",
+      "reservoir": "Minagish Oolite",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3332,7 +3332,7 @@
     {
       "well_name": "UG-0367",
       "field": "UG",
-      "reservoir": "Mauddud Oolite",
+      "reservoir": "Minagish Oolite",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4975,7 +4975,7 @@
     {
       "well_name": "UG-0102ST2",
       "field": "UG",
-      "reservoir": "Mauddud Oolite",
+      "reservoir": "Minagish Oolite",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5187,7 +5187,7 @@
     {
       "well_name": "UG-0363ST1",
       "field": "UG",
-      "reservoir": "Mauddud Oolite",
+      "reservoir": "Minagish Oolite",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5452,7 +5452,7 @@
     {
       "well_name": "UG-0153ST1",
       "field": "UG",
-      "reservoir": "Mauddud Oolite",
+      "reservoir": "Minagish Oolite",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
