@@ -64,7 +64,10 @@ import { Well, Workover, PRIORITY_COLORS } from '../models/well.model';
         <span class="k">ESP Run Life</span>
         <span class="v esp-cell">
           {{well.esp_run_life}} days
-          <span *ngIf="well.esp_run_life > 700" class="esp-blinker" title="ESP run life exceeds 700 days"></span>
+          <span *ngIf="well.esp_run_life > 700" class="esp-blinker red"
+            title="ESP run life exceeds 700 days — review for replacement"></span>
+          <span *ngIf="well.esp_run_life > 0 && well.esp_run_life < 500" class="esp-blinker green"
+            title="ESP run life below 500 days — healthy / newly installed"></span>
         </span>
         <span class="k">Install Date</span><span class="v">{{well.install_date}}</span>
         <span class="k">Last Activity</span><span class="v">{{well.last_imp_activity}}</span>
@@ -140,18 +143,29 @@ import { Well, Workover, PRIORITY_COLORS } from '../models/well.model';
     .trend-up   { color:#6dd47e; }
     .trend-down { color:#ef5a3a; }
 
-    /* ESP run life > 700 days — red blinker */
+    /* ESP run-life status dots — red >700d, green <500d */
     .esp-cell { display:inline-flex; align-items:center; gap:8px; }
     .esp-blinker {
-      width:10px; height:10px; border-radius:50%; background:#ef3a2a;
-      box-shadow:0 0 0 0 rgba(239,58,42,0.7);
-      animation: esp-blink 1.1s infinite;
+      width:10px; height:10px; border-radius:50%;
       display:inline-block;
     }
-    @keyframes esp-blink {
+    .esp-blinker.red {
+      background:#ef3a2a;
+      animation: esp-blink-red 1.1s infinite;
+    }
+    .esp-blinker.green {
+      background:#6dd47e;
+      animation: esp-blink-green 1.3s infinite;
+    }
+    @keyframes esp-blink-red {
       0%   { box-shadow:0 0 0 0 rgba(239,58,42,0.85); opacity:1;   }
       70%  { box-shadow:0 0 0 10px rgba(239,58,42,0);  opacity:.55; }
       100% { box-shadow:0 0 0 0 rgba(239,58,42,0);     opacity:1;   }
+    }
+    @keyframes esp-blink-green {
+      0%   { box-shadow:0 0 0 0 rgba(109,212,126,0.85); opacity:1;   }
+      70%  { box-shadow:0 0 0 10px rgba(109,212,126,0);  opacity:.55; }
+      100% { box-shadow:0 0 0 0 rgba(109,212,126,0);     opacity:1;   }
     }
   `]
 })

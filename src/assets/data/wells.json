@@ -32,7 +32,7 @@
     {
       "well_name": "MN-0203",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -83,7 +83,7 @@
     {
       "well_name": "MN-0205ST7",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -134,7 +134,7 @@
     {
       "well_name": "MN-0331ST2",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -185,7 +185,7 @@
     {
       "well_name": "MN-0359ST1",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -236,7 +236,7 @@
     {
       "well_name": "MN-0326",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -287,7 +287,7 @@
     {
       "well_name": "UG-0163ST1",
       "field": "UG",
-      "reservoir": "Minagish Oolite",
+      "reservoir": "MO",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -338,7 +338,7 @@
     {
       "well_name": "UG-0112ST1",
       "field": "UG",
-      "reservoir": "Minagish Oolite",
+      "reservoir": "MO",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -389,7 +389,7 @@
     {
       "well_name": "MN-0307",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -440,7 +440,7 @@
     {
       "well_name": "UG-0271H",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -491,7 +491,7 @@
     {
       "well_name": "UG-0110ST3",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -542,7 +542,7 @@
     {
       "well_name": "UG-0377ST1",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "ESP Failure",
       "al_method": "ESP",
@@ -593,7 +593,7 @@
     {
       "well_name": "UG-0356",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -644,7 +644,7 @@
     {
       "well_name": "UG-0119ST1",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -695,7 +695,7 @@
     {
       "well_name": "UG-0301HST2",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -746,7 +746,7 @@
     {
       "well_name": "UG-0331ST1",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -797,7 +797,7 @@
     {
       "well_name": "UG-0277H",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -848,7 +848,7 @@
     {
       "well_name": "UG-0370",
       "field": "UG",
-      "reservoir": "Minagish Oolite",
+      "reservoir": "MO",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -899,7 +899,7 @@
     {
       "well_name": "UG-0111ST1",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -950,7 +950,7 @@
     {
       "well_name": "UG-0233HST1",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1001,7 +1001,7 @@
     {
       "well_name": "MN-0208",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1052,7 +1052,7 @@
     {
       "well_name": "UG-0221H",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1103,7 +1103,7 @@
     {
       "well_name": "MN-0160ST3",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1154,7 +1154,7 @@
     {
       "well_name": "MN-0230H",
       "field": "MN",
-      "reservoir": "Wara Sand",
+      "reservoir": "WS",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1205,7 +1205,7 @@
     {
       "well_name": "MN-0239",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1256,7 +1256,7 @@
     {
       "well_name": "UG-0228ST1",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1307,7 +1307,7 @@
     {
       "well_name": "UG-0391",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1358,7 +1358,7 @@
     {
       "well_name": "UG-0378ST1",
       "field": "UG",
-      "reservoir": "Minagish Oolite",
+      "reservoir": "MO",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1409,7 +1409,7 @@
     {
       "well_name": "MN-0394",
       "field": "MN",
-      "reservoir": "Wara Sand",
+      "reservoir": "WS",
       "facility": "GC18",
       "reason_label": "Operator S/D",
       "al_method": "ESP",
@@ -1460,7 +1460,7 @@
     {
       "well_name": "MN-0379ST1",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1511,7 +1511,7 @@
     {
       "well_name": "MN-0238",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1562,7 +1562,7 @@
     {
       "well_name": "MN-0070",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1613,7 +1613,7 @@
     {
       "well_name": "MN-0312",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1664,7 +1664,7 @@
     {
       "well_name": "MN-0353",
       "field": "MN",
-      "reservoir": "Mauddud Frs",
+      "reservoir": "MF",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1715,7 +1715,7 @@
     {
       "well_name": "MN-0204H",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1766,7 +1766,7 @@
     {
       "well_name": "MN-0001",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1817,7 +1817,7 @@
     {
       "well_name": "MN-0216",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1868,7 +1868,7 @@
     {
       "well_name": "UG-0164ST1",
       "field": "UG",
-      "reservoir": "Minagish Oolite",
+      "reservoir": "MO",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1919,7 +1919,7 @@
     {
       "well_name": "UG-0324ST2",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -1970,7 +1970,7 @@
     {
       "well_name": "MN-0368",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2021,7 +2021,7 @@
     {
       "well_name": "UG-0259",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2072,7 +2072,7 @@
     {
       "well_name": "UG-0266",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2123,7 +2123,7 @@
     {
       "well_name": "MN-0311",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2174,7 +2174,7 @@
     {
       "well_name": "MN-0354",
       "field": "MN",
-      "reservoir": "Mauddud Frs",
+      "reservoir": "MF",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2225,7 +2225,7 @@
     {
       "well_name": "MN-0325",
       "field": "MN",
-      "reservoir": "Burgan Sand",
+      "reservoir": "BS",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2276,7 +2276,7 @@
     {
       "well_name": "UG-0219",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2327,7 +2327,7 @@
     {
       "well_name": "UG-0165ST1",
       "field": "UG",
-      "reservoir": "Minagish Oolite",
+      "reservoir": "MO",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2378,7 +2378,7 @@
     {
       "well_name": "UG-0179",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2429,7 +2429,7 @@
     {
       "well_name": "UG-0190",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2480,7 +2480,7 @@
     {
       "well_name": "UG-0395",
       "field": "UG",
-      "reservoir": "Ratawi Lst",
+      "reservoir": "RL",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2531,7 +2531,7 @@
     {
       "well_name": "UG-0205",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2582,7 +2582,7 @@
     {
       "well_name": "MN-0338",
       "field": "MN",
-      "reservoir": "Wara Sand",
+      "reservoir": "WS",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2633,7 +2633,7 @@
     {
       "well_name": "MN-0350",
       "field": "MN",
-      "reservoir": "Burgan Sand",
+      "reservoir": "BS",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2684,7 +2684,7 @@
     {
       "well_name": "MN-0268ST1",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2735,7 +2735,7 @@
     {
       "well_name": "MN-0342ST1",
       "field": "MN",
-      "reservoir": "Mauddud Frs",
+      "reservoir": "MF",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "PCP",
@@ -2786,7 +2786,7 @@
     {
       "well_name": "MN-0337",
       "field": "MN",
-      "reservoir": "Wara Sand",
+      "reservoir": "WS",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2837,7 +2837,7 @@
     {
       "well_name": "MN-0235",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2888,7 +2888,7 @@
     {
       "well_name": "MN-0222H",
       "field": "MN",
-      "reservoir": "Wara Sand",
+      "reservoir": "WS",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2939,7 +2939,7 @@
     {
       "well_name": "UG-0017",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -2990,7 +2990,7 @@
     {
       "well_name": "UG-0196",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3041,7 +3041,7 @@
     {
       "well_name": "MN-0386",
       "field": "MN",
-      "reservoir": "Mauddud Frs",
+      "reservoir": "MF",
       "facility": "GC18",
       "reason_label": "ESP Failure",
       "al_method": "ESP",
@@ -3092,7 +3092,7 @@
     {
       "well_name": "UG-0246",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3143,7 +3143,7 @@
     {
       "well_name": "MN-0318H",
       "field": "MN",
-      "reservoir": "Mauddud Frs",
+      "reservoir": "MF",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3194,7 +3194,7 @@
     {
       "well_name": "UG-0367",
       "field": "UG",
-      "reservoir": "Minagish Oolite",
+      "reservoir": "MO",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3245,7 +3245,7 @@
     {
       "well_name": "MN-0243H",
       "field": "MN",
-      "reservoir": "Mauddud Frs",
+      "reservoir": "MF",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3296,7 +3296,7 @@
     {
       "well_name": "UG-0074ST1",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3347,7 +3347,7 @@
     {
       "well_name": "MN-0339",
       "field": "MN",
-      "reservoir": "Wara Sand",
+      "reservoir": "WS",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3398,7 +3398,7 @@
     {
       "well_name": "MN-0072",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3449,7 +3449,7 @@
     {
       "well_name": "MN-0257H",
       "field": "MN",
-      "reservoir": "Mauddud Frs",
+      "reservoir": "MF",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3500,7 +3500,7 @@
     {
       "well_name": "MN-0349",
       "field": "MN",
-      "reservoir": "Wara Sand",
+      "reservoir": "WS",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3551,7 +3551,7 @@
     {
       "well_name": "UG-0100",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3602,7 +3602,7 @@
     {
       "well_name": "MN-0291HST2",
       "field": "MN",
-      "reservoir": "Burgan Sand",
+      "reservoir": "BS",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3653,7 +3653,7 @@
     {
       "well_name": "MN-0316H",
       "field": "MN",
-      "reservoir": "Mauddud Frs",
+      "reservoir": "MF",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3704,7 +3704,7 @@
     {
       "well_name": "UG-0292H",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3755,7 +3755,7 @@
     {
       "well_name": "UG-0101",
       "field": "UG",
-      "reservoir": "Ratawi Lst",
+      "reservoir": "RL",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3806,7 +3806,7 @@
     {
       "well_name": "MN-0119ST1",
       "field": "MN",
-      "reservoir": "Burgan Sand",
+      "reservoir": "BS",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3857,7 +3857,7 @@
     {
       "well_name": "MN-0168",
       "field": "MN",
-      "reservoir": "Upper Mauddud",
+      "reservoir": "UM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3908,7 +3908,7 @@
     {
       "well_name": "MN-0157H",
       "field": "MN",
-      "reservoir": "Wara Sand",
+      "reservoir": "WS",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -3959,7 +3959,7 @@
     {
       "well_name": "UG-0369",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4010,7 +4010,7 @@
     {
       "well_name": "UG-0178",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4061,7 +4061,7 @@
     {
       "well_name": "UG-0183H",
       "field": "UG",
-      "reservoir": "Ratawi Lst",
+      "reservoir": "RL",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4112,7 +4112,7 @@
     {
       "well_name": "MN-0320",
       "field": "MN",
-      "reservoir": "Wara Sand",
+      "reservoir": "WS",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4163,7 +4163,7 @@
     {
       "well_name": "MN-0009",
       "field": "MN",
-      "reservoir": "Burgan Sand",
+      "reservoir": "BS",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4214,7 +4214,7 @@
     {
       "well_name": "UG-0214",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4265,7 +4265,7 @@
     {
       "well_name": "UG-0191",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4316,7 +4316,7 @@
     {
       "well_name": "UG-0211",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4367,7 +4367,7 @@
     {
       "well_name": "MN-0308",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4418,7 +4418,7 @@
     {
       "well_name": "UG-0078",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4469,7 +4469,7 @@
     {
       "well_name": "MN-0048ST1",
       "field": "MN",
-      "reservoir": "Upper Mauddud",
+      "reservoir": "UM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4520,7 +4520,7 @@
     {
       "well_name": "UG-0187",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4571,7 +4571,7 @@
     {
       "well_name": "MN-0196H",
       "field": "MN",
-      "reservoir": "Burgan Sand",
+      "reservoir": "BS",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4622,7 +4622,7 @@
     {
       "well_name": "UG-0116HST1",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4673,7 +4673,7 @@
     {
       "well_name": "UG-0186H",
       "field": "UG",
-      "reservoir": "Ratawi Lst",
+      "reservoir": "RL",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4724,7 +4724,7 @@
     {
       "well_name": "UG-0293ST2",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4775,7 +4775,7 @@
     {
       "well_name": "UG-0102ST2",
       "field": "UG",
-      "reservoir": "Minagish Oolite",
+      "reservoir": "MO",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4826,7 +4826,7 @@
     {
       "well_name": "MN-0363",
       "field": "MN",
-      "reservoir": "Burgan Sand",
+      "reservoir": "BS",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4877,7 +4877,7 @@
     {
       "well_name": "UG-0091",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4928,7 +4928,7 @@
     {
       "well_name": "UG-0394ST2",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -4979,7 +4979,7 @@
     {
       "well_name": "UG-0363ST1",
       "field": "UG",
-      "reservoir": "Minagish Oolite",
+      "reservoir": "MO",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5030,7 +5030,7 @@
     {
       "well_name": "MN-0355",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5081,7 +5081,7 @@
     {
       "well_name": "UG-0097",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5132,7 +5132,7 @@
     {
       "well_name": "UG-0031",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5183,7 +5183,7 @@
     {
       "well_name": "UG-0260ST1",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5234,7 +5234,7 @@
     {
       "well_name": "UG-0153ST1",
       "field": "UG",
-      "reservoir": "Minagish Oolite",
+      "reservoir": "MO",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5285,7 +5285,7 @@
     {
       "well_name": "MN-0019",
       "field": "MN",
-      "reservoir": "Wara Sand",
+      "reservoir": "WS",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5336,7 +5336,7 @@
     {
       "well_name": "MN-0052",
       "field": "MN",
-      "reservoir": "Wara Sand",
+      "reservoir": "WS",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5387,7 +5387,7 @@
     {
       "well_name": "MN-0170",
       "field": "MN",
-      "reservoir": "Wara Sand",
+      "reservoir": "WS",
       "facility": "GC18",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5438,7 +5438,7 @@
     {
       "well_name": "MN-0175HST1",
       "field": "MN",
-      "reservoir": "Mauddud Frs",
+      "reservoir": "MF",
       "facility": "GC18",
       "reason_label": "Workover Required",
       "al_method": "ESP",
@@ -5489,7 +5489,7 @@
     {
       "well_name": "MN-0279",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC28",
       "reason_label": "Workover Required",
       "al_method": "ESP",
@@ -5534,7 +5534,7 @@
     {
       "well_name": "UG-0011",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5585,7 +5585,7 @@
     {
       "well_name": "UG-0038AHST1",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5636,7 +5636,7 @@
     {
       "well_name": "UG-0040",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5687,7 +5687,7 @@
     {
       "well_name": "UG-0086",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5738,7 +5738,7 @@
     {
       "well_name": "UG-0093",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "ESP Failure",
       "al_method": "ESP",
@@ -5789,7 +5789,7 @@
     {
       "well_name": "UG-0103",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5840,7 +5840,7 @@
     {
       "well_name": "UG-0172H",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5885,7 +5885,7 @@
     {
       "well_name": "UG-0180",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -5936,7 +5936,7 @@
     {
       "well_name": "UG-0371",
       "field": "UG",
-      "reservoir": "Ratawi Lst",
+      "reservoir": "RL",
       "facility": "GC27",
       "reason_label": "ESP Failure",
       "al_method": "ESP",
@@ -5987,7 +5987,7 @@
     {
       "well_name": "UG-0372",
       "field": "UG",
-      "reservoir": "Ratawi Lst",
+      "reservoir": "RL",
       "facility": "GC17",
       "reason_label": "ESP Failure",
       "al_method": "ESP",
@@ -6038,7 +6038,7 @@
     {
       "well_name": "MN-0382ST1",
       "field": "MN",
-      "reservoir": "Burgan Sand",
+      "reservoir": "BS",
       "facility": "GC28",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -6089,7 +6089,7 @@
     {
       "well_name": "UG-0085",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "GC Capacity",
       "al_method": "ESP",
@@ -6140,7 +6140,7 @@
     {
       "well_name": "UG-0092",
       "field": "UG",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC27",
       "reason_label": "Under Review",
       "al_method": "WI",
@@ -6185,7 +6185,7 @@
     {
       "well_name": "MN-0023",
       "field": "MN",
-      "reservoir": "Mauddud",
+      "reservoir": "MM",
       "facility": "GC17",
       "reason_label": "Operator S/D",
       "al_method": "ESP",

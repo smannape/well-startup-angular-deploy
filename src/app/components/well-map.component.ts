@@ -76,6 +76,16 @@ const GC_LOCATIONS: { id: string; name: string; lat: number; lon: number }[] = [
       text-shadow:0 0 3px #000; }
     .legend-sep { padding-left:6px; border-left:1px solid var(--border-1); }
 
+    /* Blink P1 (green) wells to call them out as best producers */
+    :host ::ng-deep .leaflet-overlay-pane path.p1-blink {
+      animation: p1-pulse 1.4s ease-in-out infinite;
+      filter: drop-shadow(0 0 4px #6dd47ecc);
+    }
+    @keyframes p1-pulse {
+      0%, 100% { stroke-opacity: 1;   fill-opacity: 0.9; }
+      50%      { stroke-opacity: 0.3; fill-opacity: 0.3; }
+    }
+
     /* Custom GC marker icon */
     :host ::ng-deep .gc-marker {
       background:transparent; border:none; pointer-events:auto;
@@ -167,6 +177,7 @@ export class WellMapComponent implements OnChanges, AfterViewInit {
         weight: isSelected ? 2.5 : 1,
         fillColor: color,
         fillOpacity: muted ? 0.18 : 0.85,
+        className: pri === 'P1' && !muted ? 'p1-blink' : '',
       });
 
       const popupHtml = `

@@ -108,8 +108,11 @@ import { Well, PRIORITY_COLORS } from '../models/well.model';
           </div>
 
           <div class="card-footer">
-            <span class="esp-badge" *ngIf="(w.esp_run_life || 0) > 700">
-              <span class="blink"></span>ESP {{w.esp_run_life}} d
+            <span class="esp-badge red" *ngIf="(w.esp_run_life || 0) > 700">
+              <span class="blink red"></span>ESP {{w.esp_run_life}} d
+            </span>
+            <span class="esp-badge green" *ngIf="(w.esp_run_life || 0) > 0 && (w.esp_run_life || 0) < 500">
+              <span class="blink green"></span>ESP {{w.esp_run_life}} d
             </span>
             <span class="profile-badge">{{w.priority_label}}</span>
           </div>
@@ -196,17 +199,23 @@ import { Well, PRIORITY_COLORS } from '../models/well.model';
       border-top:1px solid var(--border-1); }
     .esp-badge { display:inline-flex; align-items:center; gap:5px;
       font-size:9px; padding:2px 6px; border-radius:2px; font-weight:600;
-      letter-spacing:.08em; background:#3a1410; color:#ef5a3a;
-      border:1px solid #ef5a3a55; font-family:"JetBrains Mono",monospace; }
+      letter-spacing:.08em; font-family:"JetBrains Mono",monospace; }
+    .esp-badge.red   { background:#3a1410; color:#ef5a3a; border:1px solid #ef5a3a55; }
+    .esp-badge.green { background:#0f2a14; color:#6dd47e; border:1px solid #6dd47e55; }
     .esp-badge .blink {
-      width:6px; height:6px; border-radius:50%; background:#ef3a2a;
-      box-shadow:0 0 0 0 rgba(239,58,42,0.7);
-      animation: esp-blink 1.1s infinite;
+      width:6px; height:6px; border-radius:50%;
     }
-    @keyframes esp-blink {
+    .esp-badge .blink.red   { background:#ef3a2a; animation: esp-blink-red 1.1s infinite; }
+    .esp-badge .blink.green { background:#6dd47e; animation: esp-blink-green 1.3s infinite; }
+    @keyframes esp-blink-red {
       0%   { box-shadow:0 0 0 0 rgba(239,58,42,0.85); opacity:1;   }
       70%  { box-shadow:0 0 0 6px rgba(239,58,42,0);  opacity:.55; }
       100% { box-shadow:0 0 0 0 rgba(239,58,42,0);     opacity:1;   }
+    }
+    @keyframes esp-blink-green {
+      0%   { box-shadow:0 0 0 0 rgba(109,212,126,0.85); opacity:1;   }
+      70%  { box-shadow:0 0 0 6px rgba(109,212,126,0);  opacity:.55; }
+      100% { box-shadow:0 0 0 0 rgba(109,212,126,0);     opacity:1;   }
     }
     .profile-badge { font-size:9px; padding:2px 6px; border-radius:2px;
       letter-spacing:.05em; color:var(--beige-300); background:var(--bg-3);

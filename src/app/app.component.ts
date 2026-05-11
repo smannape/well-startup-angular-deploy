@@ -359,7 +359,7 @@ export class AppComponent implements OnInit {
   ds = inject(DataService);
 
   showSplash    = signal(true);
-  activeTab     = signal<Tab>('decide');
+  activeTab     = signal<Tab>('observe');
   selectedWell  = signal('');
   priorityFilter  = signal('');
   facilityFilter  = signal('');
