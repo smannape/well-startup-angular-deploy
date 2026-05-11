@@ -100,14 +100,13 @@ export class WellMapComponent implements OnChanges, AfterViewInit {
   @Input() wells: Well[] = [];
   @Input() selectedWell = '';
   @Input() facilityFilter = '';
-  @Input() priorityMode: 'v1' | 'v2' = 'v1';
   @Output() wellClick = new EventEmitter<string>();
 
   @ViewChild('wrap')  wrapRef!: ElementRef<HTMLDivElement>;
   @ViewChild('mapEl') mapRef!: ElementRef<HTMLDivElement>;
 
   colors = PRIORITY_COLORS;
-  legendKeys: string[] = ['P1','P2','P3','P4','P5'];
+  legendKeys: string[] = ['P1','P2','P3'];
 
   private map: any = null;
   private markerLayer: any = null;
@@ -117,11 +116,8 @@ export class WellMapComponent implements OnChanges, AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => this.initMap(), 0);
   }
-  ngOnChanges(c: SimpleChanges) {
+  ngOnChanges(_c: SimpleChanges) {
     if (!this.map) return;
-    if (c['priorityMode']) {
-      this.legendKeys = this.priorityMode === 'v2' ? ['P1','P2','P3'] : ['P1','P2','P3','P4','P5'];
-    }
     this.renderMarkers();
     this.renderGCs();
   }
@@ -152,10 +148,6 @@ export class WellMapComponent implements OnChanges, AfterViewInit {
     window.addEventListener('resize', () => this.map?.invalidateSize());
   }
 
-  private getPriority(w: Well): string {
-    return this.priorityMode === 'v2' ? (w.priority_v2 || 'P3') : w.priority;
-  }
-
   private renderMarkers() {
     if (!this.markerLayer) return;
     this.markerLayer.clearLayers();
@@ -165,7 +157,7 @@ export class WellMapComponent implements OnChanges, AfterViewInit {
       if (w.lat == null || w.lon == null) continue;
       const isSelected = w.well_name === this.selectedWell;
       const muted = !!this.facilityFilter && w.facility !== this.facilityFilter;
-      const pri = this.getPriority(w);
+      const pri = w.priority || 'P3';
       const color = (this.colors as any)[pri] || '#888';
       const r = Math.min(4 + (w.potential_oil || 0) / 1500, 9);
 

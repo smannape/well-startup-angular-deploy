@@ -2,7 +2,7 @@ import { Component, OnInit, signal, computed, inject, ChangeDetectionStrategy } 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './services/data.service';
-import { Well, PRIORITY_COLORS, PRIORITY_DESC, PRIORITY_DESC_V2 } from './models/well.model';
+import { Well, PRIORITY_COLORS, PRIORITY_DESC } from './models/well.model';
 import { WellMapComponent }          from './components/well-map.component';
 import { PriorityChartComponent }    from './components/priority-chart.component';
 import { LogicChartComponent }       from './components/logic-chart.component';
@@ -14,7 +14,6 @@ import { RecommendationComponent }   from './components/recommendation.component
 import { SplashComponent }           from './components/splash.component';
 
 type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'performance' | 'recommend';
-type PriorityMode = 'v1' | 'v2';
 
 @Component({
   selector: 'app-root',
@@ -89,7 +88,6 @@ type PriorityMode = 'v1' | 'v2';
           <app-well-map
             [wells]="ds.wells()"
             [selectedWell]="selectedWell()"
-            [priorityMode]="priorityMode()"
             (wellClick)="selectedWell.set($event)"/>
         </div>
       </div>
@@ -104,24 +102,6 @@ type PriorityMode = 'v1' | 'v2';
     <div class="main" *ngIf="isThreeCol()">
 
       <aside class="left">
-        <!-- Prioritization mode toggle -->
-        <div class="sidebar-section pmode-section">
-          <div class="sidebar-title">Prioritization Criteria</div>
-          <div class="pmode-toggle">
-            <button class="pmode-btn"
-              [class.active]="priorityMode()==='v1'"
-              (click)="priorityMode.set('v1')">
-              Standard
-              <small>Closure-reason based</small>
-            </button>
-            <button class="pmode-btn"
-              [class.active]="priorityMode()==='v2'"
-              (click)="priorityMode.set('v2')">
-              Production Profile
-              <small>Oil · WC · GOR · Trend</small>
-            </button>
-          </div>
-        </div>
 
         <div class="sidebar-section">
           <div class="sidebar-title">Search</div>
@@ -129,18 +109,19 @@ type PriorityMode = 'v1' | 'v2';
         </div>
 
         <div class="sidebar-section">
-          <div class="sidebar-title">{{priorityMode()==='v2' ? 'Production Profile' : 'Startup Priority'}}</div>
+          <div class="sidebar-title">Production Profile Priority</div>
+          <div class="psub">Oil rate · Water cut · GOR · Decline trend</div>
           <div class="priority-list">
             <div class="priority-item" [class.active]="priorityFilter()===''">
               <span class="swatch" style="background:var(--beige-400)"></span>
-              <span class="plabel">All <small>{{priorityMode()==='v2' ? 'profiles' : 'priorities'}}</small></span>
+              <span class="plabel">All <small>profiles</small></span>
               <span class="pcount" (click)="priorityFilter.set('')">{{ds.wells().length}}</span>
             </div>
-            <div class="priority-item" *ngFor="let p of priorityKeys()"
+            <div class="priority-item" *ngFor="let p of priorityKeys"
               [class.active]="priorityFilter()===p"
               (click)="priorityFilter.set(priorityFilter()===p?'':p)">
               <span class="swatch" [style.background]="colors[p]"></span>
-              <span class="plabel">{{p}} <small>{{priorityDesc()[p] | slice:0:24}}…</small></span>
+              <span class="plabel">{{p}} <small>{{priorityDesc[p] | slice:0:24}}…</small></span>
               <span class="pcount">{{priorityCount(p)}}</span>
             </div>
           </div>
@@ -177,7 +158,7 @@ type PriorityMode = 'v1' | 'v2';
         <!-- KPI strip -->
         <div class="kpi-strip" *ngIf="ds.kpis() as k">
           <div class="kpi">
-            <div class="kk">{{priorityMode()==='v2' ? 'P1 Best Producers' : 'P1 Quick-Win Wells'}}</div>
+            <div class="kk">P1 Best Producers</div>
             <div class="kv accent">{{priorityCount('P1')}}</div>
             <div class="ks">{{topBucketPotential() | number:'1.0-0'}} BOPD recoverable</div>
           </div>
@@ -207,16 +188,13 @@ type PriorityMode = 'v1' | 'v2';
         <div class="panel map-panel">
           <div class="panel-head">
             <h3>{{tabLabel()}} · Field Map — West Kuwait</h3>
-            <span class="pmeta">
-              {{filtered().length}} wells · {{priorityMode()==='v2' ? 'Production Profile' : 'Standard'}} priority
-            </span>
+            <span class="pmeta">{{filtered().length}} wells · Production Profile priority</span>
           </div>
           <div class="panel-body">
             <app-well-map
               [wells]="filtered()"
               [selectedWell]="selectedWell()"
               [facilityFilter]="facilityFilter()"
-              [priorityMode]="priorityMode()"
               (wellClick)="selectedWell.set($event)"/>
           </div>
         </div>
@@ -230,7 +208,7 @@ type PriorityMode = 'v1' | 'v2';
             </div>
             <div class="panel-body">
               <app-logic-chart    *ngIf="activeTab()==='orient'"/>
-              <app-priority-chart *ngIf="activeTab()!=='orient'" [kpis]="ds.kpis()" [mode]="priorityMode()"/>
+              <app-priority-chart *ngIf="activeTab()!=='orient'" [kpis]="ds.kpis()"/>
             </div>
           </div>
           <div class="panel" style="margin:0;border:none;border-radius:0">
@@ -339,20 +317,9 @@ type PriorityMode = 'v1' | 'v2';
     .pcount { font-family:"JetBrains Mono",monospace; color:var(--orange-300);
       font-size:12px; font-weight:600; }
 
-    /* ── Prioritization mode toggle ── */
-    .pmode-section { background:linear-gradient(180deg,#2a2118,var(--bg-1)); }
-    .pmode-toggle { display:grid; grid-template-columns:1fr 1fr; gap:4px; }
-    .pmode-btn { background:var(--bg-2); border:1px solid var(--border-1);
-      padding:8px 6px; cursor:pointer; color:var(--beige-300);
-      font-size:10px; letter-spacing:.1em; text-transform:uppercase; font-weight:600;
-      display:flex; flex-direction:column; gap:2px; align-items:center;
-      border-radius:2px; transition:.15s; }
-    .pmode-btn:hover { background:var(--bg-3); color:var(--beige-100); }
-    .pmode-btn.active { background:#ff7a1a22; border-color:var(--orange-500);
-      color:var(--orange-400); }
-    .pmode-btn small { font-size:8.5px; letter-spacing:.04em; text-transform:none;
-      color:var(--beige-400); font-weight:400; }
-    .pmode-btn.active small { color:var(--orange-300); }
+    /* ── Production-profile section subtitle ── */
+    .psub { font-size:9px; color:var(--beige-500); margin-top:-4px;
+      margin-bottom:10px; letter-spacing:.04em; }
 
     /* ── KPI strip ── */
     .kpi-strip { display:grid; grid-template-columns:repeat(5,1fr); gap:1px;
@@ -394,7 +361,6 @@ export class AppComponent implements OnInit {
   showSplash    = signal(true);
   activeTab     = signal<Tab>('decide');
   selectedWell  = signal('');
-  priorityMode  = signal<PriorityMode>('v1');
   priorityFilter  = signal('');
   facilityFilter  = signal('');
   reservoirFilter = signal('');
@@ -402,6 +368,8 @@ export class AppComponent implements OnInit {
   searchFilter    = signal('');
 
   colors = PRIORITY_COLORS;
+  priorityKeys: string[] = ['P1','P2','P3'];
+  priorityDesc: Record<string,string> = PRIORITY_DESC;
 
   tabs = [
     { id: 'observe'   as Tab, num:'1', label:'Observe',       sub:'· Location & History' },
@@ -415,26 +383,16 @@ export class AppComponent implements OnInit {
   isThreeCol = computed(() =>
     (['orient','decide','act'] as Tab[]).includes(this.activeTab()));
 
-  priorityKeys = computed<string[]>(() =>
-    this.priorityMode() === 'v2' ? ['P1','P2','P3'] : ['P1','P2','P3','P4','P5']);
-
-  priorityDesc = computed<Record<string,string>>(() =>
-    this.priorityMode() === 'v2' ? PRIORITY_DESC_V2 : PRIORITY_DESC);
-
   get dFacilities() { return [...new Set(this.ds.wells().map(w=>w.facility).filter(Boolean))].sort(); }
   get dReservoirs() { return [...new Set(this.ds.wells().map(w=>w.reservoir).filter(Boolean))].sort(); }
   get dFields()     { return [...new Set(this.ds.wells().map(w=>w.field).filter(Boolean))].sort(); }
 
-  private effectivePriority(w: Well): string {
-    return this.priorityMode() === 'v2' ? (w.priority_v2 || 'P3') : w.priority;
-  }
-
   priorityCount(p: string): number {
-    return this.ds.wells().filter(w => this.effectivePriority(w) === p).length;
+    return this.ds.wells().filter(w => w.priority === p).length;
   }
   topBucketPotential(): number {
     return this.ds.wells()
-      .filter(w => this.effectivePriority(w) === 'P1')
+      .filter(w => w.priority === 'P1')
       .reduce((s, w) => s + (w.potential_oil || 0), 0);
   }
 
@@ -443,15 +401,15 @@ export class AppComponent implements OnInit {
           r=this.reservoirFilter(), fl=this.fieldFilter(), s=this.searchFilter().toLowerCase();
     return this.ds.wells()
       .filter(w =>
-        (!p  || this.effectivePriority(w)===p) &&
+        (!p  || w.priority===p) &&
         (!f  || w.facility===f) &&
         (!r  || w.reservoir===r) &&
         (!fl || w.field===fl) &&
         (!s  || w.well_name.toLowerCase().includes(s))
       )
       .sort((a,b) =>
-        this.effectivePriority(a).localeCompare(this.effectivePriority(b))
-        || (b.startup_score||0)-(a.startup_score||0));
+        a.priority.localeCompare(b.priority)
+        || (b.recent_highest_oil || b.potential_oil || 0) - (a.recent_highest_oil || a.potential_oil || 0));
   });
 
   selectedWellObj = computed(() =>

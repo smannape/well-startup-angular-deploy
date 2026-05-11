@@ -3,18 +3,14 @@
     "total_wells_inventory": 122,
     "potential_oil_total_bopd": 79460.9,
     "by_priority": {
-      "P1": 12,
-      "P2": 18,
-      "P3": 25,
-      "P4": 24,
-      "P5": 43
+      "P2": 73,
+      "P1": 9,
+      "P3": 40
     },
     "potential_by_priority": {
-      "P1": 24771.0,
-      "P2": 18713.9,
-      "P3": 16431.0,
-      "P4": 9522.0,
-      "P5": 10023.0
+      "P2": 53759.10000000002,
+      "P1": 18452.699999999997,
+      "P3": 19166.499999999996
     },
     "by_facility": {
       "GC28": 36,
@@ -30,17 +26,7 @@
       "Under Review": 1
     },
     "total_closed_wells": 121,
-    "total_open_wells": 1,
-    "by_priority_v2": {
-      "P2": 73,
-      "P1": 9,
-      "P3": 40
-    },
-    "potential_by_priority_v2": {
-      "P2": 53759.10000000002,
-      "P1": 18452.699999999997,
-      "P3": 19166.499999999996
-    }
+    "total_open_wells": 1
   },
   "wells": [
     {
@@ -80,8 +66,8 @@
       "x": 747956.26,
       "y": 3212459.45,
       "startup_score": 107.03,
-      "priority": "P1",
-      "priority_label": "Quick Win",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 40000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -92,9 +78,7 @@
       "lon": 47.545706,
       "recent_highest_oil": 7017.0,
       "recent_highest_oil_date": "2015-01-14",
-      "oil_trend_pct": -1.8,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -1.8
     },
     {
       "well_name": "MN-0205ST7",
@@ -133,8 +117,8 @@
       "x": 748386.64,
       "y": 3212867.78,
       "startup_score": 76.43,
-      "priority": "P1",
-      "priority_label": "Quick Win",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -145,9 +129,7 @@
       "lon": 47.550211,
       "recent_highest_oil": 1505.0,
       "recent_highest_oil_date": "2025-11-28",
-      "oil_trend_pct": 3.6,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 3.6
     },
     {
       "well_name": "MN-0331ST2",
@@ -187,7 +169,7 @@
       "y": 3214281.0,
       "startup_score": 76.06,
       "priority": "P1",
-      "priority_label": "Quick Win",
+      "priority_label": "High Oil · Low WC · Low GOR",
       "h2s_ppm": 39000.0,
       "well_category": "Grounded",
       "pump_status_review": "Within Range",
@@ -198,9 +180,7 @@
       "lon": 47.52297,
       "recent_highest_oil": 3391.42395,
       "recent_highest_oil_date": "2024-12-11",
-      "oil_trend_pct": -14.4,
-      "priority_v2": "P1",
-      "priority_v2_label": "High Oil · Low WC · Low GOR"
+      "oil_trend_pct": -14.4
     },
     {
       "well_name": "MN-0359ST1",
@@ -240,7 +220,7 @@
       "y": 3212580.15,
       "startup_score": 72.05,
       "priority": "P1",
-      "priority_label": "Quick Win",
+      "priority_label": "High Oil · Low WC · Low GOR",
       "h2s_ppm": 15000.0,
       "well_category": "Normal",
       "pump_status_review": "Upthrust",
@@ -251,9 +231,7 @@
       "lon": 47.544965,
       "recent_highest_oil": 2480.1441,
       "recent_highest_oil_date": "2025-07-26",
-      "oil_trend_pct": null,
-      "priority_v2": "P1",
-      "priority_v2_label": "High Oil · Low WC · Low GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "MN-0326",
@@ -292,8 +270,8 @@
       "x": 748208.0,
       "y": 3211485.0,
       "startup_score": 66.82,
-      "priority": "P1",
-      "priority_label": "Quick Win",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 38000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -304,9 +282,7 @@
       "lon": 47.548072,
       "recent_highest_oil": 4237.8114,
       "recent_highest_oil_date": "2022-07-20",
-      "oil_trend_pct": -20.6,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -20.6
     },
     {
       "well_name": "UG-0163ST1",
@@ -346,7 +322,7 @@
       "y": 3197387.17,
       "startup_score": 65.91,
       "priority": "P1",
-      "priority_label": "Quick Win",
+      "priority_label": "High Oil · Low WC · Low GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -357,9 +333,7 @@
       "lon": 47.689792,
       "recent_highest_oil": 1748.0,
       "recent_highest_oil_date": "2026-02-09",
-      "oil_trend_pct": null,
-      "priority_v2": "P1",
-      "priority_v2_label": "High Oil · Low WC · Low GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "UG-0112ST1",
@@ -399,7 +373,7 @@
       "y": 3194471.31,
       "startup_score": 60.2,
       "priority": "P1",
-      "priority_label": "Quick Win",
+      "priority_label": "High Oil · Low WC · Low GOR",
       "h2s_ppm": 15000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -410,9 +384,7 @@
       "lon": 47.686598,
       "recent_highest_oil": 1511.0,
       "recent_highest_oil_date": "2026-02-23",
-      "oil_trend_pct": null,
-      "priority_v2": "P1",
-      "priority_v2_label": "High Oil · Low WC · Low GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "MN-0307",
@@ -452,7 +424,7 @@
       "y": 3211112.0,
       "startup_score": 56.19,
       "priority": "P1",
-      "priority_label": "Quick Win",
+      "priority_label": "High Oil · Low WC · Low GOR",
       "h2s_ppm": 35000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -463,9 +435,7 @@
       "lon": 47.532706,
       "recent_highest_oil": 2344.0016,
       "recent_highest_oil_date": "2024-04-17",
-      "oil_trend_pct": 8.5,
-      "priority_v2": "P1",
-      "priority_v2_label": "High Oil · Low WC · Low GOR"
+      "oil_trend_pct": 8.5
     },
     {
       "well_name": "UG-0271H",
@@ -505,7 +475,7 @@
       "y": 3196395.187,
       "startup_score": 49.22,
       "priority": "P1",
-      "priority_label": "Quick Win",
+      "priority_label": "High Oil · Low WC · Low GOR",
       "h2s_ppm": 10000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -516,9 +486,7 @@
       "lon": 47.734441,
       "recent_highest_oil": 3259.9596,
       "recent_highest_oil_date": "2020-07-16",
-      "oil_trend_pct": -12.0,
-      "priority_v2": "P1",
-      "priority_v2_label": "High Oil · Low WC · Low GOR"
+      "oil_trend_pct": -12.0
     },
     {
       "well_name": "UG-0110ST3",
@@ -558,7 +526,7 @@
       "y": 3204874.96,
       "startup_score": 47.57,
       "priority": "P1",
-      "priority_label": "Quick Win",
+      "priority_label": "High Oil · Low WC · Low GOR",
       "h2s_ppm": 12000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -569,9 +537,7 @@
       "lon": 47.685173,
       "recent_highest_oil": 2065.9206,
       "recent_highest_oil_date": "2024-02-22",
-      "oil_trend_pct": 4.3,
-      "priority_v2": "P1",
-      "priority_v2_label": "High Oil · Low WC · Low GOR"
+      "oil_trend_pct": 4.3
     },
     {
       "well_name": "UG-0377ST1",
@@ -611,7 +577,7 @@
       "y": 3195638.078,
       "startup_score": 43.93,
       "priority": "P1",
-      "priority_label": "Quick Win",
+      "priority_label": "High Oil · Low WC · Low GOR",
       "h2s_ppm": 13000.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -622,9 +588,7 @@
       "lon": 47.704751,
       "recent_highest_oil": 1959.5,
       "recent_highest_oil_date": "2024-09-21",
-      "oil_trend_pct": -11.9,
-      "priority_v2": "P1",
-      "priority_v2_label": "High Oil · Low WC · Low GOR"
+      "oil_trend_pct": -11.9
     },
     {
       "well_name": "UG-0356",
@@ -663,8 +627,8 @@
       "x": 762680.64,
       "y": 3194805.54,
       "startup_score": 43.75,
-      "priority": "P1",
-      "priority_label": "Quick Win",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 18000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -675,9 +639,7 @@
       "lon": 47.692623,
       "recent_highest_oil": 2563.488,
       "recent_highest_oil_date": "2023-12-16",
-      "oil_trend_pct": -28.2,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -28.2
     },
     {
       "well_name": "UG-0119ST1",
@@ -717,7 +679,7 @@
       "y": 3195703.53,
       "startup_score": 42.62,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 6000.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -728,9 +690,7 @@
       "lon": 47.668379,
       "recent_highest_oil": 1855.38,
       "recent_highest_oil_date": "2025-10-11",
-      "oil_trend_pct": -38.7,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -38.7
     },
     {
       "well_name": "UG-0301HST2",
@@ -770,7 +730,7 @@
       "y": 3195243.9,
       "startup_score": 42.23,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -781,9 +741,7 @@
       "lon": 47.699412,
       "recent_highest_oil": 2165.0,
       "recent_highest_oil_date": "2022-03-26",
-      "oil_trend_pct": -12.3,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -12.3
     },
     {
       "well_name": "UG-0331ST1",
@@ -823,7 +781,7 @@
       "y": 3194545.38,
       "startup_score": 40.91,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -834,9 +792,7 @@
       "lon": 47.68279,
       "recent_highest_oil": 1481.004,
       "recent_highest_oil_date": "2024-10-27",
-      "oil_trend_pct": -15.6,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -15.6
     },
     {
       "well_name": "UG-0277H",
@@ -876,7 +832,7 @@
       "y": 3195917.75,
       "startup_score": 39.99,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Grounded",
       "pump_status_review": "Within Range",
@@ -887,9 +843,7 @@
       "lon": 47.686562,
       "recent_highest_oil": 2599.0,
       "recent_highest_oil_date": "2020-02-13",
-      "oil_trend_pct": -18.3,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -18.3
     },
     {
       "well_name": "UG-0370",
@@ -929,7 +883,7 @@
       "y": 3197599.264,
       "startup_score": 38.18,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -940,9 +894,7 @@
       "lon": 47.752601,
       "recent_highest_oil": 2541.0,
       "recent_highest_oil_date": "2023-04-17",
-      "oil_trend_pct": 73.1,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 73.1
     },
     {
       "well_name": "UG-0111ST1",
@@ -982,7 +934,7 @@
       "y": 3197359.68,
       "startup_score": 37.43,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 15000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -993,9 +945,7 @@
       "lon": 47.717981,
       "recent_highest_oil": 2610.0,
       "recent_highest_oil_date": "2024-08-25",
-      "oil_trend_pct": -19.0,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -19.0
     },
     {
       "well_name": "UG-0233HST1",
@@ -1035,7 +985,7 @@
       "y": 3199735.133,
       "startup_score": 37.28,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 19000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -1046,9 +996,7 @@
       "lon": 47.671422,
       "recent_highest_oil": 3662.131892,
       "recent_highest_oil_date": "2021-05-24",
-      "oil_trend_pct": -0.6,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -0.6
     },
     {
       "well_name": "MN-0208",
@@ -1088,7 +1036,7 @@
       "y": 3216860.08,
       "startup_score": 36.2,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 35000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -1099,9 +1047,7 @@
       "lon": 47.552453,
       "recent_highest_oil": 3428.9268,
       "recent_highest_oil_date": "2016-07-12",
-      "oil_trend_pct": -12.1,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -12.1
     },
     {
       "well_name": "UG-0221H",
@@ -1141,7 +1087,7 @@
       "y": 3198341.0,
       "startup_score": 35.79,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -1152,9 +1098,7 @@
       "lon": 47.772469,
       "recent_highest_oil": 1688.0,
       "recent_highest_oil_date": "2019-07-03",
-      "oil_trend_pct": 21.3,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 21.3
     },
     {
       "well_name": "MN-0160ST3",
@@ -1194,7 +1138,7 @@
       "y": 3215355.658,
       "startup_score": 34.39,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 35000.0,
       "well_category": "Problematic",
       "pump_status_review": "Upthrust",
@@ -1205,9 +1149,7 @@
       "lon": 47.544373,
       "recent_highest_oil": 2198.85468,
       "recent_highest_oil_date": "2025-10-07",
-      "oil_trend_pct": 165.0,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 165.0
     },
     {
       "well_name": "MN-0230H",
@@ -1247,7 +1189,7 @@
       "y": 3211840.44,
       "startup_score": 33.42,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -1258,9 +1200,7 @@
       "lon": 47.542884,
       "recent_highest_oil": 1492.9596,
       "recent_highest_oil_date": "2020-11-26",
-      "oil_trend_pct": -6.2,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -6.2
     },
     {
       "well_name": "MN-0239",
@@ -1299,8 +1239,8 @@
       "x": 747573.187,
       "y": 3210131.117,
       "startup_score": 33.42,
-      "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority": "P1",
+      "priority_label": "High Oil · Low WC · Low GOR",
       "h2s_ppm": 50000.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -1311,9 +1251,7 @@
       "lon": 47.541262,
       "recent_highest_oil": 6907.164,
       "recent_highest_oil_date": "2017-12-20",
-      "oil_trend_pct": 4.8,
-      "priority_v2": "P1",
-      "priority_v2_label": "High Oil · Low WC · Low GOR"
+      "oil_trend_pct": 4.8
     },
     {
       "well_name": "UG-0228ST1",
@@ -1353,7 +1291,7 @@
       "y": 3199602.0,
       "startup_score": 33.08,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -1364,9 +1302,7 @@
       "lon": 47.668702,
       "recent_highest_oil": 3451.0,
       "recent_highest_oil_date": "2022-10-19",
-      "oil_trend_pct": -39.9,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -39.9
     },
     {
       "well_name": "UG-0391",
@@ -1406,7 +1342,7 @@
       "y": 3197641.76,
       "startup_score": 31.92,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 15000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -1417,9 +1353,7 @@
       "lon": 47.750316,
       "recent_highest_oil": 1469.25,
       "recent_highest_oil_date": "2025-12-12",
-      "oil_trend_pct": 299.2,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 299.2
     },
     {
       "well_name": "UG-0378ST1",
@@ -1459,7 +1393,7 @@
       "y": 3200965.0,
       "startup_score": 31.87,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 30000.0,
       "well_category": "Grounded",
       "pump_status_review": "Within Range",
@@ -1470,9 +1404,7 @@
       "lon": 47.676118,
       "recent_highest_oil": 2541.8688,
       "recent_highest_oil_date": "2023-09-19",
-      "oil_trend_pct": -19.6,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -19.6
     },
     {
       "well_name": "MN-0394",
@@ -1512,7 +1444,7 @@
       "y": 3214622.46,
       "startup_score": 30.29,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 600.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -1523,9 +1455,7 @@
       "lon": 47.534338,
       "recent_highest_oil": 651.9752,
       "recent_highest_oil_date": "2025-11-15",
-      "oil_trend_pct": null,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "MN-0379ST1",
@@ -1565,7 +1495,7 @@
       "y": 3210304.0,
       "startup_score": 29.5,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 14000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -1576,9 +1506,7 @@
       "lon": 47.545729,
       "recent_highest_oil": 1650.426956,
       "recent_highest_oil_date": "2024-11-29",
-      "oil_trend_pct": -33.8,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -33.8
     },
     {
       "well_name": "MN-0238",
@@ -1618,7 +1546,7 @@
       "y": 3212663.0,
       "startup_score": 29.48,
       "priority": "P2",
-      "priority_label": "Surface Intervention",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 50000.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -1629,9 +1557,7 @@
       "lon": 47.547092,
       "recent_highest_oil": 4763.9837,
       "recent_highest_oil_date": "2017-12-18",
-      "oil_trend_pct": -13.0,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -13.0
     },
     {
       "well_name": "MN-0070",
@@ -1670,8 +1596,8 @@
       "x": 748000.269,
       "y": 3209692.587,
       "startup_score": 29.21,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 35000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -1682,9 +1608,7 @@
       "lon": 47.545545,
       "recent_highest_oil": 6855.0,
       "recent_highest_oil_date": "2010-01-21",
-      "oil_trend_pct": -44.0,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -44.0
     },
     {
       "well_name": "MN-0312",
@@ -1724,7 +1648,7 @@
       "y": 3209841.52,
       "startup_score": 27.87,
       "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 40000.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -1735,9 +1659,7 @@
       "lon": 47.538122,
       "recent_highest_oil": 4278.1098,
       "recent_highest_oil_date": "2023-03-08",
-      "oil_trend_pct": -26.1,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -26.1
     },
     {
       "well_name": "MN-0353",
@@ -1776,8 +1698,8 @@
       "x": 748570.37,
       "y": 3208296.99,
       "startup_score": 26.54,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -1788,9 +1710,7 @@
       "lon": 47.551083,
       "recent_highest_oil": 580.50225,
       "recent_highest_oil_date": "2025-12-22",
-      "oil_trend_pct": null,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "MN-0204H",
@@ -1830,7 +1750,7 @@
       "y": 3215382.338,
       "startup_score": 25.72,
       "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 40000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -1841,9 +1761,7 @@
       "lon": 47.551306,
       "recent_highest_oil": 7620.0,
       "recent_highest_oil_date": "2013-11-03",
-      "oil_trend_pct": -47.1,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -47.1
     },
     {
       "well_name": "MN-0001",
@@ -1883,7 +1801,7 @@
       "y": 3215503.41,
       "startup_score": 24.5,
       "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 70000.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -1894,9 +1812,7 @@
       "lon": 47.550847,
       "recent_highest_oil": 4152.0,
       "recent_highest_oil_date": "2012-12-30",
-      "oil_trend_pct": -9.5,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -9.5
     },
     {
       "well_name": "MN-0216",
@@ -1936,7 +1852,7 @@
       "y": 3210041.102,
       "startup_score": 23.75,
       "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 12000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -1947,9 +1863,7 @@
       "lon": 47.543374,
       "recent_highest_oil": 7130.0,
       "recent_highest_oil_date": "2016-06-22",
-      "oil_trend_pct": -63.4,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -63.4
     },
     {
       "well_name": "UG-0164ST1",
@@ -1989,7 +1903,7 @@
       "y": 3201562.54,
       "startup_score": 23.47,
       "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 10000.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -2000,9 +1914,7 @@
       "lon": 47.681467,
       "recent_highest_oil": 885.9465,
       "recent_highest_oil_date": "2025-10-27",
-      "oil_trend_pct": -46.4,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -46.4
     },
     {
       "well_name": "UG-0324ST2",
@@ -2041,8 +1953,8 @@
       "x": 761112.776,
       "y": 3197144.93,
       "startup_score": 23.13,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -2053,9 +1965,7 @@
       "lon": 47.677107,
       "recent_highest_oil": 2246.443121,
       "recent_highest_oil_date": "2021-12-06",
-      "oil_trend_pct": 285.2,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 285.2
     },
     {
       "well_name": "MN-0368",
@@ -2094,8 +2004,8 @@
       "x": 746999.9,
       "y": 3209061.62,
       "startup_score": 23.1,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 35000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -2106,9 +2016,7 @@
       "lon": 47.535147,
       "recent_highest_oil": 1016.96,
       "recent_highest_oil_date": "2025-06-03",
-      "oil_trend_pct": 1116.9,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 1116.9
     },
     {
       "well_name": "UG-0259",
@@ -2147,8 +2055,8 @@
       "x": 760882.176,
       "y": 3197801.27,
       "startup_score": 22.92,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -2159,9 +2067,7 @@
       "lon": 47.674896,
       "recent_highest_oil": 1757.08,
       "recent_highest_oil_date": "2019-11-24",
-      "oil_trend_pct": -12.6,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -12.6
     },
     {
       "well_name": "UG-0266",
@@ -2200,8 +2106,8 @@
       "x": 761055.76,
       "y": 3204600.04,
       "startup_score": 22.59,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -2212,9 +2118,7 @@
       "lon": 47.678249,
       "recent_highest_oil": 3456.9561,
       "recent_highest_oil_date": "2020-03-03",
-      "oil_trend_pct": -3.4,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -3.4
     },
     {
       "well_name": "MN-0311",
@@ -2254,7 +2158,7 @@
       "y": 3211697.62,
       "startup_score": 21.52,
       "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 50000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -2265,9 +2169,7 @@
       "lon": 47.535278,
       "recent_highest_oil": 2414.71296,
       "recent_highest_oil_date": "2022-09-09",
-      "oil_trend_pct": -29.1,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -29.1
     },
     {
       "well_name": "MN-0354",
@@ -2306,8 +2208,8 @@
       "x": 745674.3,
       "y": 3213191.03,
       "startup_score": 19.38,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -2318,9 +2220,7 @@
       "lon": 47.522457,
       "recent_highest_oil": 695.0306,
       "recent_highest_oil_date": "2024-10-13",
-      "oil_trend_pct": 48.1,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 48.1
     },
     {
       "well_name": "MN-0325",
@@ -2359,8 +2259,8 @@
       "x": 747240.0,
       "y": 3215429.0,
       "startup_score": 19.13,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -2371,9 +2271,7 @@
       "lon": 47.539013,
       "recent_highest_oil": 1089.2,
       "recent_highest_oil_date": "2023-03-04",
-      "oil_trend_pct": -7.3,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -7.3
     },
     {
       "well_name": "UG-0219",
@@ -2412,8 +2310,8 @@
       "x": 768724.795,
       "y": 3199332.909,
       "startup_score": 18.24,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -2424,9 +2322,7 @@
       "lon": 47.755598,
       "recent_highest_oil": 3335.0,
       "recent_highest_oil_date": "2015-09-11",
-      "oil_trend_pct": 52.6,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 52.6
     },
     {
       "well_name": "UG-0165ST1",
@@ -2466,7 +2362,7 @@
       "y": 3204370.52,
       "startup_score": 18.0,
       "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 6000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -2477,9 +2373,7 @@
       "lon": 47.664734,
       "recent_highest_oil": 1534.176,
       "recent_highest_oil_date": "2024-11-06",
-      "oil_trend_pct": -46.2,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -46.2
     },
     {
       "well_name": "UG-0179",
@@ -2519,7 +2413,7 @@
       "y": 3197923.65,
       "startup_score": 17.82,
       "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 30000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -2530,9 +2424,7 @@
       "lon": 47.68059,
       "recent_highest_oil": 3666.06,
       "recent_highest_oil_date": "2010-06-19",
-      "oil_trend_pct": -72.1,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -72.1
     },
     {
       "well_name": "UG-0190",
@@ -2572,7 +2464,7 @@
       "y": 3195550.447,
       "startup_score": 17.77,
       "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -2583,9 +2475,7 @@
       "lon": 47.737086,
       "recent_highest_oil": 3241.28,
       "recent_highest_oil_date": "2011-05-13",
-      "oil_trend_pct": -50.6,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -50.6
     },
     {
       "well_name": "UG-0395",
@@ -2624,8 +2514,8 @@
       "x": 767994.216,
       "y": 3193926.91,
       "startup_score": 17.18,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "Problematic",
       "pump_status_review": "Downthrust",
@@ -2636,9 +2526,7 @@
       "lon": 47.74683,
       "recent_highest_oil": 430.998,
       "recent_highest_oil_date": "2025-03-21",
-      "oil_trend_pct": -60.8,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -60.8
     },
     {
       "well_name": "UG-0205",
@@ -2677,8 +2565,8 @@
       "x": 760669.537,
       "y": 3199184.523,
       "startup_score": 17.01,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -2689,9 +2577,7 @@
       "lon": 47.673037,
       "recent_highest_oil": 4367.24,
       "recent_highest_oil_date": "2012-05-20",
-      "oil_trend_pct": 2.4,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 2.4
     },
     {
       "well_name": "MN-0338",
@@ -2730,8 +2616,8 @@
       "x": 746323.55,
       "y": 3212093.3,
       "startup_score": 16.89,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -2742,9 +2628,7 @@
       "lon": 47.528876,
       "recent_highest_oil": 664.0,
       "recent_highest_oil_date": "2023-08-20",
-      "oil_trend_pct": -11.0,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -11.0
     },
     {
       "well_name": "MN-0350",
@@ -2784,7 +2668,7 @@
       "y": 3216134.99,
       "startup_score": 16.82,
       "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -2795,9 +2679,7 @@
       "lon": 47.55894,
       "recent_highest_oil": 661.0443,
       "recent_highest_oil_date": "2024-06-18",
-      "oil_trend_pct": -41.1,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -41.1
     },
     {
       "well_name": "MN-0268ST1",
@@ -2837,7 +2719,7 @@
       "y": 3212306.0,
       "startup_score": 16.74,
       "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 25000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -2848,9 +2730,7 @@
       "lon": 47.535113,
       "recent_highest_oil": 1338.4312,
       "recent_highest_oil_date": "2023-09-22",
-      "oil_trend_pct": -43.8,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -43.8
     },
     {
       "well_name": "MN-0342ST1",
@@ -2889,8 +2769,8 @@
       "x": 746007.79,
       "y": 3215219.3,
       "startup_score": 16.33,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -2901,9 +2781,7 @@
       "lon": 47.526323,
       "recent_highest_oil": 545.0368,
       "recent_highest_oil_date": "2025-10-16",
-      "oil_trend_pct": 408.1,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 408.1
     },
     {
       "well_name": "MN-0337",
@@ -2942,8 +2820,8 @@
       "x": 747534.34,
       "y": 3208752.32,
       "startup_score": 15.86,
-      "priority": "P3",
-      "priority_label": "Rigless WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -2954,9 +2832,7 @@
       "lon": 47.540559,
       "recent_highest_oil": 517.0,
       "recent_highest_oil_date": "2024-03-07",
-      "oil_trend_pct": -15.2,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -15.2
     },
     {
       "well_name": "MN-0235",
@@ -2995,8 +2871,8 @@
       "x": 747113.986,
       "y": 3211797.968,
       "startup_score": 15.03,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 23000.0,
       "well_category": "Grounded",
       "pump_status_review": "Within Range",
@@ -3007,9 +2883,7 @@
       "lon": 47.536919,
       "recent_highest_oil": 6303.732024,
       "recent_highest_oil_date": "2018-10-31",
-      "oil_trend_pct": -1.4,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -1.4
     },
     {
       "well_name": "MN-0222H",
@@ -3048,8 +2922,8 @@
       "x": 748720.82,
       "y": 3212731.64,
       "startup_score": 14.65,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -3060,9 +2934,7 @@
       "lon": 47.553609,
       "recent_highest_oil": 3120.0,
       "recent_highest_oil_date": "2016-05-22",
-      "oil_trend_pct": -52.9,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -52.9
     },
     {
       "well_name": "UG-0017",
@@ -3101,8 +2973,8 @@
       "x": 767522.274,
       "y": 3196520.112,
       "startup_score": 14.65,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 10000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -3113,9 +2985,7 @@
       "lon": 47.742612,
       "recent_highest_oil": 8573.0,
       "recent_highest_oil_date": "2007-09-12",
-      "oil_trend_pct": 172.7,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 172.7
     },
     {
       "well_name": "UG-0196",
@@ -3154,8 +3024,8 @@
       "x": 770924.387,
       "y": 3198386.946,
       "startup_score": 14.41,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 18000.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -3166,9 +3036,7 @@
       "lon": 47.777904,
       "recent_highest_oil": 941.0204,
       "recent_highest_oil_date": "2020-11-12",
-      "oil_trend_pct": -37.4,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -37.4
     },
     {
       "well_name": "MN-0386",
@@ -3207,8 +3075,8 @@
       "x": 745499.24,
       "y": 3215249.31,
       "startup_score": 13.95,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "Low Pi",
       "pump_status_review": "Downthrust",
@@ -3219,9 +3087,7 @@
       "lon": 47.521112,
       "recent_highest_oil": 264.0,
       "recent_highest_oil_date": "2026-02-03",
-      "oil_trend_pct": null,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "UG-0246",
@@ -3260,8 +3126,8 @@
       "x": 769156.0,
       "y": 3197393.0,
       "startup_score": 12.54,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 30000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -3272,9 +3138,7 @@
       "lon": 47.759553,
       "recent_highest_oil": 2833.0771,
       "recent_highest_oil_date": "2016-09-10",
-      "oil_trend_pct": -82.3,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -82.3
     },
     {
       "well_name": "MN-0318H",
@@ -3313,8 +3177,8 @@
       "x": 747204.0,
       "y": 3212920.8,
       "startup_score": 12.52,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "Low Pi",
       "pump_status_review": "Within Range",
@@ -3325,9 +3189,7 @@
       "lon": 47.53809,
       "recent_highest_oil": 1156.0,
       "recent_highest_oil_date": "2022-12-06",
-      "oil_trend_pct": -28.4,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -28.4
     },
     {
       "well_name": "UG-0367",
@@ -3366,8 +3228,8 @@
       "x": 768920.0,
       "y": 3199457.0,
       "startup_score": 12.5,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 50000.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -3378,9 +3240,7 @@
       "lon": 47.757627,
       "recent_highest_oil": 1774.0,
       "recent_highest_oil_date": "2022-11-10",
-      "oil_trend_pct": -2.3,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -2.3
     },
     {
       "well_name": "MN-0243H",
@@ -3419,8 +3279,8 @@
       "x": 749402.88,
       "y": 3211608.444,
       "startup_score": 11.86,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 1000.0,
       "well_category": "Low Pi",
       "pump_status_review": "Within Range",
@@ -3431,9 +3291,7 @@
       "lon": 47.560356,
       "recent_highest_oil": 864.0,
       "recent_highest_oil_date": "2019-06-05",
-      "oil_trend_pct": -23.9,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -23.9
     },
     {
       "well_name": "UG-0074ST1",
@@ -3472,8 +3330,8 @@
       "x": 769011.715,
       "y": 3198966.74,
       "startup_score": 11.77,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 50000.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -3484,9 +3342,7 @@
       "lon": 47.75845,
       "recent_highest_oil": 2771.1238,
       "recent_highest_oil_date": "2018-05-01",
-      "oil_trend_pct": -15.1,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -15.1
     },
     {
       "well_name": "MN-0339",
@@ -3525,8 +3381,8 @@
       "x": 746495.0,
       "y": 3210827.0,
       "startup_score": 11.57,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 5.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -3537,9 +3393,7 @@
       "lon": 47.530356,
       "recent_highest_oil": 858.0,
       "recent_highest_oil_date": "2023-08-20",
-      "oil_trend_pct": -14.5,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -14.5
     },
     {
       "well_name": "MN-0072",
@@ -3578,8 +3432,8 @@
       "x": 747457.0,
       "y": 3208857.67,
       "startup_score": 11.34,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 15000.0,
       "well_category": "Normal",
       "pump_status_review": "Upthrust",
@@ -3590,9 +3444,7 @@
       "lon": 47.539789,
       "recent_highest_oil": 8959.0,
       "recent_highest_oil_date": "2008-12-19",
-      "oil_trend_pct": -28.2,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -28.2
     },
     {
       "well_name": "MN-0257H",
@@ -3631,8 +3483,8 @@
       "x": 750714.109,
       "y": 3215083.2,
       "startup_score": 11.23,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "Low Pi",
       "pump_status_review": "Downthrust",
@@ -3643,9 +3495,7 @@
       "lon": 47.574584,
       "recent_highest_oil": 743.0,
       "recent_highest_oil_date": "2022-03-17",
-      "oil_trend_pct": -17.9,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -17.9
     },
     {
       "well_name": "MN-0349",
@@ -3684,8 +3534,8 @@
       "x": 746422.5,
       "y": 3215759.98,
       "startup_score": 10.8,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -3696,9 +3546,7 @@
       "lon": 47.530698,
       "recent_highest_oil": 568.0402,
       "recent_highest_oil_date": "2024-01-18",
-      "oil_trend_pct": -22.4,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -22.4
     },
     {
       "well_name": "UG-0100",
@@ -3737,8 +3585,8 @@
       "x": 768072.36,
       "y": 3199112.34,
       "startup_score": 10.17,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -3749,9 +3597,7 @@
       "lon": 47.748861,
       "recent_highest_oil": 7048.56,
       "recent_highest_oil_date": "2002-10-18",
-      "oil_trend_pct": 17.7,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 17.7
     },
     {
       "well_name": "MN-0291HST2",
@@ -3790,8 +3636,8 @@
       "x": 747733.0,
       "y": 3216274.0,
       "startup_score": 9.89,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -3802,9 +3648,7 @@
       "lon": 47.544259,
       "recent_highest_oil": 703.5149,
       "recent_highest_oil_date": "2021-08-05",
-      "oil_trend_pct": 47.1,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 47.1
     },
     {
       "well_name": "MN-0316H",
@@ -3843,8 +3687,8 @@
       "x": 749839.67,
       "y": 3214375.06,
       "startup_score": 9.0,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "Low Pi",
       "pump_status_review": "Downthrust",
@@ -3855,9 +3699,7 @@
       "lon": 47.565453,
       "recent_highest_oil": 316.94,
       "recent_highest_oil_date": "2022-07-27",
-      "oil_trend_pct": 11.8,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 11.8
     },
     {
       "well_name": "UG-0292H",
@@ -3896,8 +3738,8 @@
       "x": 767694.0,
       "y": 3196144.0,
       "startup_score": 8.5,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 10000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -3908,9 +3750,7 @@
       "lon": 47.744281,
       "recent_highest_oil": 3283.0,
       "recent_highest_oil_date": "2019-09-25",
-      "oil_trend_pct": -15.4,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -15.4
     },
     {
       "well_name": "UG-0101",
@@ -3949,8 +3789,8 @@
       "x": 767048.35,
       "y": 3192175.58,
       "startup_score": 8.43,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 2000.0,
       "well_category": "Low Pi",
       "pump_status_review": "Within Range",
@@ -3961,9 +3801,7 @@
       "lon": 47.736731,
       "recent_highest_oil": 1514.7,
       "recent_highest_oil_date": "2008-11-13",
-      "oil_trend_pct": 14.5,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 14.5
     },
     {
       "well_name": "MN-0119ST1",
@@ -4002,8 +3840,8 @@
       "x": 747060.783,
       "y": 3214937.028,
       "startup_score": 7.83,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 100.0,
       "well_category": "New Commission",
       "pump_status_review": "Within Range",
@@ -4014,9 +3852,7 @@
       "lon": 47.537066,
       "recent_highest_oil": 1573.9489,
       "recent_highest_oil_date": "2019-07-30",
-      "oil_trend_pct": -86.5,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -86.5
     },
     {
       "well_name": "MN-0168",
@@ -4055,8 +3891,8 @@
       "x": 746263.168,
       "y": 3211588.816,
       "startup_score": 7.64,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 60000.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -4067,9 +3903,7 @@
       "lon": 47.528146,
       "recent_highest_oil": 3589.05,
       "recent_highest_oil_date": "2010-09-02",
-      "oil_trend_pct": 57.2,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 57.2
     },
     {
       "well_name": "MN-0157H",
@@ -4108,8 +3942,8 @@
       "x": 747302.541,
       "y": 3215677.293,
       "startup_score": 7.47,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -4120,9 +3954,7 @@
       "lon": 47.53971,
       "recent_highest_oil": 4199.506,
       "recent_highest_oil_date": "2010-05-18",
-      "oil_trend_pct": 2.7,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 2.7
     },
     {
       "well_name": "UG-0369",
@@ -4161,8 +3993,8 @@
       "x": 764363.813,
       "y": 3197892.529,
       "startup_score": 7.38,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 17000.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -4173,9 +4005,7 @@
       "lon": 47.710583,
       "recent_highest_oil": 462.069975,
       "recent_highest_oil_date": "2023-01-24",
-      "oil_trend_pct": 33.4,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 33.4
     },
     {
       "well_name": "UG-0178",
@@ -4214,8 +4044,8 @@
       "x": 765964.97,
       "y": 3196270.42,
       "startup_score": 7.14,
-      "priority": "P4",
-      "priority_label": "Rig WO",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -4226,9 +4056,7 @@
       "lon": 47.726603,
       "recent_highest_oil": 4151.25,
       "recent_highest_oil_date": "2010-01-20",
-      "oil_trend_pct": 58.2,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 58.2
     },
     {
       "well_name": "UG-0183H",
@@ -4267,8 +4095,8 @@
       "x": 767699.83,
       "y": 3193949.92,
       "startup_score": 6.63,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 10000.0,
       "well_category": "Low Pi",
       "pump_status_review": "Within Range",
@@ -4279,9 +4107,7 @@
       "lon": 47.743821,
       "recent_highest_oil": 905.85,
       "recent_highest_oil_date": "2011-09-06",
-      "oil_trend_pct": -29.6,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -29.6
     },
     {
       "well_name": "MN-0320",
@@ -4320,8 +4146,8 @@
       "x": 747653.43,
       "y": 3216584.62,
       "startup_score": 5.59,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "Low Pi",
       "pump_status_review": "Downthrust",
@@ -4332,9 +4158,7 @@
       "lon": 47.543511,
       "recent_highest_oil": 641.0,
       "recent_highest_oil_date": "2024-03-13",
-      "oil_trend_pct": -71.8,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -71.8
     },
     {
       "well_name": "MN-0009",
@@ -4373,8 +4197,8 @@
       "x": 747906.92,
       "y": 3214668.51,
       "startup_score": 5.38,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -4385,9 +4209,7 @@
       "lon": 47.545688,
       "recent_highest_oil": 4105.71,
       "recent_highest_oil_date": "2002-09-30",
-      "oil_trend_pct": 18.8,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 18.8
     },
     {
       "well_name": "UG-0214",
@@ -4426,8 +4248,8 @@
       "x": 759575.154,
       "y": 3199542.404,
       "startup_score": 4.96,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": null,
       "well_category": "New Commission",
       "pump_status_review": "Within Range",
@@ -4438,9 +4260,7 @@
       "lon": 47.661907,
       "recent_highest_oil": 2600.32,
       "recent_highest_oil_date": "2012-11-14",
-      "oil_trend_pct": 20.5,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": 20.5
     },
     {
       "well_name": "UG-0191",
@@ -4479,8 +4299,8 @@
       "x": 767883.435,
       "y": 3198541.974,
       "startup_score": 4.77,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -4491,9 +4311,7 @@
       "lon": 47.746791,
       "recent_highest_oil": 3859.2,
       "recent_highest_oil_date": "2011-04-06",
-      "oil_trend_pct": -58.7,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -58.7
     },
     {
       "well_name": "UG-0211",
@@ -4532,8 +4350,8 @@
       "x": 768681.0,
       "y": 3198502.0,
       "startup_score": 4.65,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 20000.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -4544,9 +4362,7 @@
       "lon": 47.754951,
       "recent_highest_oil": 2889.901,
       "recent_highest_oil_date": "2016-11-16",
-      "oil_trend_pct": -36.4,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -36.4
     },
     {
       "well_name": "MN-0308",
@@ -4585,8 +4401,8 @@
       "x": 746860.74,
       "y": 3211258.19,
       "startup_score": 4.3,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 40000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -4597,9 +4413,7 @@
       "lon": 47.534203,
       "recent_highest_oil": 901.9911,
       "recent_highest_oil_date": "2022-03-10",
-      "oil_trend_pct": 43.8,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": 43.8
     },
     {
       "well_name": "UG-0078",
@@ -4638,8 +4452,8 @@
       "x": 769074.223,
       "y": 3196838.423,
       "startup_score": 4.2,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 18000.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -4650,9 +4464,7 @@
       "lon": 47.758583,
       "recent_highest_oil": 5298.3,
       "recent_highest_oil_date": "2004-09-30",
-      "oil_trend_pct": -15.1,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -15.1
     },
     {
       "well_name": "MN-0048ST1",
@@ -4691,8 +4503,8 @@
       "x": 745774.88,
       "y": 3211464.64,
       "startup_score": 4.15,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "Grounded",
       "pump_status_review": "Within Range",
@@ -4703,9 +4515,7 @@
       "lon": 47.52311,
       "recent_highest_oil": 4565.0,
       "recent_highest_oil_date": "2018-02-15",
-      "oil_trend_pct": -37.4,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -37.4
     },
     {
       "well_name": "UG-0187",
@@ -4744,8 +4554,8 @@
       "x": 760550.941,
       "y": 3197887.29,
       "startup_score": 4.12,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 34000.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -4756,9 +4566,7 @@
       "lon": 47.671523,
       "recent_highest_oil": 4593.92,
       "recent_highest_oil_date": "2011-09-14",
-      "oil_trend_pct": -45.6,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -45.6
     },
     {
       "well_name": "MN-0196H",
@@ -4797,8 +4605,8 @@
       "x": 745932.632,
       "y": 3214405.38,
       "startup_score": 3.62,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 1200.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -4809,9 +4617,7 @@
       "lon": 47.525373,
       "recent_highest_oil": 5398.0,
       "recent_highest_oil_date": "2016-01-03",
-      "oil_trend_pct": -43.8,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -43.8
     },
     {
       "well_name": "UG-0116HST1",
@@ -4850,8 +4656,8 @@
       "x": 768859.92,
       "y": 3194979.84,
       "startup_score": 2.99,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -4862,9 +4668,7 @@
       "lon": 47.755946,
       "recent_highest_oil": 2555.878,
       "recent_highest_oil_date": "2008-12-17",
-      "oil_trend_pct": 25.2,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": 25.2
     },
     {
       "well_name": "UG-0186H",
@@ -4903,8 +4707,8 @@
       "x": 769488.28,
       "y": 3197340.13,
       "startup_score": 2.94,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 200.0,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -4915,9 +4719,7 @@
       "lon": 47.762943,
       "recent_highest_oil": 819.0,
       "recent_highest_oil_date": "2013-10-30",
-      "oil_trend_pct": -3.9,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -3.9
     },
     {
       "well_name": "UG-0293ST2",
@@ -4956,8 +4758,8 @@
       "x": 768061.45,
       "y": 3197265.56,
       "startup_score": 2.59,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 30000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -4968,9 +4770,7 @@
       "lon": 47.748311,
       "recent_highest_oil": null,
       "recent_highest_oil_date": null,
-      "oil_trend_pct": null,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "UG-0102ST2",
@@ -5009,8 +4809,8 @@
       "x": 762399.0,
       "y": 3196199.69,
       "startup_score": 1.69,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -5021,9 +4821,7 @@
       "lon": 47.690062,
       "recent_highest_oil": null,
       "recent_highest_oil_date": null,
-      "oil_trend_pct": null,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "MN-0363",
@@ -5062,8 +4860,8 @@
       "x": 747841.73,
       "y": 3212578.76,
       "startup_score": 1.6,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 200.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "NO PGORT",
@@ -5074,9 +4872,7 @@
       "lon": 47.544557,
       "recent_highest_oil": null,
       "recent_highest_oil_date": null,
-      "oil_trend_pct": null,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "UG-0091",
@@ -5115,8 +4911,8 @@
       "x": 766676.456,
       "y": 3192303.845,
       "startup_score": 1.51,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -5127,9 +4923,7 @@
       "lon": 47.732954,
       "recent_highest_oil": 3389.28,
       "recent_highest_oil_date": "2007-02-17",
-      "oil_trend_pct": 5.8,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": 5.8
     },
     {
       "well_name": "UG-0394ST2",
@@ -5168,8 +4962,8 @@
       "x": 768149.019,
       "y": 3197642.709,
       "startup_score": 1.4,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 12000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -5180,9 +4974,7 @@
       "lon": 47.749298,
       "recent_highest_oil": null,
       "recent_highest_oil_date": null,
-      "oil_trend_pct": null,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "UG-0363ST1",
@@ -5221,8 +5013,8 @@
       "x": 759962.0,
       "y": 3198336.0,
       "startup_score": 1.11,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 22000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -5233,9 +5025,7 @@
       "lon": 47.665593,
       "recent_highest_oil": 2199.9978,
       "recent_highest_oil_date": "2022-10-14",
-      "oil_trend_pct": -29.6,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -29.6
     },
     {
       "well_name": "MN-0355",
@@ -5274,8 +5064,8 @@
       "x": 747851.68,
       "y": 3212579.46,
       "startup_score": 0.84,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 32000.0,
       "well_category": "Normal",
       "pump_status_review": "NO PGORT",
@@ -5286,9 +5076,7 @@
       "lon": 47.544659,
       "recent_highest_oil": null,
       "recent_highest_oil_date": null,
-      "oil_trend_pct": null,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "UG-0097",
@@ -5327,8 +5115,8 @@
       "x": 770289.04,
       "y": 3199323.12,
       "startup_score": 0.38,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Sensor reading lost",
       "pump_status_review": "Within Range",
@@ -5339,9 +5127,7 @@
       "lon": 47.77162,
       "recent_highest_oil": 4269.63,
       "recent_highest_oil_date": "2003-09-05",
-      "oil_trend_pct": 24.5,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 24.5
     },
     {
       "well_name": "UG-0031",
@@ -5380,8 +5166,8 @@
       "x": 764315.1,
       "y": 3193422.9,
       "startup_score": 0.21,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 22000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -5392,9 +5178,7 @@
       "lon": 47.709038,
       "recent_highest_oil": 1098.43656,
       "recent_highest_oil_date": "2000-10-17",
-      "oil_trend_pct": 19.9,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": 19.9
     },
     {
       "well_name": "UG-0260ST1",
@@ -5433,8 +5217,8 @@
       "x": 759593.0,
       "y": 3196950.0,
       "startup_score": 0.19,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -5445,9 +5229,7 @@
       "lon": 47.661494,
       "recent_highest_oil": null,
       "recent_highest_oil_date": null,
-      "oil_trend_pct": null,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "UG-0153ST1",
@@ -5486,8 +5268,8 @@
       "x": 767676.66,
       "y": 3197296.24,
       "startup_score": 0.19,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 40000.0,
       "well_category": "Normal",
       "pump_status_review": "Upthrust",
@@ -5498,9 +5280,7 @@
       "lon": 47.744377,
       "recent_highest_oil": null,
       "recent_highest_oil_date": null,
-      "oil_trend_pct": null,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "MN-0019",
@@ -5539,8 +5319,8 @@
       "x": 745976.72,
       "y": 3216347.28,
       "startup_score": 0.05,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -5551,9 +5331,7 @@
       "lon": 47.526253,
       "recent_highest_oil": 7270.0,
       "recent_highest_oil_date": "2003-12-31",
-      "oil_trend_pct": 132.4,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": 132.4
     },
     {
       "well_name": "MN-0052",
@@ -5592,8 +5370,8 @@
       "x": 746811.0,
       "y": 3216496.0,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -5604,9 +5382,7 @@
       "lon": 47.534847,
       "recent_highest_oil": 4932.0,
       "recent_highest_oil_date": "2005-12-14",
-      "oil_trend_pct": -49.8,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -49.8
     },
     {
       "well_name": "MN-0170",
@@ -5645,8 +5421,8 @@
       "x": 747637.177,
       "y": 3217815.26,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -5657,9 +5433,7 @@
       "lon": 47.543617,
       "recent_highest_oil": 946.0,
       "recent_highest_oil_date": "2015-12-08",
-      "oil_trend_pct": -5.6,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -5.6
     },
     {
       "well_name": "MN-0175HST1",
@@ -5698,8 +5472,8 @@
       "x": 746129.7,
       "y": 3214228.31,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 0.0,
       "well_category": "Low Pi",
       "pump_status_review": "Within Range",
@@ -5710,9 +5484,7 @@
       "lon": 47.527357,
       "recent_highest_oil": 1230.9015,
       "recent_highest_oil_date": "2017-11-15",
-      "oil_trend_pct": -12.0,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -12.0
     },
     {
       "well_name": "MN-0279",
@@ -5751,15 +5523,13 @@
       "x": 746747.267,
       "y": 3210275.778,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "lat": 28.996798,
       "lon": 47.532823,
       "recent_highest_oil": 1011.640872,
       "recent_highest_oil_date": "2022-11-02",
-      "oil_trend_pct": -6.3,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -6.3
     },
     {
       "well_name": "UG-0011",
@@ -5798,8 +5568,8 @@
       "x": 760774.933,
       "y": 3204909.546,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 10000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -5810,9 +5580,7 @@
       "lon": 47.675443,
       "recent_highest_oil": 7160.958,
       "recent_highest_oil_date": "2010-11-23",
-      "oil_trend_pct": -12.3,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -12.3
     },
     {
       "well_name": "UG-0038AHST1",
@@ -5851,8 +5619,8 @@
       "x": 764190.35,
       "y": 3194031.46,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 18000.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -5863,9 +5631,7 @@
       "lon": 47.707903,
       "recent_highest_oil": 4208.4,
       "recent_highest_oil_date": "2010-10-05",
-      "oil_trend_pct": -5.4,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -5.4
     },
     {
       "well_name": "UG-0040",
@@ -5904,8 +5670,8 @@
       "x": 766547.72,
       "y": 3193172.56,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": 8000.0,
       "well_category": "Grounded",
       "pump_status_review": "Downthrust",
@@ -5916,9 +5682,7 @@
       "lon": 47.731841,
       "recent_highest_oil": 1119.16,
       "recent_highest_oil_date": "2006-12-26",
-      "oil_trend_pct": -42.1,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -42.1
     },
     {
       "well_name": "UG-0086",
@@ -5957,8 +5721,8 @@
       "x": 760338.036,
       "y": 3205575.196,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 30000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -5969,9 +5733,7 @@
       "lon": 47.671118,
       "recent_highest_oil": 7057.92,
       "recent_highest_oil_date": "2004-05-31",
-      "oil_trend_pct": null,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "UG-0093",
@@ -6010,8 +5772,8 @@
       "x": 759908.91,
       "y": 3201145.76,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": null,
       "well_category": "New Commission",
       "pump_status_review": "Within Range",
@@ -6022,9 +5784,7 @@
       "lon": 47.665697,
       "recent_highest_oil": 8101.66,
       "recent_highest_oil_date": "2002-07-13",
-      "oil_trend_pct": -43.9,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -43.9
     },
     {
       "well_name": "UG-0103",
@@ -6063,8 +5823,8 @@
       "x": 765017.93,
       "y": 3192999.99,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -6075,9 +5835,7 @@
       "lon": 47.716136,
       "recent_highest_oil": 4700.5,
       "recent_highest_oil_date": "1999-05-10",
-      "oil_trend_pct": 12.5,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": 12.5
     },
     {
       "well_name": "UG-0172H",
@@ -6116,15 +5874,13 @@
       "x": 767298.47,
       "y": 3193797.73,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "lat": 28.844098,
       "lon": 47.739676,
       "recent_highest_oil": 4955.0,
       "recent_highest_oil_date": "2010-01-09",
-      "oil_trend_pct": -77.5,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -77.5
     },
     {
       "well_name": "UG-0180",
@@ -6163,8 +5919,8 @@
       "x": 767978.0,
       "y": 3196313.0,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 20000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -6175,9 +5931,7 @@
       "lon": 47.74723,
       "recent_highest_oil": 6379.2,
       "recent_highest_oil_date": "2009-12-31",
-      "oil_trend_pct": -32.0,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -32.0
     },
     {
       "well_name": "UG-0371",
@@ -6216,8 +5970,8 @@
       "x": 770797.53,
       "y": 3197198.06,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "h2s_ppm": null,
       "well_category": "Problematic",
       "pump_status_review": "Within Range",
@@ -6228,9 +5982,7 @@
       "lon": 47.77632,
       "recent_highest_oil": 320.597288,
       "recent_highest_oil_date": "2023-02-24",
-      "oil_trend_pct": -23.0,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": -23.0
     },
     {
       "well_name": "UG-0372",
@@ -6269,8 +6021,8 @@
       "x": 771234.09,
       "y": 3198204.09,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 100.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Within Range",
@@ -6281,9 +6033,7 @@
       "lon": 47.781033,
       "recent_highest_oil": 351.025,
       "recent_highest_oil_date": "2023-07-11",
-      "oil_trend_pct": -27.0,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -27.0
     },
     {
       "well_name": "MN-0382ST1",
@@ -6322,8 +6072,8 @@
       "x": 748821.25,
       "y": 3214621.91,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 0.0,
       "well_category": "High Viscous / CT",
       "pump_status_review": "Upthrust",
@@ -6334,9 +6084,7 @@
       "lon": 47.555059,
       "recent_highest_oil": 546.96,
       "recent_highest_oil_date": "2024-09-09",
-      "oil_trend_pct": -57.6,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -57.6
     },
     {
       "well_name": "UG-0085",
@@ -6375,8 +6123,8 @@
       "x": 768506.998,
       "y": 3199809.604,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P3",
+      "priority_label": "Low Oil · Low WC · Low GOR",
       "h2s_ppm": 24000.0,
       "well_category": "Normal",
       "pump_status_review": "Within Range",
@@ -6387,9 +6135,7 @@
       "lon": 47.75348,
       "recent_highest_oil": 5891.78,
       "recent_highest_oil_date": "2002-01-05",
-      "oil_trend_pct": -75.5,
-      "priority_v2": "P3",
-      "priority_v2_label": "Low Oil · Low WC · Low GOR"
+      "oil_trend_pct": -75.5
     },
     {
       "well_name": "UG-0092",
@@ -6428,15 +6174,13 @@
       "x": 764751.19,
       "y": 3193833.64,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "lat": 28.844949,
       "lon": 47.7136,
       "recent_highest_oil": null,
       "recent_highest_oil_date": null,
-      "oil_trend_pct": null,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": null
     },
     {
       "well_name": "MN-0023",
@@ -6475,15 +6219,13 @@
       "x": 746936.33,
       "y": 3212995.56,
       "startup_score": 0.0,
-      "priority": "P5",
-      "priority_label": "Hold",
+      "priority": "P2",
+      "priority_label": "Medium Oil · Medium WC · Medium GOR",
       "lat": 29.021286,
       "lon": 47.535361,
       "recent_highest_oil": null,
       "recent_highest_oil_date": null,
-      "oil_trend_pct": null,
-      "priority_v2": "P2",
-      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
+      "oil_trend_pct": null
     }
   ]
 }

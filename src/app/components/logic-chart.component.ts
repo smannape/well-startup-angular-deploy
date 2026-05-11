@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
     <div class="sk-root">
 
       <div class="sk-header">
-        <span class="sk-title">Startup Scoring — Signal Flow</span>
-        <span class="sk-sub">Input signals (left) → weighted score → priority bucket (right) · band width = contribution</span>
+        <span class="sk-title">Production-Profile Prioritization — Signal Flow</span>
+        <span class="sk-sub">Oil rate · Water cut · GOR · Decline trend → scoring → P1/P2/P3 producer tier · band width = contribution</span>
       </div>
 
       <div class="sk-body">
@@ -135,13 +135,12 @@ export class LogicChartComponent {
     const usable = this.H - this.MT - this.MB;   // 220
     const gap    = 5;
 
-    /* ── Input nodes ──────────────────────────────────── */
+    /* ── Input nodes — Production-Profile signals ──────── */
     const inputDefs = [
-      { icon: '🛢', label: 'Oil Rate / PGOR', wLabel: '+130', pos: true  },
-      { icon: '📋', label: 'Closure Reason',  wLabel:  '−25', pos: false },
-      { icon: '🔧', label: 'WO History',      wLabel:  '−15', pos: false },
-      { icon: '💧', label: 'Water Cut %',     wLabel:  '−10', pos: false },
-      { icon: '⚡', label: 'ESP Run Life',    wLabel:  '−10', pos: false },
+      { icon: '🛢', label: 'Oil Rate (BOPD)',  wLabel: 'Bucket 1–3', pos: true  },
+      { icon: '💧', label: 'Water Cut %',      wLabel: 'Bucket 1–3', pos: false },
+      { icon: '⛽', label: 'GOR (scf/stb)',    wLabel: 'Bucket 1–3', pos: false },
+      { icon: '📉', label: 'Decline Trend',    wLabel: '+1 if ≤-20%', pos: false },
     ];
     const iH = (usable - gap * (inputDefs.length - 1)) / inputDefs.length;
     this.inputNodes = inputDefs.map((d, i) => ({
@@ -152,14 +151,12 @@ export class LogicChartComponent {
 
     /* ── Priority nodes (sized by actual well count) ──── */
     const priDefs = [
-      { p: 'P1', count: 12, color: '#ffb83d', label: 'Quick Win'    },
-      { p: 'P2', count: 18, color: '#ff9849', label: 'Surface Intv' },
-      { p: 'P3', count: 25, color: '#cf6b3a', label: 'Rigless WO'   },
-      { p: 'P4', count: 24, color: '#8a4a2b', label: 'Rig WO'       },
-      { p: 'P5', count: 43, color: '#5a4434', label: 'Hold / RE'    },
+      { p: 'P1', count:  9, color: '#6dd47e', label: 'High Producer · score ≤ 3' },
+      { p: 'P2', count: 73, color: '#ffb83d', label: 'Mid Producer · score 4–6'  },
+      { p: 'P3', count: 40, color: '#cf6b3a', label: 'Marginal · score 7+ / declining' },
     ];
     const totalWells = priDefs.reduce((s, p) => s + p.count, 0); // 122
-    const totalPH    = usable - gap * (priDefs.length - 1);       // 200
+    const totalPH    = usable - gap * (priDefs.length - 1);
 
     let pY = this.MT;
     this.priorityNodes = priDefs.map(p => {
@@ -171,12 +168,12 @@ export class LogicChartComponent {
 
     /* ── Scoring formula rows (centre panel) ─────────── */
     const fRows = [
-      { text: '+100 × Potential', pos: true  },
-      { text:  '+30 × Freshness', pos: true  },
-      { text:  '−25 × Severity',  pos: false },
-      { text:  '−15 × WO Burden', pos: false },
-      { text:   '−10 × WC Risk',  pos: false },
-      { text: '−10 × Equip Risk', pos: false },
+      { text: 'Oil ≥ 1500 → 1',    pos: true  },
+      { text: '500–1500  → 2',     pos: false },
+      { text: 'WC < 50%  → 1',     pos: true  },
+      { text: '50–75%    → 2',     pos: false },
+      { text: 'GOR < 500 → 1',     pos: true  },
+      { text: 'Decline ≤ -20% +1', pos: false },
     ];
     const rowH  = (usable - 24) / fRows.length;
     this.formula = fRows.map((r, i) => ({
