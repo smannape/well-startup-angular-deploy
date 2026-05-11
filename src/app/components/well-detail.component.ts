@@ -40,8 +40,19 @@ import { Well, Workover, PRIORITY_COLORS } from '../models/well.model';
         <span class="k">Water Cut</span><span class="v">{{well.latest_wc | number:'1.1-1'}} %</span>
         <span class="k">GOR</span><span class="v">{{well.latest_gor | number:'1.0-0'}} scf/stb</span>
         <span class="k">Expected Oil</span><span class="v">{{well.expected_oil | number:'1.0-0'}} BOPD</span>
-        <span class="k">Potential Oil</span>
-        <span class="v" style="color:var(--warn)">{{well.potential_oil | number:'1.0-0'}} BOPD</span>
+        <span class="k">Recent Highest Oil</span>
+        <span class="v oil-high">
+          {{(well.recent_highest_oil ?? well.potential_oil) | number:'1.0-0'}} BOPD
+          <small *ngIf="well.recent_highest_oil_date" class="oil-date">({{well.recent_highest_oil_date}})</small>
+        </span>
+        <span class="k">Oil Trend</span>
+        <span class="v" [class.trend-down]="(well.oil_trend_pct ?? 0) < 0"
+                       [class.trend-up]="(well.oil_trend_pct ?? 0) > 0">
+          <ng-container *ngIf="well.oil_trend_pct != null; else noTrend">
+            {{well.oil_trend_pct > 0 ? '+' : ''}}{{well.oil_trend_pct | number:'1.1-1'}} %
+          </ng-container>
+          <ng-template #noTrend>—</ng-template>
+        </span>
         <span class="k">Last PGOR Date</span><span class="v">{{well.latest_pgor_date}}</span>
         <span class="k">Allowable</span><span class="v">{{well.allowable_rate | number:'1.0-0'}} BLPD</span>
       </div>
@@ -50,7 +61,11 @@ import { Well, Workover, PRIORITY_COLORS } from '../models/well.model';
       <div class="kv">
         <span class="k">AL Method</span><span class="v">{{well.al_method}}</span>
         <span class="k">Contractor</span><span class="v">{{well.contractor}}</span>
-        <span class="k">ESP Run Life</span><span class="v">{{well.esp_run_life}} days</span>
+        <span class="k">ESP Run Life</span>
+        <span class="v esp-cell">
+          {{well.esp_run_life}} days
+          <span *ngIf="well.esp_run_life > 700" class="esp-blinker" title="ESP run life exceeds 700 days"></span>
+        </span>
         <span class="k">Install Date</span><span class="v">{{well.install_date}}</span>
         <span class="k">Last Activity</span><span class="v">{{well.last_imp_activity}}</span>
       </div>
@@ -117,6 +132,27 @@ import { Well, Workover, PRIORITY_COLORS } from '../models/well.model';
     .no-wo { font-size:11px; color:var(--beige-500); }
     .note { font-size:11px; margin-bottom:6px; line-height:1.6; }
     .note-tag { color:var(--orange-400); }
+
+    /* Recent-highest-oil — green emphasis */
+    .oil-high { color:#6dd47e !important; font-weight:600; }
+    .oil-high .oil-date { color:#6dd47e99; font-family:'JetBrains Mono',monospace;
+      font-size:10px; margin-left:6px; }
+    .trend-up   { color:#6dd47e; }
+    .trend-down { color:#ef5a3a; }
+
+    /* ESP run life > 700 days — red blinker */
+    .esp-cell { display:inline-flex; align-items:center; gap:8px; }
+    .esp-blinker {
+      width:10px; height:10px; border-radius:50%; background:#ef3a2a;
+      box-shadow:0 0 0 0 rgba(239,58,42,0.7);
+      animation: esp-blink 1.1s infinite;
+      display:inline-block;
+    }
+    @keyframes esp-blink {
+      0%   { box-shadow:0 0 0 0 rgba(239,58,42,0.85); opacity:1;   }
+      70%  { box-shadow:0 0 0 10px rgba(239,58,42,0);  opacity:.55; }
+      100% { box-shadow:0 0 0 0 rgba(239,58,42,0);     opacity:1;   }
+    }
   `]
 })
 export class WellDetailComponent {

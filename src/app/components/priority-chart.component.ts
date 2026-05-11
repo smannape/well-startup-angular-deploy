@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Kpis, PRIORITY_COLORS, PRIORITY_DESC } from '../models/well.model';
+import { Kpis, PRIORITY_COLORS, PRIORITY_DESC, PRIORITY_DESC_V2 } from '../models/well.model';
 
 @Component({
   selector: 'app-priority-chart',
@@ -47,9 +47,10 @@ import { Kpis, PRIORITY_COLORS, PRIORITY_DESC } from '../models/well.model';
 })
 export class PriorityChartComponent implements OnChanges {
   @Input() kpis!: Kpis | null;
+  @Input() mode: 'v1' | 'v2' = 'v1';
   colors = PRIORITY_COLORS;
-  descs  = PRIORITY_DESC;
-  priorities = ['P1','P2','P3','P4','P5'];
+  descs: Record<string,string> = PRIORITY_DESC;
+  priorities: string[] = ['P1','P2','P3','P4','P5'];
   ml=40; mr=20; mt=28; mb=36; bw=70;
   bars: any[] = [];
   gridYs: any[] = [];
@@ -59,9 +60,14 @@ export class PriorityChartComponent implements OnChanges {
 
   build() {
     if (!this.kpis) return;
+    const v2 = this.mode === 'v2';
+    this.priorities = v2 ? ['P1','P2','P3'] : ['P1','P2','P3','P4','P5'];
+    this.descs = v2 ? PRIORITY_DESC_V2 : PRIORITY_DESC;
+    const counts = v2 ? (this.kpis.by_priority_v2 || {}) : this.kpis.by_priority;
+    const pots   = v2 ? (this.kpis.potential_by_priority_v2 || {}) : this.kpis.potential_by_priority;
     const data = this.priorities.map(p => ({
-      p, wells: this.kpis!.by_priority[p]||0,
-      potential: Math.round(this.kpis!.potential_by_priority[p]||0)
+      p, wells: counts[p]||0,
+      potential: Math.round(pots[p]||0)
     }));
     const max = Math.max(...data.map(d=>d.potential))||1;
     const n = data.length;

@@ -11,6 +11,15 @@ export interface Well {
   formations: string; wo_count: number;
   pe_comment: string; re_comment: string; fd_action_plan: string;
   x: number; y: number;
+  /* ── Geo (computed from UTM 38N -> WGS84) ── */
+  lat?: number; lon?: number;
+  /* ── Well test history derived ── */
+  recent_highest_oil?: number | null;
+  recent_highest_oil_date?: string | null;
+  oil_trend_pct?: number | null;
+  /* ── Option-2 production-profile priority ── */
+  priority_v2?: string | null;
+  priority_v2_label?: string | null;
   /* ── WK Wells Review fields (from Excel) ── */
   h2s_ppm?: number | null;
   well_category?: string | null;
@@ -27,6 +36,8 @@ export interface Kpis {
   potential_by_priority: Record<string, number>;
   by_facility: Record<string, number>;
   by_reason: Record<string, number>;
+  by_priority_v2?: Record<string, number>;
+  potential_by_priority_v2?: Record<string, number>;
 }
 
 export interface WellData { kpis: Kpis; wells: Well[]; }
@@ -47,4 +58,11 @@ export const PRIORITY_DESC: Record<string, string> = {
   P3: 'Requires rigless downhole workover via coiled tubing or wireline (acid job, sand control, scale treatment, tubing repair). 3–7 days. Good economics.',
   P4: 'Full rig workover needed (casing patch, reperforation, fish-in-hole, sidetrack). Higher cost and longer lead time. Justify with expected oil rate.',
   P5: 'Complex cases on hold pending reservoir engineering study or economic review. Do not commit resources until RE assessment complete.'
+};
+
+/* Production-Profile priority (Option 2) — based on oil rate, water cut, GOR and decline trend */
+export const PRIORITY_DESC_V2: Record<string, string> = {
+  P1: 'High oil rate, low water cut and low GOR. Stable or improving trend. Best-in-class producer — bring on first.',
+  P2: 'Medium oil rate, medium water cut and medium GOR. Mid-tier production profile — second wave.',
+  P3: 'Low oil, low water cut and low GOR (or declining trend). Marginal producer — review economics before startup.'
 };

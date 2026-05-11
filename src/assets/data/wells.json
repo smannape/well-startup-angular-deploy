@@ -30,7 +30,17 @@
       "Under Review": 1
     },
     "total_closed_wells": 121,
-    "total_open_wells": 1
+    "total_open_wells": 1,
+    "by_priority_v2": {
+      "P2": 73,
+      "P1": 9,
+      "P3": 40
+    },
+    "potential_by_priority_v2": {
+      "P2": 53759.10000000002,
+      "P1": 18452.699999999997,
+      "P3": 19166.499999999996
+    }
   },
   "wells": [
     {
@@ -77,7 +87,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Producer well (5071 bpd net oil), Hi H₂S concentration and Hi GOR",
       "recommendation_review": "To open casing gradually before start-up with low Hz",
-      "erl_pct": 124.0
+      "erl_pct": 124.0,
+      "lat": 29.016254,
+      "lon": 47.545706,
+      "recent_highest_oil": 7017.0,
+      "recent_highest_oil_date": "2015-01-14",
+      "oil_trend_pct": -1.8,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0205ST7",
@@ -123,7 +140,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Commissioned on 29-Jan-26",
       "recommendation_review": "Open casing gradually before start-up to and release gas",
-      "erl_pct": 8.0
+      "erl_pct": 8.0,
+      "lat": 29.019852,
+      "lon": 47.550211,
+      "recent_highest_oil": 1505.0,
+      "recent_highest_oil_date": "2025-11-28",
+      "oil_trend_pct": 3.6,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0331ST2",
@@ -169,7 +193,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration and Hi GOR",
       "recommendation_review": "Grounded well, To keep S/D and to be started as the last batch if required start-up",
-      "erl_pct": 94.0
+      "erl_pct": 94.0,
+      "lat": 29.033116,
+      "lon": 47.52297,
+      "recent_highest_oil": 3391.42395,
+      "recent_highest_oil_date": "2024-12-11",
+      "oil_trend_pct": -14.4,
+      "priority_v2": "P1",
+      "priority_v2_label": "High Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0359ST1",
@@ -215,7 +246,14 @@
       "pump_status_review": "Upthrust",
       "remarks_review": "PAD well, last PGORT done on 26-Jul-25 , not able to conduct PGORT\n due to nearby rig",
       "recommendation_review": "Confirm pressure equalized , no NF,  SCSSV & SSV are open",
-      "erl_pct": 75.0
+      "erl_pct": 75.0,
+      "lat": 29.017357,
+      "lon": 47.544965,
+      "recent_highest_oil": 2480.1441,
+      "recent_highest_oil_date": "2025-07-26",
+      "oil_trend_pct": null,
+      "priority_v2": "P1",
+      "priority_v2_label": "High Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0326",
@@ -261,7 +299,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Running with Hi load and Hi H₂S concentration",
       "recommendation_review": "Start with low frequency",
-      "erl_pct": 35.0
+      "erl_pct": 35.0,
+      "lat": 29.007418,
+      "lon": 47.548072,
+      "recent_highest_oil": 4237.8114,
+      "recent_highest_oil_date": "2022-07-20",
+      "oil_trend_pct": -20.6,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0163ST1",
@@ -307,7 +352,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 12.0
+      "erl_pct": 12.0,
+      "lat": 28.877482,
+      "lon": 47.689792,
+      "recent_highest_oil": 1748.0,
+      "recent_highest_oil_date": "2026-02-09",
+      "oil_trend_pct": null,
+      "priority_v2": "P1",
+      "priority_v2_label": "High Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0112ST1",
@@ -353,7 +405,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 10.0
+      "erl_pct": 10.0,
+      "lat": 28.851243,
+      "lon": 47.686598,
+      "recent_highest_oil": 1511.0,
+      "recent_highest_oil_date": "2026-02-23",
+      "oil_trend_pct": null,
+      "priority_v2": "P1",
+      "priority_v2_label": "High Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0307",
@@ -399,7 +458,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Faulty Pd, Natural flow",
       "recommendation_review": "Before start-up confirm back spin or NF, open casing gradually before start-up",
-      "erl_pct": 79.0
+      "erl_pct": 79.0,
+      "lat": 29.004344,
+      "lon": 47.532706,
+      "recent_highest_oil": 2344.0016,
+      "recent_highest_oil_date": "2024-04-17",
+      "oil_trend_pct": 8.5,
+      "priority_v2": "P1",
+      "priority_v2_label": "High Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0271H",
@@ -445,7 +511,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "CIP connected in FL due to heavy crude",
       "recommendation_review": null,
-      "erl_pct": 175.0
+      "erl_pct": 175.0,
+      "lat": 28.867635,
+      "lon": 47.734441,
+      "recent_highest_oil": 3259.9596,
+      "recent_highest_oil_date": "2020-07-16",
+      "oil_trend_pct": -12.0,
+      "priority_v2": "P1",
+      "priority_v2_label": "High Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0110ST3",
@@ -491,7 +564,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 137.0
+      "erl_pct": 137.0,
+      "lat": 28.94512,
+      "lon": 47.685173,
+      "recent_highest_oil": 2065.9206,
+      "recent_highest_oil_date": "2024-02-22",
+      "oil_trend_pct": 4.3,
+      "priority_v2": "P1",
+      "priority_v2_label": "High Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0377ST1",
@@ -537,7 +617,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Well is flowing in stable condition and all surface and sub-surface parameters except fluctuations in vibration (Vx & Vy) and sudden increase in Amps before OL trips.\nBH flusing done but ESP tripped again due to O/L (Kept S/D for change VSD).",
       "recommendation_review": "Change surface equipment",
-      "erl_pct": 64.0
+      "erl_pct": 64.0,
+      "lat": 28.861405,
+      "lon": 47.704751,
+      "recent_highest_oil": 1959.5,
+      "recent_highest_oil_date": "2024-09-21",
+      "oil_trend_pct": -11.9,
+      "priority_v2": "P1",
+      "priority_v2_label": "High Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0356",
@@ -583,7 +670,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": null,
-      "erl_pct": 149.0
+      "erl_pct": 149.0,
+      "lat": 28.854137,
+      "lon": 47.692623,
+      "recent_highest_oil": 2563.488,
+      "recent_highest_oil_date": "2023-12-16",
+      "oil_trend_pct": -28.2,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0119ST1",
@@ -629,7 +723,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Running with Hi Tm",
       "recommendation_review": null,
-      "erl_pct": 61.0
+      "erl_pct": 61.0,
+      "lat": 28.86272,
+      "lon": 47.668379,
+      "recent_highest_oil": 1855.38,
+      "recent_highest_oil_date": "2025-10-11",
+      "oil_trend_pct": -38.7,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0301HST2",
@@ -675,7 +776,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy crude",
       "recommendation_review": "Start with low frequency",
-      "erl_pct": 174.0
+      "erl_pct": 174.0,
+      "lat": 28.857956,
+      "lon": 47.699412,
+      "recent_highest_oil": 2165.0,
+      "recent_highest_oil_date": "2022-03-26",
+      "oil_trend_pct": -12.3,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0331ST1",
@@ -721,7 +829,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "CIP connected in casing",
       "recommendation_review": null,
-      "erl_pct": 65.0
+      "erl_pct": 65.0,
+      "lat": 28.851987,
+      "lon": 47.68279,
+      "recent_highest_oil": 1481.004,
+      "recent_highest_oil_date": "2024-10-27",
+      "oil_trend_pct": -15.6,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0277H",
@@ -767,7 +882,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "CIP connected in casing (Fluid shot done on 17-Apr-26 PIP 1536 Psi)",
       "recommendation_review": "To be started from location with low frequency",
-      "erl_pct": 78.0
+      "erl_pct": 78.0,
+      "lat": 28.864291,
+      "lon": 47.686562,
+      "recent_highest_oil": 2599.0,
+      "recent_highest_oil_date": "2020-02-13",
+      "oil_trend_pct": -18.3,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0370",
@@ -813,7 +935,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "CIP already connected in FL (No CT)",
       "recommendation_review": null,
-      "erl_pct": 34.0
+      "erl_pct": 34.0,
+      "lat": 28.878127,
+      "lon": 47.752601,
+      "recent_highest_oil": 2541.0,
+      "recent_highest_oil_date": "2023-04-17",
+      "oil_trend_pct": 73.1,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0111ST1",
@@ -859,7 +988,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 68.0
+      "erl_pct": 68.0,
+      "lat": 28.876668,
+      "lon": 47.717981,
+      "recent_highest_oil": 2610.0,
+      "recent_highest_oil_date": "2024-08-25",
+      "oil_trend_pct": -19.0,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0233HST1",
@@ -905,7 +1041,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": null,
-      "erl_pct": 19.0
+      "erl_pct": 19.0,
+      "lat": 28.899029,
+      "lon": 47.671422,
+      "recent_highest_oil": 3662.131892,
+      "recent_highest_oil_date": "2021-05-24",
+      "oil_trend_pct": -0.6,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0208",
@@ -951,7 +1094,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": "Recommends to open casing before start-up",
-      "erl_pct": 34.0
+      "erl_pct": 34.0,
+      "lat": 29.055824,
+      "lon": 47.552453,
+      "recent_highest_oil": 3428.9268,
+      "recent_highest_oil_date": "2016-07-12",
+      "oil_trend_pct": -12.1,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0221H",
@@ -997,7 +1147,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Faulty Pd",
       "recommendation_review": "check back spin and to be started with low Hz",
-      "erl_pct": 187.0
+      "erl_pct": 187.0,
+      "lat": 28.88441,
+      "lon": 47.772469,
+      "recent_highest_oil": 1688.0,
+      "recent_highest_oil_date": "2019-07-03",
+      "oil_trend_pct": 21.3,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0160ST3",
@@ -1043,7 +1200,14 @@
       "pump_status_review": "Upthrust",
       "remarks_review": "Has NF,Closed casing has pressure 1000 psi, running with Hi WHP",
       "recommendation_review": "To keep it S/D for natural flow, remove blanking plug and release casing pressure gradually",
-      "erl_pct": 75.0
+      "erl_pct": 75.0,
+      "lat": 29.042406,
+      "lon": 47.544373,
+      "recent_highest_oil": 2198.85468,
+      "recent_highest_oil_date": "2025-10-07",
+      "oil_trend_pct": 165.0,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0230H",
@@ -1089,7 +1253,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Pd faulty and running with Hi Tm, CIP connected in FL",
       "recommendation_review": "Required BH flushing before start-up",
-      "erl_pct": 64.0
+      "erl_pct": 64.0,
+      "lat": 29.010723,
+      "lon": 47.542884,
+      "recent_highest_oil": 1492.9596,
+      "recent_highest_oil_date": "2020-11-26",
+      "oil_trend_pct": -6.2,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0239",
@@ -1135,7 +1306,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration and Hi GOR",
       "recommendation_review": "Release gas, confirm casing is open and  start ESP with low frequency",
-      "erl_pct": 37.0
+      "erl_pct": 37.0,
+      "lat": 28.995334,
+      "lon": 47.541262,
+      "recent_highest_oil": 6907.164,
+      "recent_highest_oil_date": "2017-12-20",
+      "oil_trend_pct": 4.8,
+      "priority_v2": "P1",
+      "priority_v2_label": "High Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0228ST1",
@@ -1181,7 +1359,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Running with Hi motor load, CIP connected in casing",
       "recommendation_review": "Start with low frequency",
-      "erl_pct": 66.0
+      "erl_pct": 66.0,
+      "lat": 28.897882,
+      "lon": 47.668702,
+      "recent_highest_oil": 3451.0,
+      "recent_highest_oil_date": "2022-10-19",
+      "oil_trend_pct": -39.9,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0391",
@@ -1227,7 +1412,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "PAD well",
       "recommendation_review": "Confirm SCSSV & SSV",
-      "erl_pct": 15.0
+      "erl_pct": 15.0,
+      "lat": 28.878557,
+      "lon": 47.750316,
+      "recent_highest_oil": 1469.25,
+      "recent_highest_oil_date": "2025-12-12",
+      "oil_trend_pct": 299.2,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0378ST1",
@@ -1273,7 +1465,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Two CIP connected due to heavy crude (net oil 1400 bpd),\n(Fluid shot done on 17-Apr-26 PIP 1513 Psi)",
       "recommendation_review": "To be started from location with low frequency",
-      "erl_pct": 123.0
+      "erl_pct": 123.0,
+      "lat": 28.91003,
+      "lon": 47.676118,
+      "recent_highest_oil": 2541.8688,
+      "recent_highest_oil_date": "2023-09-19",
+      "oil_trend_pct": -19.6,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0394",
@@ -1319,7 +1518,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "PAD well S/D on 27-Nov-25 due to nearby rig on location",
       "recommendation_review": "Recommended for BH flushing before start-up",
-      "erl_pct": 29.0
+      "erl_pct": 29.0,
+      "lat": 29.035982,
+      "lon": 47.534338,
+      "recent_highest_oil": 651.9752,
+      "recent_highest_oil_date": "2025-11-15",
+      "oil_trend_pct": null,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0379ST1",
@@ -1365,7 +1571,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": "Confirm casing open for gas release",
-      "erl_pct": 110.0
+      "erl_pct": 110.0,
+      "lat": 28.996809,
+      "lon": 47.545729,
+      "recent_highest_oil": 1650.426956,
+      "recent_highest_oil_date": "2024-11-29",
+      "oil_trend_pct": -33.8,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0238",
@@ -1411,7 +1624,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration and Hi GOR",
       "recommendation_review": "Release gas on far pit and manual start ESP with low frequency",
-      "erl_pct": 82.0
+      "erl_pct": 82.0,
+      "lat": 29.018064,
+      "lon": 47.547092,
+      "recent_highest_oil": 4763.9837,
+      "recent_highest_oil_date": "2017-12-18",
+      "oil_trend_pct": -13.0,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0070",
@@ -1457,7 +1677,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Running with Current control mode",
       "recommendation_review": null,
-      "erl_pct": 80.0
+      "erl_pct": 80.0,
+      "lat": 28.991296,
+      "lon": 47.545545,
+      "recent_highest_oil": 6855.0,
+      "recent_highest_oil_date": "2010-01-21",
+      "oil_trend_pct": -44.0,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0312",
@@ -1503,7 +1730,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Slugging well, running with Hi Tm",
       "recommendation_review": "to be started manually with low frequency and install  CIP",
-      "erl_pct": 54.0
+      "erl_pct": 54.0,
+      "lat": 28.99278,
+      "lon": 47.538122,
+      "recent_highest_oil": 4278.1098,
+      "recent_highest_oil_date": "2023-03-08",
+      "oil_trend_pct": -26.1,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0353",
@@ -1549,7 +1783,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": "Start-up with low frequency on far pit to confirm flow (MTR to be De-rated)",
-      "erl_pct": 21.0
+      "erl_pct": 21.0,
+      "lat": 28.978601,
+      "lon": 47.551083,
+      "recent_highest_oil": 580.50225,
+      "recent_highest_oil_date": "2025-12-22",
+      "oil_trend_pct": null,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0204H",
@@ -1595,7 +1836,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "DWO due to Hi WC",
       "recommendation_review": null,
-      "erl_pct": 19.0
+      "erl_pct": 19.0,
+      "lat": 29.042515,
+      "lon": 47.551306,
+      "recent_highest_oil": 7620.0,
+      "recent_highest_oil_date": "2013-11-03",
+      "oil_trend_pct": -47.1,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0001",
@@ -1641,7 +1889,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration and Hi GOR(1366 SCF/STB)",
       "recommendation_review": "Start manually with low frequency and confirm casing is open",
-      "erl_pct": 33.0
+      "erl_pct": 33.0,
+      "lat": 29.043616,
+      "lon": 47.550847,
+      "recent_highest_oil": 4152.0,
+      "recent_highest_oil_date": "2012-12-30",
+      "oil_trend_pct": -9.5,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0216",
@@ -1687,7 +1942,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": null,
-      "erl_pct": 30.0
+      "erl_pct": 30.0,
+      "lat": 28.994482,
+      "lon": 47.543374,
+      "recent_highest_oil": 7130.0,
+      "recent_highest_oil_date": "2016-06-22",
+      "oil_trend_pct": -63.4,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0164ST1",
@@ -1733,7 +1995,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "CIP connected due to Hi FLP",
       "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage",
-      "erl_pct": 21.0
+      "erl_pct": 21.0,
+      "lat": 28.915314,
+      "lon": 47.681467,
+      "recent_highest_oil": 885.9465,
+      "recent_highest_oil_date": "2025-10-27",
+      "oil_trend_pct": -46.4,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0324ST2",
@@ -1779,7 +2048,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Running with Hi Tm, CIP connected in casing",
       "recommendation_review": "Manual start-up with low frequency",
-      "erl_pct": 52.0
+      "erl_pct": 52.0,
+      "lat": 28.87555,
+      "lon": 47.677107,
+      "recent_highest_oil": 2246.443121,
+      "recent_highest_oil_date": "2021-12-06",
+      "oil_trend_pct": 285.2,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0368",
@@ -1825,7 +2101,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": "Confirm casing open for gas release",
-      "erl_pct": 65.0
+      "erl_pct": 65.0,
+      "lat": 28.985801,
+      "lon": 47.535147,
+      "recent_highest_oil": 1016.96,
+      "recent_highest_oil_date": "2025-06-03",
+      "oil_trend_pct": 1116.9,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0259",
@@ -1871,7 +2154,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": "Recommended to install CIP",
-      "erl_pct": 70.0
+      "erl_pct": 70.0,
+      "lat": 28.881515,
+      "lon": 47.674896,
+      "recent_highest_oil": 1757.08,
+      "recent_highest_oil_date": "2019-11-24",
+      "oil_trend_pct": -12.6,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0266",
@@ -1917,7 +2207,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Running with Hi VSD load",
       "recommendation_review": "Start with low frequency",
-      "erl_pct": 77.0
+      "erl_pct": 77.0,
+      "lat": 28.942778,
+      "lon": 47.678249,
+      "recent_highest_oil": 3456.9561,
+      "recent_highest_oil_date": "2020-03-03",
+      "oil_trend_pct": -3.4,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0311",
@@ -1963,7 +2260,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "CIP connected in FL",
       "recommendation_review": "Relocate CIP from FL to CT and\n restart CIP before one day from start-up ESP with Hi dosage",
-      "erl_pct": 156.0
+      "erl_pct": 156.0,
+      "lat": 29.009578,
+      "lon": 47.535278,
+      "recent_highest_oil": 2414.71296,
+      "recent_highest_oil_date": "2022-09-09",
+      "oil_trend_pct": -29.1,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0354",
@@ -2009,7 +2313,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": "Start-up with low frequency on far pit to confirm flow",
-      "erl_pct": 126.0
+      "erl_pct": 126.0,
+      "lat": 29.023292,
+      "lon": 47.522457,
+      "recent_highest_oil": 695.0306,
+      "recent_highest_oil_date": "2024-10-13",
+      "oil_trend_pct": 48.1,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0325",
@@ -2055,7 +2366,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": null,
-      "erl_pct": 247.0
+      "erl_pct": 247.0,
+      "lat": 29.043169,
+      "lon": 47.539013,
+      "recent_highest_oil": 1089.2,
+      "recent_highest_oil_date": "2023-03-04",
+      "oil_trend_pct": -7.3,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0219",
@@ -2101,7 +2419,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 15.0
+      "erl_pct": 15.0,
+      "lat": 28.893704,
+      "lon": 47.755598,
+      "recent_highest_oil": 3335.0,
+      "recent_highest_oil_date": "2015-09-11",
+      "oil_trend_pct": 52.6,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0165ST1",
@@ -2147,7 +2472,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": null,
-      "erl_pct": 59.0
+      "erl_pct": 59.0,
+      "lat": 28.940976,
+      "lon": 47.664734,
+      "recent_highest_oil": 1534.176,
+      "recent_highest_oil_date": "2024-11-06",
+      "oil_trend_pct": -46.2,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0179",
@@ -2193,7 +2525,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration, CIP already connected in casing (No CT)",
       "recommendation_review": null,
-      "erl_pct": 46.0
+      "erl_pct": 46.0,
+      "lat": 28.882505,
+      "lon": 47.68059,
+      "recent_highest_oil": 3666.06,
+      "recent_highest_oil_date": "2010-06-19",
+      "oil_trend_pct": -72.1,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0190",
@@ -2239,7 +2578,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 36.0
+      "erl_pct": 36.0,
+      "lat": 28.859961,
+      "lon": 47.737086,
+      "recent_highest_oil": 3241.28,
+      "recent_highest_oil_date": "2011-05-13",
+      "oil_trend_pct": -50.6,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0395",
@@ -2285,7 +2631,14 @@
       "pump_status_review": "Downthrust",
       "remarks_review": "Low PIP, viscous and heavy crude RL formation",
       "recommendation_review": "Buildup pressure, Connect CIP in casing (Manual start-up with low frequency on pit ) , \nstimulation job and down size the pump",
-      "erl_pct": 44.0
+      "erl_pct": 44.0,
+      "lat": 28.845118,
+      "lon": 47.74683,
+      "recent_highest_oil": 430.998,
+      "recent_highest_oil_date": "2025-03-21",
+      "oil_trend_pct": -60.8,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0205",
@@ -2331,7 +2684,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Running with Hi Tm, CIP connected in FL",
       "recommendation_review": "BH Flushing",
-      "erl_pct": 12.0
+      "erl_pct": 12.0,
+      "lat": 28.89403,
+      "lon": 47.673037,
+      "recent_highest_oil": 4367.24,
+      "recent_highest_oil_date": "2012-05-20",
+      "oil_trend_pct": 2.4,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0338",
@@ -2377,7 +2737,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy and viscous crude",
       "recommendation_review": "Start-up with low frequency on far pit to confirm flow",
-      "erl_pct": 179.0
+      "erl_pct": 179.0,
+      "lat": 29.013269,
+      "lon": 47.528876,
+      "recent_highest_oil": 664.0,
+      "recent_highest_oil_date": "2023-08-20",
+      "oil_trend_pct": -11.0,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0350",
@@ -2423,7 +2790,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": "Start-up with low frequency on far pit to confirm flow",
-      "erl_pct": 36.0
+      "erl_pct": 36.0,
+      "lat": 29.04916,
+      "lon": 47.55894,
+      "recent_highest_oil": 661.0443,
+      "recent_highest_oil_date": "2024-06-18",
+      "oil_trend_pct": -41.1,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0268ST1",
@@ -2469,7 +2843,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "PAD well, S/D since 25-Dec-25 ,It has heavy crude",
       "recommendation_review": "Required BH flushing and confirm SCSSV & SSV are open before start-up",
-      "erl_pct": 60.0
+      "erl_pct": 60.0,
+      "lat": 29.01507,
+      "lon": 47.535113,
+      "recent_highest_oil": 1338.4312,
+      "recent_highest_oil_date": "2023-09-22",
+      "oil_trend_pct": -43.8,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0342ST1",
@@ -2515,7 +2896,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Low Pi",
       "recommendation_review": "Buildup pressure and start manually on far pit to confirm flow",
-      "erl_pct": 34.0
+      "erl_pct": 34.0,
+      "lat": 29.041517,
+      "lon": 47.526323,
+      "recent_highest_oil": 545.0368,
+      "recent_highest_oil_date": "2025-10-16",
+      "oil_trend_pct": 408.1,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0337",
@@ -2561,7 +2949,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy and viscous crude,WS formation and CIP connected to CT",
       "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage, Start with low HZ",
-      "erl_pct": 71.0
+      "erl_pct": 71.0,
+      "lat": 28.982908,
+      "lon": 47.540559,
+      "recent_highest_oil": 517.0,
+      "recent_highest_oil_date": "2024-03-07",
+      "oil_trend_pct": -15.2,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0235",
@@ -2607,7 +3002,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": "Required BH flushing before start-up and start with low Hz",
-      "erl_pct": 97.0
+      "erl_pct": 97.0,
+      "lat": 29.010453,
+      "lon": 47.536919,
+      "recent_highest_oil": 6303.732024,
+      "recent_highest_oil_date": "2018-10-31",
+      "oil_trend_pct": -1.4,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0222H",
@@ -2653,7 +3055,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy and viscous crude, CIP connected to CT",
       "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage and start with low Hz in far pit",
-      "erl_pct": 52.0
+      "erl_pct": 52.0,
+      "lat": 29.018559,
+      "lon": 47.553609,
+      "recent_highest_oil": 3120.0,
+      "recent_highest_oil_date": "2016-05-22",
+      "oil_trend_pct": -52.9,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0017",
@@ -2699,7 +3108,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 40.0
+      "erl_pct": 40.0,
+      "lat": 28.868596,
+      "lon": 47.742612,
+      "recent_highest_oil": 8573.0,
+      "recent_highest_oil_date": "2007-09-12",
+      "oil_trend_pct": 172.7,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0196",
@@ -2745,7 +3161,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Running with Hi Tm, CIP connected in casing",
       "recommendation_review": "Recommended to install CT",
-      "erl_pct": 32.0
+      "erl_pct": 32.0,
+      "lat": 28.884712,
+      "lon": 47.777904,
+      "recent_highest_oil": 941.0204,
+      "recent_highest_oil_date": "2020-11-12",
+      "oil_trend_pct": -37.4,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0386",
@@ -2791,7 +3214,14 @@
       "pump_status_review": "Downthrust",
       "remarks_review": "Low inflow , DWO due to no flow",
       "recommendation_review": "Stimulation job and down size the pump",
-      "erl_pct": 19.0
+      "erl_pct": 19.0,
+      "lat": 29.041886,
+      "lon": 47.521112,
+      "recent_highest_oil": 264.0,
+      "recent_highest_oil_date": "2026-02-03",
+      "oil_trend_pct": null,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0246",
@@ -2837,7 +3267,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi WC (94%), Casing NRV passing",
       "recommendation_review": "Recommends for WO plan",
-      "erl_pct": 12.0
+      "erl_pct": 12.0,
+      "lat": 28.876124,
+      "lon": 47.759553,
+      "recent_highest_oil": 2833.0771,
+      "recent_highest_oil_date": "2016-09-10",
+      "oil_trend_pct": -82.3,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0318H",
@@ -2883,7 +3320,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy and viscous crude, running with Hi frequency",
       "recommendation_review": "Buildup pressure and To be started manually with low frequency in far pit",
-      "erl_pct": 255.0
+      "erl_pct": 255.0,
+      "lat": 29.02056,
+      "lon": 47.53809,
+      "recent_highest_oil": 1156.0,
+      "recent_highest_oil_date": "2022-12-06",
+      "oil_trend_pct": -28.4,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0367",
@@ -2929,7 +3373,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration, CIP already connected in FL (No CT)",
       "recommendation_review": null,
-      "erl_pct": 139.0
+      "erl_pct": 139.0,
+      "lat": 28.894782,
+      "lon": 47.757627,
+      "recent_highest_oil": 1774.0,
+      "recent_highest_oil_date": "2022-11-10",
+      "oil_trend_pct": -2.3,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0243H",
@@ -2975,7 +3426,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy and viscous crude",
       "recommendation_review": "Pressure buildup and Manual start ESP on far pit",
-      "erl_pct": 230.0
+      "erl_pct": 230.0,
+      "lat": 29.008298,
+      "lon": 47.560356,
+      "recent_highest_oil": 864.0,
+      "recent_highest_oil_date": "2019-06-05",
+      "oil_trend_pct": -23.9,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0074ST1",
@@ -3021,7 +3479,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy crude (No CT) with Hi H₂S concentration",
       "recommendation_review": "Install CIP in casing",
-      "erl_pct": 59.0
+      "erl_pct": 59.0,
+      "lat": 28.890342,
+      "lon": 47.75845,
+      "recent_highest_oil": 2771.1238,
+      "recent_highest_oil_date": "2018-05-01",
+      "oil_trend_pct": -15.1,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0339",
@@ -3067,7 +3532,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy and viscous crude, Pd suspected faulty, Hi Tm after start-up",
       "recommendation_review": "Start-up with low frequency on far pit to confirm flow",
-      "erl_pct": 179.0
+      "erl_pct": 179.0,
+      "lat": 29.001817,
+      "lon": 47.530356,
+      "recent_highest_oil": 858.0,
+      "recent_highest_oil_date": "2023-08-20",
+      "oil_trend_pct": -14.5,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0072",
@@ -3113,7 +3585,14 @@
       "pump_status_review": "Upthrust",
       "remarks_review": null,
       "recommendation_review": null,
-      "erl_pct": 103.0
+      "erl_pct": 103.0,
+      "lat": 28.983873,
+      "lon": 47.539789,
+      "recent_highest_oil": 8959.0,
+      "recent_highest_oil_date": "2008-12-19",
+      "oil_trend_pct": -28.2,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0257H",
@@ -3159,7 +3638,14 @@
       "pump_status_review": "Downthrust",
       "remarks_review": "It has MPFM, Heavy and viscous crude, CIP connected to CT",
       "recommendation_review": "Pressure build-up and Start CIP before one day\n from start-up ESP with Hi dosage",
-      "erl_pct": 243.0
+      "erl_pct": 243.0,
+      "lat": 29.039372,
+      "lon": 47.574584,
+      "recent_highest_oil": 743.0,
+      "recent_highest_oil_date": "2022-03-17",
+      "oil_trend_pct": -17.9,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0349",
@@ -3205,7 +3691,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": "Start-up with low frequency on far pit to confirm flow",
-      "erl_pct": 9.0
+      "erl_pct": 9.0,
+      "lat": 29.046312,
+      "lon": 47.530698,
+      "recent_highest_oil": 568.0402,
+      "recent_highest_oil_date": "2024-01-18",
+      "oil_trend_pct": -22.4,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0100",
@@ -3251,7 +3744,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 99.0
+      "erl_pct": 99.0,
+      "lat": 28.891852,
+      "lon": 47.748861,
+      "recent_highest_oil": 7048.56,
+      "recent_highest_oil_date": "2002-10-18",
+      "oil_trend_pct": 17.7,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0291HST2",
@@ -3297,7 +3797,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Running with Hi Tm, heavy and viscous crude, CIP connected to CT",
       "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage",
-      "erl_pct": 237.0
+      "erl_pct": 237.0,
+      "lat": 29.050693,
+      "lon": 47.544259,
+      "recent_highest_oil": 703.5149,
+      "recent_highest_oil_date": "2021-08-05",
+      "oil_trend_pct": 47.1,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0316H",
@@ -3343,7 +3850,14 @@
       "pump_status_review": "Downthrust",
       "remarks_review": "Heavy and viscous crude",
       "recommendation_review": "Buildup pressure and start manually on far pit to confirm flow",
-      "erl_pct": 250.0
+      "erl_pct": 250.0,
+      "lat": 29.033159,
+      "lon": 47.565453,
+      "recent_highest_oil": 316.94,
+      "recent_highest_oil_date": "2022-07-27",
+      "oil_trend_pct": 11.8,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0292H",
@@ -3389,7 +3903,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration, Ki WC 89.9 %",
       "recommendation_review": "Install NRV and To confirm pressure equalized before start-up",
-      "erl_pct": 88.0
+      "erl_pct": 88.0,
+      "lat": 28.865169,
+      "lon": 47.744281,
+      "recent_highest_oil": 3283.0,
+      "recent_highest_oil_date": "2019-09-25",
+      "oil_trend_pct": -15.4,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0101",
@@ -3435,7 +3956,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "I limit running mode, Problematic well",
       "recommendation_review": "Release gas on far pit and keep casing open",
-      "erl_pct": 51.0
+      "erl_pct": 51.0,
+      "lat": 28.829525,
+      "lon": 47.736731,
+      "recent_highest_oil": 1514.7,
+      "recent_highest_oil_date": "2008-11-13",
+      "oil_trend_pct": 14.5,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0119ST1",
@@ -3481,7 +4009,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "S/D since 25-Dec-25 ,It has heavy crude",
       "recommendation_review": "Required BH flushing before start-up",
-      "erl_pct": 22.0
+      "erl_pct": 22.0,
+      "lat": 29.038768,
+      "lon": 47.537066,
+      "recent_highest_oil": 1573.9489,
+      "recent_highest_oil_date": "2019-07-30",
+      "oil_trend_pct": -86.5,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0168",
@@ -3527,7 +4062,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Frequent Hi Tm trips, Hi H₂S concentration and Hi GOR",
       "recommendation_review": "Check natural flow and release gas and open casing gradually before start-up",
-      "erl_pct": 75.0
+      "erl_pct": 75.0,
+      "lat": 29.008731,
+      "lon": 47.528146,
+      "recent_highest_oil": 3589.05,
+      "recent_highest_oil_date": "2010-09-02",
+      "oil_trend_pct": 57.2,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0157H",
@@ -3573,7 +4115,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy and viscous crude",
       "recommendation_review": "Required BH flushing before start-up",
-      "erl_pct": 48.0
+      "erl_pct": 48.0,
+      "lat": 29.045396,
+      "lon": 47.53971,
+      "recent_highest_oil": 4199.506,
+      "recent_highest_oil_date": "2010-05-18",
+      "oil_trend_pct": 2.7,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0369",
@@ -3619,7 +4168,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "CIP already connected in FL (No CT)",
       "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage",
-      "erl_pct": 144.0
+      "erl_pct": 144.0,
+      "lat": 28.881624,
+      "lon": 47.710583,
+      "recent_highest_oil": 462.069975,
+      "recent_highest_oil_date": "2023-01-24",
+      "oil_trend_pct": 33.4,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0178",
@@ -3665,7 +4221,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Running with Hi Tm, CIP connected due to heavy crude (No CT),",
       "recommendation_review": null,
-      "erl_pct": 36.0
+      "erl_pct": 36.0,
+      "lat": 28.866668,
+      "lon": 47.726603,
+      "recent_highest_oil": 4151.25,
+      "recent_highest_oil_date": "2010-01-20",
+      "oil_trend_pct": 58.2,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0183H",
@@ -3711,7 +4274,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Viscous and heavy crude RL formation",
       "recommendation_review": "to be started on far pit with low Hz",
-      "erl_pct": 100.0
+      "erl_pct": 100.0,
+      "lat": 28.845387,
+      "lon": 47.743821,
+      "recent_highest_oil": 905.85,
+      "recent_highest_oil_date": "2011-09-06",
+      "oil_trend_pct": -29.6,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0320",
@@ -3757,7 +4327,14 @@
       "pump_status_review": "Downthrust",
       "remarks_review": "Heavy and viscous crude, running with Hi frequency and MPFM Connected",
       "recommendation_review": "Buildup pressure and To be started manually with low frequency in far pit",
-      "erl_pct": 144.0
+      "erl_pct": 144.0,
+      "lat": 29.053509,
+      "lon": 47.543511,
+      "recent_highest_oil": 641.0,
+      "recent_highest_oil_date": "2024-03-13",
+      "oil_trend_pct": -71.8,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0009",
@@ -3803,7 +4380,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Stable well with heavy crude",
       "recommendation_review": "Start with low frequency",
-      "erl_pct": 165.0
+      "erl_pct": 165.0,
+      "lat": 29.036182,
+      "lon": 47.545688,
+      "recent_highest_oil": 4105.71,
+      "recent_highest_oil_date": "2002-09-30",
+      "oil_trend_pct": 18.8,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0214",
@@ -3849,7 +4433,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": null,
       "recommendation_review": null,
-      "erl_pct": 112.0
+      "erl_pct": 112.0,
+      "lat": 28.897478,
+      "lon": 47.661907,
+      "recent_highest_oil": 2600.32,
+      "recent_highest_oil_date": "2012-11-14",
+      "oil_trend_pct": 20.5,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0191",
@@ -3895,7 +4486,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi WC (96%)",
       "recommendation_review": "Recommends for WO plan",
-      "erl_pct": 25.0
+      "erl_pct": 25.0,
+      "lat": 28.886749,
+      "lon": 47.746791,
+      "recent_highest_oil": 3859.2,
+      "recent_highest_oil_date": "2011-04-06",
+      "oil_trend_pct": -58.7,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0211",
@@ -3941,7 +4539,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "85 % WC",
       "recommendation_review": "Confirm pressure equalized and start with low Hz",
-      "erl_pct": 88.0
+      "erl_pct": 88.0,
+      "lat": 28.886222,
+      "lon": 47.754951,
+      "recent_highest_oil": 2889.901,
+      "recent_highest_oil_date": "2016-11-16",
+      "oil_trend_pct": -36.4,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0308",
@@ -3987,7 +4592,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "S/D since 25-Dec-25 ,It has heavy crude",
       "recommendation_review": "Required BH flushing before start-up",
-      "erl_pct": 79.0
+      "erl_pct": 79.0,
+      "lat": 29.005635,
+      "lon": 47.534203,
+      "recent_highest_oil": 901.9911,
+      "recent_highest_oil_date": "2022-03-10",
+      "oil_trend_pct": 43.8,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0078",
@@ -4033,7 +4645,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy crude (No CT)",
       "recommendation_review": "To be started with low frequency and confirm flow",
-      "erl_pct": 71.0
+      "erl_pct": 71.0,
+      "lat": 28.871141,
+      "lon": 47.758583,
+      "recent_highest_oil": 5298.3,
+      "recent_highest_oil_date": "2004-09-30",
+      "oil_trend_pct": -15.1,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0048ST1",
@@ -4079,7 +4698,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Has Hi Tm & OL trips history and natural flow from casing,",
       "recommendation_review": "To keep S/D for NF and to be started after\n natural flow stopped with closed casing",
-      "erl_pct": 183.0
+      "erl_pct": 183.0,
+      "lat": 29.007706,
+      "lon": 47.52311,
+      "recent_highest_oil": 4565.0,
+      "recent_highest_oil_date": "2018-02-15",
+      "oil_trend_pct": -37.4,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0187",
@@ -4125,7 +4751,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Running with Hi frequency,  CIP connected to FL",
       "recommendation_review": "Required BH flushing, Manual start-up with low frequency and to connect CIP in casing",
-      "erl_pct": 99.0
+      "erl_pct": 99.0,
+      "lat": 28.882357,
+      "lon": 47.671523,
+      "recent_highest_oil": 4593.92,
+      "recent_highest_oil_date": "2011-09-14",
+      "oil_trend_pct": -45.6,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0196H",
@@ -4171,7 +4804,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "It has MPFM, Heavy and viscous crude, CIP connected to CT",
       "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage",
-      "erl_pct": 140.0
+      "erl_pct": 140.0,
+      "lat": 29.034192,
+      "lon": 47.525373,
+      "recent_highest_oil": 5398.0,
+      "recent_highest_oil_date": "2016-01-03",
+      "oil_trend_pct": -43.8,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0116HST1",
@@ -4217,7 +4857,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "New commissioning, running with Hi Tm",
       "recommendation_review": null,
-      "erl_pct": 3.0
+      "erl_pct": 3.0,
+      "lat": 28.85443,
+      "lon": 47.755946,
+      "recent_highest_oil": 2555.878,
+      "recent_highest_oil_date": "2008-12-17",
+      "oil_trend_pct": 25.2,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0186H",
@@ -4263,7 +4910,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "CIP connected on FL due to viscous and heavy crude,  Has frequent Hi Tm trips (RL formation)",
       "recommendation_review": "Build-up pressure and to be start on pit with low Hz",
-      "erl_pct": 134.0
+      "erl_pct": 134.0,
+      "lat": 28.875577,
+      "lon": 47.762943,
+      "recent_highest_oil": 819.0,
+      "recent_highest_oil_date": "2013-10-30",
+      "oil_trend_pct": -3.9,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0293ST2",
@@ -4309,7 +4963,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 0.0
+      "erl_pct": 0.0,
+      "lat": 28.875204,
+      "lon": 47.748311,
+      "recent_highest_oil": null,
+      "recent_highest_oil_date": null,
+      "oil_trend_pct": null,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0102ST2",
@@ -4355,7 +5016,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 11.0
+      "erl_pct": 11.0,
+      "lat": 28.866765,
+      "lon": 47.690062,
+      "recent_highest_oil": null,
+      "recent_highest_oil_date": null,
+      "oil_trend_pct": null,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0363",
@@ -4401,7 +5069,14 @@
       "pump_status_review": "NO PGORT",
       "remarks_review": "PAD well, No PGORT conducted since commissioning\n due to near-by Rig on location",
       "recommendation_review": "Confirm no back spin,  SCSSV & SSV are open",
-      "erl_pct": 38.0
+      "erl_pct": 38.0,
+      "lat": 29.017352,
+      "lon": 47.544557,
+      "recent_highest_oil": null,
+      "recent_highest_oil_date": null,
+      "oil_trend_pct": null,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0091",
@@ -4447,7 +5122,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 46.0
+      "erl_pct": 46.0,
+      "lat": 28.830759,
+      "lon": 47.732954,
+      "recent_highest_oil": 3389.28,
+      "recent_highest_oil_date": "2007-02-17",
+      "oil_trend_pct": 5.8,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0394ST2",
@@ -4493,7 +5175,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "PAD well",
       "recommendation_review": "Confirm SCSSV & SSV",
-      "erl_pct": 25.0
+      "erl_pct": 25.0,
+      "lat": 28.878586,
+      "lon": 47.749298,
+      "recent_highest_oil": null,
+      "recent_highest_oil_date": null,
+      "oil_trend_pct": null,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0363ST1",
@@ -4539,7 +5228,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi WC (97%)",
       "recommendation_review": "Recommends for WO plan",
-      "erl_pct": 75.0
+      "erl_pct": 75.0,
+      "lat": 28.886523,
+      "lon": 47.665593,
+      "recent_highest_oil": 2199.9978,
+      "recent_highest_oil_date": "2022-10-14",
+      "oil_trend_pct": -29.6,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0355",
@@ -4585,7 +5281,14 @@
       "pump_status_review": "NO PGORT",
       "remarks_review": "PAD well, No PGORT conducted since commissioning\n due to near-by Rig on location",
       "recommendation_review": "Confirm pressure equalized , no NF,  SCSSV & SSV are open",
-      "erl_pct": 38.0
+      "erl_pct": 38.0,
+      "lat": 29.017356,
+      "lon": 47.544659,
+      "recent_highest_oil": null,
+      "recent_highest_oil_date": null,
+      "oil_trend_pct": null,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0097",
@@ -4631,7 +5334,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "To check back spin before start-up  (Fluid shot done on 17-Apr-26 PIP 1961 Psi)",
       "recommendation_review": "To be started with low frequency on far pit to confirm flow",
-      "erl_pct": 22.0
+      "erl_pct": 22.0,
+      "lat": 28.893287,
+      "lon": 47.77162,
+      "recent_highest_oil": 4269.63,
+      "recent_highest_oil_date": "2003-09-05",
+      "oil_trend_pct": 24.5,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0031",
@@ -4677,7 +5387,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi Motor load 90%",
       "recommendation_review": "Start with low frequency",
-      "erl_pct": 11.0
+      "erl_pct": 11.0,
+      "lat": 28.841336,
+      "lon": 47.709038,
+      "recent_highest_oil": 1098.43656,
+      "recent_highest_oil_date": "2000-10-17",
+      "oil_trend_pct": 19.9,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0260ST1",
@@ -4723,7 +5440,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 16.0
+      "erl_pct": 16.0,
+      "lat": 28.874101,
+      "lon": 47.661494,
+      "recent_highest_oil": null,
+      "recent_highest_oil_date": null,
+      "oil_trend_pct": null,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0153ST1",
@@ -4769,7 +5493,14 @@
       "pump_status_review": "Upthrust",
       "remarks_review": "Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 8.0
+      "erl_pct": 8.0,
+      "lat": 28.875561,
+      "lon": 47.744377,
+      "recent_highest_oil": null,
+      "recent_highest_oil_date": null,
+      "oil_trend_pct": null,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0019",
@@ -4815,7 +5546,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Two CIP connected due to heavy crude",
       "recommendation_review": "To be started manually with low frequency in far pit",
-      "erl_pct": 59.0
+      "erl_pct": 59.0,
+      "lat": 29.051694,
+      "lon": 47.526253,
+      "recent_highest_oil": 7270.0,
+      "recent_highest_oil_date": "2003-12-31",
+      "oil_trend_pct": 132.4,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0052",
@@ -4861,7 +5599,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy and Viscous crude running with Hi frequency 55 Hz",
       "recommendation_review": "To be started manually with low frequency in far pit",
-      "erl_pct": 218.0
+      "erl_pct": 218.0,
+      "lat": 29.052874,
+      "lon": 47.534847,
+      "recent_highest_oil": 4932.0,
+      "recent_highest_oil_date": "2005-12-14",
+      "oil_trend_pct": -49.8,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0170",
@@ -4907,7 +5652,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy and viscous crude, CIP connected to CT",
       "recommendation_review": "Start CIP before one day from start-up ESP with Hi dosage",
-      "erl_pct": 237.0
+      "erl_pct": 237.0,
+      "lat": 29.064609,
+      "lon": 47.543617,
+      "recent_highest_oil": 946.0,
+      "recent_highest_oil_date": "2015-12-08",
+      "oil_trend_pct": -5.6,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0175HST1",
@@ -4953,7 +5705,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Heavy and viscous crude",
       "recommendation_review": null,
-      "erl_pct": 57.0
+      "erl_pct": 57.0,
+      "lat": 29.032558,
+      "lon": 47.527357,
+      "recent_highest_oil": 1230.9015,
+      "recent_highest_oil_date": "2017-11-15",
+      "oil_trend_pct": -12.0,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0279",
@@ -4993,7 +5752,14 @@
       "y": 3210275.778,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "lat": 28.996798,
+      "lon": 47.532823,
+      "recent_highest_oil": 1011.640872,
+      "recent_highest_oil_date": "2022-11-02",
+      "oil_trend_pct": -6.3,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0011",
@@ -5039,7 +5805,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "WC 86%, CIP connected in FL",
       "recommendation_review": null,
-      "erl_pct": 113.0
+      "erl_pct": 113.0,
+      "lat": 28.945626,
+      "lon": 47.675443,
+      "recent_highest_oil": 7160.958,
+      "recent_highest_oil_date": "2010-11-23",
+      "oil_trend_pct": -12.3,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0038AHST1",
@@ -5085,7 +5858,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "It was running with CIP before but it removed",
       "recommendation_review": "To be started with low frequency and confirm flow",
-      "erl_pct": 77.0
+      "erl_pct": 77.0,
+      "lat": 28.846848,
+      "lon": 47.707903,
+      "recent_highest_oil": 4208.4,
+      "recent_highest_oil_date": "2010-10-05",
+      "oil_trend_pct": -5.4,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0040",
@@ -5131,7 +5911,14 @@
       "pump_status_review": "Downthrust",
       "remarks_review": "I limit running mode (Fluid shot done on 17-Apr-26 PIP 810 Psi)",
       "recommendation_review": "Problematic well to keep S/D more  Build-up (last Pi 810 psi), to be started on far pit to release gas and confirm flow",
-      "erl_pct": 172.0
+      "erl_pct": 172.0,
+      "lat": 28.838618,
+      "lon": 47.731841,
+      "recent_highest_oil": 1119.16,
+      "recent_highest_oil_date": "2006-12-26",
+      "oil_trend_pct": -42.1,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0086",
@@ -5177,7 +5964,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi WC well (98%), with Hi H₂S concentration",
       "recommendation_review": null,
-      "erl_pct": 26.0
+      "erl_pct": 26.0,
+      "lat": 28.951717,
+      "lon": 47.671118,
+      "recent_highest_oil": 7057.92,
+      "recent_highest_oil_date": "2004-05-31",
+      "oil_trend_pct": null,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0093",
@@ -5223,7 +6017,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Waiting for commission FT finished @09:14 on 19-Mar-26",
       "recommendation_review": "to be started on far pit to clean the well",
-      "erl_pct": 0.0
+      "erl_pct": 0.0,
+      "lat": 28.911867,
+      "lon": 47.665697,
+      "recent_highest_oil": 8101.66,
+      "recent_highest_oil_date": "2002-07-13",
+      "oil_trend_pct": -43.9,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0103",
@@ -5269,7 +6070,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi WC well (91%)",
       "recommendation_review": null,
-      "erl_pct": 15.0
+      "erl_pct": 15.0,
+      "lat": 28.837378,
+      "lon": 47.716136,
+      "recent_highest_oil": 4700.5,
+      "recent_highest_oil_date": "1999-05-10",
+      "oil_trend_pct": 12.5,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0172H",
@@ -5309,7 +6117,14 @@
       "y": 3193797.73,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "lat": 28.844098,
+      "lon": 47.739676,
+      "recent_highest_oil": 4955.0,
+      "recent_highest_oil_date": "2010-01-09",
+      "oil_trend_pct": -77.5,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0180",
@@ -5355,7 +6170,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi WC (90.5%)",
       "recommendation_review": null,
-      "erl_pct": 61.0
+      "erl_pct": 61.0,
+      "lat": 28.866633,
+      "lon": 47.74723,
+      "recent_highest_oil": 6379.2,
+      "recent_highest_oil_date": "2009-12-31",
+      "oil_trend_pct": -32.0,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0371",
@@ -5401,7 +6223,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "ESP failed to start after frequent OL trips, observed during BH & CTU flushing Hi WHP, No back spin detected",
       "recommendation_review": "To change AL method",
-      "erl_pct": 5.0
+      "erl_pct": 5.0,
+      "lat": 28.874021,
+      "lon": 47.77632,
+      "recent_highest_oil": 320.597288,
+      "recent_highest_oil_date": "2023-02-24",
+      "oil_trend_pct": -23.0,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "UG-0372",
@@ -5447,7 +6276,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "DWO due to no flow suspecting circulation, WC 86%",
       "recommendation_review": "Recommends for WSO program due to Hi WC",
-      "erl_pct": 108.0
+      "erl_pct": 108.0,
+      "lat": 28.882998,
+      "lon": 47.781033,
+      "recent_highest_oil": 351.025,
+      "recent_highest_oil_date": "2023-07-11",
+      "oil_trend_pct": -27.0,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "MN-0382ST1",
@@ -5493,7 +6329,14 @@
       "pump_status_review": "Upthrust",
       "remarks_review": "PAD well, it has viscous and heavy crude (CIP connected in FL)",
       "recommendation_review": "Start-up with low frequency on far pit to confirm flow and \nconfirm SCSSV & SSV are open",
-      "erl_pct": 111.0
+      "erl_pct": 111.0,
+      "lat": 29.035584,
+      "lon": 47.555059,
+      "recent_highest_oil": 546.96,
+      "recent_highest_oil_date": "2024-09-09",
+      "oil_trend_pct": -57.6,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0085",
@@ -5539,7 +6382,14 @@
       "pump_status_review": "Within Range",
       "remarks_review": "Hi WC well (96%)",
       "recommendation_review": null,
-      "erl_pct": 52.0
+      "erl_pct": 52.0,
+      "lat": 28.898047,
+      "lon": 47.75348,
+      "recent_highest_oil": 5891.78,
+      "recent_highest_oil_date": "2002-01-05",
+      "oil_trend_pct": -75.5,
+      "priority_v2": "P3",
+      "priority_v2_label": "Low Oil · Low WC · Low GOR"
     },
     {
       "well_name": "UG-0092",
@@ -5579,7 +6429,14 @@
       "y": 3193833.64,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "lat": 28.844949,
+      "lon": 47.7136,
+      "recent_highest_oil": null,
+      "recent_highest_oil_date": null,
+      "oil_trend_pct": null,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     },
     {
       "well_name": "MN-0023",
@@ -5619,7 +6476,14 @@
       "y": 3212995.56,
       "startup_score": 0.0,
       "priority": "P5",
-      "priority_label": "Hold"
+      "priority_label": "Hold",
+      "lat": 29.021286,
+      "lon": 47.535361,
+      "recent_highest_oil": null,
+      "recent_highest_oil_date": null,
+      "oil_trend_pct": null,
+      "priority_v2": "P2",
+      "priority_v2_label": "Medium Oil · Medium WC · Medium GOR"
     }
   ]
 }

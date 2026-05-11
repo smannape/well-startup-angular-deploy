@@ -230,7 +230,7 @@ export class RecommendationComponent implements OnChanges {
   categoryFilter = '';
   gcFilter       = '';
   priFilter      = '';
-  sourceFilter   = '';
+  sourceFilter   = 'review';   /* default: show KOC Well Review recommendations first */
   search         = '';
 
   allRecs:  Rec[] = [];
@@ -600,10 +600,10 @@ export class RecommendationComponent implements OnChanges {
 
     }
 
-    /* Sort: review cards float to top within their urgency tier, then by well name */
+    /* Sort: ALL KOC-Review recommendations float strictly to the top, then by urgency, then by well */
     return recs.sort((a, b) =>
-      URGENCY_ORDER[a.urgency] - URGENCY_ORDER[b.urgency] ||
       (b.isReview ? 1 : 0) - (a.isReview ? 1 : 0) ||
+      URGENCY_ORDER[a.urgency] - URGENCY_ORDER[b.urgency] ||
       a.wellName.localeCompare(b.wellName));
   }
 

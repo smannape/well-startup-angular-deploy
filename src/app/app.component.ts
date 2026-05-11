@@ -2,7 +2,7 @@ import { Component, OnInit, signal, computed, inject, ChangeDetectionStrategy } 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './services/data.service';
-import { Well, PRIORITY_COLORS, PRIORITY_DESC } from './models/well.model';
+import { Well, PRIORITY_COLORS, PRIORITY_DESC, PRIORITY_DESC_V2 } from './models/well.model';
 import { WellMapComponent }          from './components/well-map.component';
 import { PriorityChartComponent }    from './components/priority-chart.component';
 import { LogicChartComponent }       from './components/logic-chart.component';
@@ -13,7 +13,8 @@ import { RtSurveillanceComponent }   from './components/rt-surveillance.componen
 import { RecommendationComponent }   from './components/recommendation.component';
 import { SplashComponent }           from './components/splash.component';
 
-type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recommend';
+type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'rt' | 'recommend';
+type PriorityMode = 'v1' | 'v2';
 
 @Component({
   selector: 'app-root',
@@ -26,25 +27,21 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-  <!-- ── Splash screen ── -->
   <app-splash *ngIf="showSplash()" (done)="showSplash.set(false)"/>
 
   <div class="app" *ngIf="!showSplash() && (ds.loaded()); else loading">
 
-    <!-- ── TOPBAR ──────────────────────────────────────────── -->
+    <!-- ── TOPBAR ── -->
     <header class="topbar">
       <div class="brand">
         <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
           <rect width="32" height="32" rx="3" fill="#ff7a1a" opacity=".12"/>
-          <!-- derrick frame -->
           <line x1="16" y1="3"  x2="5"  y2="28" stroke="#ff9849" stroke-width="1.5"/>
           <line x1="16" y1="3"  x2="27" y2="28" stroke="#ff9849" stroke-width="1.5"/>
           <line x1="8"  y1="20" x2="24" y2="20" stroke="#ff9849" stroke-width="1.2"/>
           <line x1="10" y1="14" x2="22" y2="14" stroke="#ff9849" stroke-width="1.2"/>
           <line x1="13" y1="8"  x2="19" y2="8"  stroke="#ff9849" stroke-width="1.2"/>
-          <!-- base -->
           <line x1="4"  y1="28" x2="28" y2="28" stroke="#ff7a1a" stroke-width="2"/>
-          <!-- crown dot -->
           <circle cx="16" cy="3" r="2" fill="#ffb83d"/>
         </svg>
         <div class="brand-text">
@@ -62,7 +59,7 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
       </div>
     </header>
 
-    <!-- ── TAB NAV ─────────────────────────────────────────── -->
+    <!-- ── TAB NAV (Sequencing removed; now embedded in ACT) ── -->
     <nav class="tab-nav">
       <button *ngFor="let t of tabs" class="tab-btn"
         [class.active]="activeTab()===t.id"
@@ -73,38 +70,78 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
       </button>
     </nav>
 
-    <!-- ── FULL-WIDTH TABS ──────────────────────────────────── -->
-    <app-well-sequencing *ngIf="activeTab()==='sequence'"
-      [wells]="ds.wells()" class="seq-full"/>
+    <!-- ── FULL-WIDTH TABS ── -->
     <app-rt-surveillance *ngIf="activeTab()==='rt'"
       [wells]="ds.wells()" class="seq-full"/>
     <app-recommendation  *ngIf="activeTab()==='recommend'"
       [wells]="ds.wells()" [woMap]="ds.woMap()" class="seq-full"/>
 
-    <!-- ── MAIN 3-COL LAYOUT ───────────────────────────────── -->
-    <div class="main" *ngIf="!isFullWidth()">
+    <!-- ══════════════════════════════════════════════════════
+         OBSERVE TAB — minimal: just well location (map) + history
+         ══════════════════════════════════════════════════════ -->
+    <div class="observe-layout" *ngIf="activeTab()==='observe'">
+      <div class="panel observe-map-panel">
+        <div class="panel-head">
+          <h3>Observe · Well Location — West Kuwait</h3>
+          <span class="pmeta">{{ds.wells().length}} wells · zoom & pan supported</span>
+        </div>
+        <div class="panel-body">
+          <app-well-map
+            [wells]="ds.wells()"
+            [selectedWell]="selectedWell()"
+            [priorityMode]="priorityMode()"
+            (wellClick)="selectedWell.set($event)"/>
+        </div>
+      </div>
+      <aside class="observe-right">
+        <app-well-detail [well]="selectedWellObj()" [workovers]="selectedWOs()"/>
+      </aside>
+    </div>
 
-      <!-- LEFT: Filters + Priority -->
+    <!-- ══════════════════════════════════════════════════════
+         MAIN 3-COL LAYOUT — used by Orient / Decide / Act
+         ══════════════════════════════════════════════════════ -->
+    <div class="main" *ngIf="isThreeCol()">
+
       <aside class="left">
+        <!-- Prioritization mode toggle -->
+        <div class="sidebar-section pmode-section">
+          <div class="sidebar-title">Prioritization Criteria</div>
+          <div class="pmode-toggle">
+            <button class="pmode-btn"
+              [class.active]="priorityMode()==='v1'"
+              (click)="priorityMode.set('v1')">
+              Standard
+              <small>Closure-reason based</small>
+            </button>
+            <button class="pmode-btn"
+              [class.active]="priorityMode()==='v2'"
+              (click)="priorityMode.set('v2')">
+              Production Profile
+              <small>Oil · WC · GOR · Trend</small>
+            </button>
+          </div>
+        </div>
+
         <div class="sidebar-section">
           <div class="sidebar-title">Search</div>
           <input placeholder="Well name…" [ngModel]="searchFilter()" (ngModelChange)="searchFilter.set($event)"/>
         </div>
 
         <div class="sidebar-section">
-          <div class="sidebar-title">Startup Priority</div>
+          <div class="sidebar-title">{{priorityMode()==='v2' ? 'Production Profile' : 'Startup Priority'}}</div>
           <div class="priority-list">
             <div class="priority-item" [class.active]="priorityFilter()===''">
               <span class="swatch" style="background:var(--beige-400)"></span>
-              <span class="plabel">All <small>{{ds.kpis()?.total_closed_wells}}</small></span>
+              <span class="plabel">All <small>{{priorityMode()==='v2' ? 'profiles' : 'priorities'}}</small></span>
               <span class="pcount" (click)="priorityFilter.set('')">{{ds.wells().length}}</span>
             </div>
-            <div class="priority-item" *ngFor="let p of ['P1','P2','P3','P4','P5']"
+            <div class="priority-item" *ngFor="let p of priorityKeys()"
               [class.active]="priorityFilter()===p"
               (click)="priorityFilter.set(priorityFilter()===p?'':p)">
               <span class="swatch" [style.background]="colors[p]"></span>
-              <span class="plabel">{{p}} <small>{{pDesc[p] | slice:0:22}}…</small></span>
-              <span class="pcount">{{ds.kpis()?.by_priority?.[p]??0}}</span>
+              <span class="plabel">{{p}} <small>{{priorityDesc()[p] | slice:0:24}}…</small></span>
+              <span class="pcount">{{priorityCount(p)}}</span>
             </div>
           </div>
         </div>
@@ -135,14 +172,14 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
         </div>
       </aside>
 
-      <!-- CENTER -->
       <section class="center">
+
         <!-- KPI strip -->
         <div class="kpi-strip" *ngIf="ds.kpis() as k">
           <div class="kpi">
-            <div class="kk">P1 Quick-Win Wells</div>
-            <div class="kv accent">{{k.by_priority?.['P1']??0}}</div>
-            <div class="ks">{{(k.potential_by_priority?.['P1']??0)|number:'1.0-0'}} BOPD recoverable</div>
+            <div class="kk">{{priorityMode()==='v2' ? 'P1 Best Producers' : 'P1 Quick-Win Wells'}}</div>
+            <div class="kv accent">{{priorityCount('P1')}}</div>
+            <div class="ks">{{topBucketPotential() | number:'1.0-0'}} BOPD recoverable</div>
           </div>
           <div class="kpi">
             <div class="kk">Closed Inventory</div>
@@ -157,26 +194,29 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
           <div class="kpi">
             <div class="kk">Total Recoverable</div>
             <div class="kv accent">{{(k.potential_oil_total_bopd/1000).toFixed(0)}}k</div>
-            <div class="ks">BOPD potential across all P</div>
+            <div class="ks">BOPD potential</div>
           </div>
           <div class="kpi">
             <div class="kk">Filtered Wells</div>
             <div class="kv">{{filtered().length}}</div>
-            <div class="ks">matching current selection</div>
+            <div class="ks">matching selection</div>
           </div>
         </div>
 
-        <!-- Map panel -->
+        <!-- Map panel (Leaflet) -->
         <div class="panel map-panel">
           <div class="panel-head">
             <h3>{{tabLabel()}} · Field Map — West Kuwait</h3>
-            <span class="pmeta">{{filtered().length}} wells · dot size = potential · color = priority</span>
+            <span class="pmeta">
+              {{filtered().length}} wells · {{priorityMode()==='v2' ? 'Production Profile' : 'Standard'}} priority
+            </span>
           </div>
           <div class="panel-body">
             <app-well-map
               [wells]="filtered()"
               [selectedWell]="selectedWell()"
               [facilityFilter]="facilityFilter()"
+              [priorityMode]="priorityMode()"
               (wellClick)="selectedWell.set($event)"/>
           </div>
         </div>
@@ -190,12 +230,12 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
             </div>
             <div class="panel-body">
               <app-logic-chart    *ngIf="activeTab()==='orient'"/>
-              <app-priority-chart *ngIf="activeTab()!=='orient'" [kpis]="ds.kpis()"/>
+              <app-priority-chart *ngIf="activeTab()!=='orient'" [kpis]="ds.kpis()" [mode]="priorityMode()"/>
             </div>
           </div>
           <div class="panel" style="margin:0;border:none;border-radius:0">
             <div class="panel-head">
-              <h3>Act · Candidate Queue</h3>
+              <h3>{{activeTab()==='act' ? 'Act · Startup Queue + Sequencing' : 'Act · Candidate Queue'}}</h3>
               <span class="pmeta">{{filtered().length}} wells · click to select</span>
             </div>
             <div class="panel-body">
@@ -206,9 +246,14 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
             </div>
           </div>
         </div>
+
+        <!-- ACT tab only: embedded sequencing strip ─────────── -->
+        <div class="seq-embed" *ngIf="activeTab()==='act'">
+          <app-well-sequencing [wells]="filtered()"/>
+        </div>
+
       </section>
 
-      <!-- RIGHT: Well Detail -->
       <aside class="right">
         <app-well-detail [well]="selectedWellObj()" [workovers]="selectedWOs()"/>
       </aside>
@@ -222,16 +267,13 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
   </ng-template>
   `,
   styles: [`
-    /* ── root layout ── */
     .app { display:grid; grid-template-rows:56px 44px 1fr; height:100vh; }
     .seq-full { grid-row:3; overflow:hidden; }
 
     /* ── topbar ── */
-    .topbar {
-      display:flex; align-items:center; gap:18px; padding:0 20px;
+    .topbar { display:flex; align-items:center; gap:18px; padding:0 20px;
       background:linear-gradient(180deg,#251d14,var(--bg-1));
-      border-bottom:1px solid var(--border-1); box-shadow:var(--shadow);
-    }
+      border-bottom:1px solid var(--border-1); box-shadow:var(--shadow); }
     .brand { display:flex; align-items:center; gap:12px; }
     .logo-icon { flex-shrink:0; }
     .brand-text { display:flex; align-items:center; gap:6px; }
@@ -263,11 +305,18 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
       background:#ff7a1a18; }
     .tab-sub { opacity:.6; font-size:10px; letter-spacing:.06em; text-transform:none; }
 
+    /* ── OBSERVE layout (map + history only) ── */
+    .observe-layout { grid-row:3; display:grid; grid-template-columns:1fr 380px;
+      overflow:hidden; height:100%; background:var(--bg-0); }
+    .observe-map-panel { margin:10px; display:flex; flex-direction:column; overflow:hidden;
+      background:var(--bg-1); border:1px solid var(--border-1); border-radius:2px; }
+    .observe-right { background:var(--bg-1); border-left:1px solid var(--border-1); overflow-y:auto; }
+
     /* ── main 3-col ── */
     .main { display:grid; grid-template-columns:240px 1fr 380px;
       overflow:hidden; height:100%; }
     .left  { background:var(--bg-1); border-right:1px solid var(--border-1); overflow-y:auto; }
-    .center{ overflow:hidden; display:grid; grid-template-rows:auto 1fr auto; background:var(--bg-0); }
+    .center{ overflow:hidden auto; display:flex; flex-direction:column; background:var(--bg-0); }
     .right { background:var(--bg-1); border-left:1px solid var(--border-1); overflow-y:auto; }
 
     /* ── sidebar ── */
@@ -290,9 +339,24 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
     .pcount { font-family:"JetBrains Mono",monospace; color:var(--orange-300);
       font-size:12px; font-weight:600; }
 
+    /* ── Prioritization mode toggle ── */
+    .pmode-section { background:linear-gradient(180deg,#2a2118,var(--bg-1)); }
+    .pmode-toggle { display:grid; grid-template-columns:1fr 1fr; gap:4px; }
+    .pmode-btn { background:var(--bg-2); border:1px solid var(--border-1);
+      padding:8px 6px; cursor:pointer; color:var(--beige-300);
+      font-size:10px; letter-spacing:.1em; text-transform:uppercase; font-weight:600;
+      display:flex; flex-direction:column; gap:2px; align-items:center;
+      border-radius:2px; transition:.15s; }
+    .pmode-btn:hover { background:var(--bg-3); color:var(--beige-100); }
+    .pmode-btn.active { background:#ff7a1a22; border-color:var(--orange-500);
+      color:var(--orange-400); }
+    .pmode-btn small { font-size:8.5px; letter-spacing:.04em; text-transform:none;
+      color:var(--beige-400); font-weight:400; }
+    .pmode-btn.active small { color:var(--orange-300); }
+
     /* ── KPI strip ── */
     .kpi-strip { display:grid; grid-template-columns:repeat(5,1fr); gap:1px;
-      background:var(--border-1); border-bottom:1px solid var(--border-1); }
+      background:var(--border-1); border-bottom:1px solid var(--border-1); flex-shrink:0; }
     .kpi { background:var(--bg-1); padding:10px 14px; }
     .kk { font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--beige-400); }
     .kv { font-family:"JetBrains Mono",monospace; font-size:20px; font-weight:600;
@@ -303,7 +367,8 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
     /* ── panel ── */
     .panel { background:var(--bg-1); border:1px solid var(--border-1);
       border-radius:2px; margin:10px; display:flex; flex-direction:column; overflow:hidden; }
-    .map-panel { margin-bottom:0; flex:1; }
+    .map-panel { margin-bottom:0; flex:1 1 380px; min-height:340px; }
+    .observe-map-panel .panel-body { flex:1; }
     .panel-head { display:flex; align-items:center; justify-content:space-between;
       padding:9px 14px; border-bottom:1px solid var(--border-1);
       background:linear-gradient(180deg,#2b231a,var(--bg-1)); flex-shrink:0; }
@@ -314,15 +379,22 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'sequence' | 'rt' | 'recomm
 
     /* ── bottom strip ── */
     .bottom-strip { display:grid; grid-template-columns:2fr 1.4fr; gap:1px;
-      background:var(--border-1); border-top:1px solid var(--border-1); height:240px; }
+      background:var(--border-1); border-top:1px solid var(--border-1);
+      height:240px; flex-shrink:0; }
+
+    /* ── ACT-tab embedded sequencing ── */
+    .seq-embed { flex-shrink:0; border-top:1px solid var(--border-1); min-height:520px;
+      background:var(--bg-0); }
+    .seq-embed app-well-sequencing { display:block; height:100%; }
   `]
 })
 export class AppComponent implements OnInit {
   ds = inject(DataService);
 
-  showSplash   = signal(true);
-  activeTab    = signal<Tab>('decide');
-  selectedWell = signal('');
+  showSplash    = signal(true);
+  activeTab     = signal<Tab>('decide');
+  selectedWell  = signal('');
+  priorityMode  = signal<PriorityMode>('v1');
   priorityFilter  = signal('');
   facilityFilter  = signal('');
   reservoirFilter = signal('');
@@ -330,48 +402,64 @@ export class AppComponent implements OnInit {
   searchFilter    = signal('');
 
   colors = PRIORITY_COLORS;
-  pDesc  = PRIORITY_DESC;
 
   tabs = [
-    { id: 'observe'   as Tab, num:'1', label:'Observe',       sub:'· Inventory & Signals' },
+    { id: 'observe'   as Tab, num:'1', label:'Observe',       sub:'· Location & History' },
     { id: 'orient'    as Tab, num:'2', label:'Orient',        sub:'· Cause & Severity' },
     { id: 'decide'    as Tab, num:'3', label:'Decide',        sub:'· Priority & Plan' },
-    { id: 'act'       as Tab, num:'4', label:'Act',           sub:'· Startup Queue' },
-    { id: 'sequence'  as Tab, num:'5', label:'Sequencing',    sub:'· Launch Order' },
-    { id: 'rt'        as Tab, num:'6', label:'Post Start-In Surveillance',sub:'· ESP Telemetry' },
-    { id: 'recommend' as Tab, num:'7', label:'Recommendation',sub:'· Intervention Guide' },
+    { id: 'act'       as Tab, num:'4', label:'Act',           sub:'· Queue & Sequencing' },
+    { id: 'rt'        as Tab, num:'5', label:'Post Start-In Surveillance',sub:'· ESP Telemetry' },
+    { id: 'recommend' as Tab, num:'6', label:'Recommendation',sub:'· Intervention Guide' },
   ];
 
-  isFullWidth = computed(() =>
-    (['sequence','rt','recommend'] as Tab[]).includes(this.activeTab()));
+  isThreeCol = computed(() =>
+    (['orient','decide','act'] as Tab[]).includes(this.activeTab()));
 
+  priorityKeys = computed<string[]>(() =>
+    this.priorityMode() === 'v2' ? ['P1','P2','P3'] : ['P1','P2','P3','P4','P5']);
+
+  priorityDesc = computed<Record<string,string>>(() =>
+    this.priorityMode() === 'v2' ? PRIORITY_DESC_V2 : PRIORITY_DESC);
 
   get dFacilities() { return [...new Set(this.ds.wells().map(w=>w.facility).filter(Boolean))].sort(); }
-  get dReservoirs()  { return [...new Set(this.ds.wells().map(w=>w.reservoir).filter(Boolean))].sort(); }
-  get dFields()      { return [...new Set(this.ds.wells().map(w=>w.field).filter(Boolean))].sort(); }
+  get dReservoirs() { return [...new Set(this.ds.wells().map(w=>w.reservoir).filter(Boolean))].sort(); }
+  get dFields()     { return [...new Set(this.ds.wells().map(w=>w.field).filter(Boolean))].sort(); }
+
+  private effectivePriority(w: Well): string {
+    return this.priorityMode() === 'v2' ? (w.priority_v2 || 'P3') : w.priority;
+  }
+
+  priorityCount(p: string): number {
+    return this.ds.wells().filter(w => this.effectivePriority(w) === p).length;
+  }
+  topBucketPotential(): number {
+    return this.ds.wells()
+      .filter(w => this.effectivePriority(w) === 'P1')
+      .reduce((s, w) => s + (w.potential_oil || 0), 0);
+  }
 
   filtered = computed(() => {
     const p=this.priorityFilter(), f=this.facilityFilter(),
           r=this.reservoirFilter(), fl=this.fieldFilter(), s=this.searchFilter().toLowerCase();
     return this.ds.wells()
       .filter(w =>
-        (!p  || w.priority===p) &&
+        (!p  || this.effectivePriority(w)===p) &&
         (!f  || w.facility===f) &&
         (!r  || w.reservoir===r) &&
         (!fl || w.field===fl) &&
         (!s  || w.well_name.toLowerCase().includes(s))
       )
-      .sort((a,b) => a.priority.localeCompare(b.priority) || (b.startup_score||0)-(a.startup_score||0));
+      .sort((a,b) =>
+        this.effectivePriority(a).localeCompare(this.effectivePriority(b))
+        || (b.startup_score||0)-(a.startup_score||0));
   });
 
   selectedWellObj = computed(() =>
-    this.ds.wells().find(w => w.well_name === this.selectedWell()) ?? null
-  );
+    this.ds.wells().find(w => w.well_name === this.selectedWell()) ?? null);
 
   selectedWOs = computed(() =>
     (this.ds.woMap()[this.selectedWell()] ?? [])
-      .slice().sort((a,b)=>(b.start_date||'').localeCompare(a.start_date||''))
-  );
+      .slice().sort((a,b)=>(b.start_date||'').localeCompare(a.start_date||'')));
 
   tabLabel = computed(() => {
     const t = this.tabs.find(x=>x.id===this.activeTab());
