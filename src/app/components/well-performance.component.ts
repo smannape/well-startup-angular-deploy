@@ -131,7 +131,7 @@ interface ChartSeries { def: SeriesDef; pts: ChartPoint[]; path: string; dots: {
             <circle *ngFor="let p of s.dots" [attr.cx]="p.cx" [attr.cy]="p.cy"
               r="2.2" [attr.fill]="s.def.color" opacity="0.85"
               (mouseenter)="tip = {x:p.cx, y:p.cy, label:s.def.label, color:s.def.color,
-                value: (p.v | number:'1.0-2'), unit:s.def.unit, date:p.date}"
+                value: p.v, unit:s.def.unit, date:p.date}"
               (mouseleave)="tip = null"/>
           </g>
 
@@ -143,7 +143,7 @@ interface ChartSeries { def: SeriesDef; pts: ChartPoint[]; path: string; dots: {
               fill="#ece1c7" font-size="10" font-family="JetBrains Mono">{{tip.label}}</text>
             <text [attr.x]="tip.x + 18" [attr.y]="tip.y + 2"
               [attr.fill]="tip.color" font-size="11" font-weight="700"
-              font-family="JetBrains Mono">{{tip.value}} {{tip.unit}}</text>
+              font-family="JetBrains Mono">{{tip.value | number:'1.0-2'}} {{tip.unit}}</text>
             <text [attr.x]="tip.x + 18" [attr.y]="tip.y + 14"
               fill="#8a7a5d" font-size="9" font-family="JetBrains Mono">{{tip.date}}</text>
           </g>
