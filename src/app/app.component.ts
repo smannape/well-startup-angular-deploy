@@ -62,23 +62,46 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'performance' | 'recommend'
     <nav class="tab-nav">
       <button *ngFor="let t of tabs" class="tab-btn"
         [class.active]="activeTab()===t.id"
-        (click)="activeTab.set(t.id)">
+        (click)="onTabClick(t.id)">
         <span class="tab-num">{{t.num}}</span>
         <span class="tab-label">{{t.label}}</span>
         <span class="tab-sub">{{t.sub}}</span>
       </button>
     </nav>
 
+    <!-- ── TAB SWITCH LOADER (2s graphic) ── -->
+    <div class="tab-loader" *ngIf="tabLoading()">
+      <div class="tl-grid"></div>
+      <div class="tl-scan"></div>
+      <div class="tl-content">
+        <div class="tl-radar">
+          <div class="tl-sweep"></div>
+          <div class="tl-ring r1"></div>
+          <div class="tl-ring r2"></div>
+          <div class="tl-ring r3"></div>
+          <div class="tl-cross h"></div>
+          <div class="tl-cross v"></div>
+          <div class="tl-center"></div>
+        </div>
+        <div class="tl-meta">
+          <div class="tl-label">LOADING</div>
+          <div class="tl-tab">{{tabLabel()}}</div>
+          <div class="tl-tag">{{tabSub()}}</div>
+          <div class="tl-bar"><div class="tl-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
     <!-- ── FULL-WIDTH TABS ── -->
-    <app-well-performance *ngIf="activeTab()==='performance'"
+    <app-well-performance *ngIf="!tabLoading() && activeTab()==='performance'"
       [wells]="ds.wells()" [testMap]="ds.testMap()" class="seq-full"/>
-    <app-recommendation  *ngIf="activeTab()==='recommend'"
+    <app-recommendation  *ngIf="!tabLoading() && activeTab()==='recommend'"
       [wells]="ds.wells()" [woMap]="ds.woMap()" class="seq-full"/>
 
     <!-- ══════════════════════════════════════════════════════
          OBSERVE TAB — minimal: just well location (map) + history
          ══════════════════════════════════════════════════════ -->
-    <div class="observe-layout" *ngIf="activeTab()==='observe'">
+    <div class="observe-layout" *ngIf="!tabLoading() && activeTab()==='observe'">
       <div class="panel observe-map-panel">
         <div class="panel-head">
           <h3>Observe · Well Location — West Kuwait</h3>
@@ -99,7 +122,7 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'performance' | 'recommend'
     <!-- ══════════════════════════════════════════════════════
          MAIN 3-COL LAYOUT — used by Orient / Decide / Act
          ══════════════════════════════════════════════════════ -->
-    <div class="main" *ngIf="isThreeCol()">
+    <div class="main" *ngIf="!tabLoading() && isThreeCol()">
 
       <aside class="left">
 
@@ -353,6 +376,86 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'performance' | 'recommend'
     .seq-embed { flex-shrink:0; border-top:1px solid var(--border-1); min-height:520px;
       background:var(--bg-0); }
     .seq-embed app-well-sequencing { display:block; height:100%; }
+
+    /* ────────────────────────────────────────────────────
+       TAB SWITCH LOADER (2 second OODA-radar graphic)
+       ──────────────────────────────────────────────────── */
+    .tab-loader { grid-row:3; position:relative; overflow:hidden;
+      background:radial-gradient(circle at 50% 50%, #221b13 0%, #14110d 70%); }
+    .tl-grid { position:absolute; inset:0; opacity:.35;
+      background-image:
+        linear-gradient(rgba(255,122,26,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,122,26,.08) 1px, transparent 1px);
+      background-size:36px 36px; }
+    .tl-scan { position:absolute; left:0; right:0; height:2px;
+      background:linear-gradient(90deg, transparent, #ff7a1a99, transparent);
+      animation: tl-scan 2s linear forwards; box-shadow:0 0 12px #ff7a1a66; }
+    @keyframes tl-scan {
+      0%   { top:0%;   opacity:.0; }
+      10%  { opacity:1; }
+      90%  { opacity:1; }
+      100% { top:100%; opacity:0; }
+    }
+    .tl-content { position:absolute; inset:0; display:flex;
+      align-items:center; justify-content:center; gap:36px; }
+
+    /* Radar */
+    .tl-radar { position:relative; width:140px; height:140px; flex-shrink:0; }
+    .tl-radar .tl-sweep {
+      position:absolute; inset:0; border-radius:50%;
+      background: conic-gradient(from 0deg,
+        rgba(255,122,26,0) 0deg,
+        rgba(255,122,26,0) 270deg,
+        rgba(255,184,61,0.55) 350deg,
+        rgba(255,184,61,0) 360deg);
+      animation: tl-spin 1s linear infinite;
+      filter:drop-shadow(0 0 6px #ff7a1aaa);
+    }
+    @keyframes tl-spin { to { transform:rotate(360deg); } }
+    .tl-radar .tl-ring {
+      position:absolute; border:1px solid #ff7a1a55; border-radius:50%;
+    }
+    .tl-radar .tl-ring.r1 { inset:6px;  }
+    .tl-radar .tl-ring.r2 { inset:30px; }
+    .tl-radar .tl-ring.r3 { inset:54px; }
+    .tl-radar .tl-cross {
+      position:absolute; background:#ff7a1a44;
+    }
+    .tl-radar .tl-cross.h { left:0; right:0; top:50%; height:1px; }
+    .tl-radar .tl-cross.v { top:0; bottom:0; left:50%; width:1px; }
+    .tl-radar .tl-center {
+      position:absolute; left:50%; top:50%;
+      width:8px; height:8px; border-radius:50%;
+      background:#ffb83d;
+      transform:translate(-50%, -50%);
+      box-shadow:0 0 12px #ffb83daa, 0 0 24px #ff7a1a66;
+      animation: tl-pulse 0.9s ease-in-out infinite;
+    }
+    @keyframes tl-pulse {
+      0%, 100% { transform:translate(-50%,-50%) scale(1);   opacity:1;   }
+      50%      { transform:translate(-50%,-50%) scale(1.6); opacity:.5;  }
+    }
+
+    /* Meta block */
+    .tl-meta { display:flex; flex-direction:column; min-width:260px; }
+    .tl-meta .tl-label { font-family:'JetBrains Mono', monospace;
+      font-size:9.5px; letter-spacing:.42em; color:var(--beige-400); }
+    .tl-meta .tl-tab { font-size:26px; font-weight:700; letter-spacing:.18em;
+      color:var(--orange-400); margin-top:6px; text-transform:uppercase;
+      font-family:'JetBrains Mono', monospace; line-height:1; }
+    .tl-meta .tl-tag { font-size:10px; color:var(--beige-300); margin-top:6px;
+      letter-spacing:.06em; }
+    .tl-meta .tl-bar {
+      width:260px; height:3px; background:var(--bg-2); margin-top:18px; overflow:hidden;
+      border:1px solid var(--border-1); border-radius:1px;
+    }
+    .tl-meta .tl-fill {
+      height:100%; width:0%;
+      background:linear-gradient(90deg, #ff7a1a, #ffb83d, #ff7a1a);
+      animation: tl-fill 2s ease-out forwards;
+      box-shadow:0 0 8px #ff7a1a99;
+    }
+    @keyframes tl-fill { to { width:100%; } }
   `]
 })
 export class AppComponent implements OnInit {
@@ -360,6 +463,7 @@ export class AppComponent implements OnInit {
 
   showSplash    = signal(true);
   activeTab     = signal<Tab>('observe');
+  tabLoading    = signal(false);
   selectedWell  = signal('');
   priorityFilter  = signal('');
   facilityFilter  = signal('');
@@ -423,6 +527,18 @@ export class AppComponent implements OnInit {
     const t = this.tabs.find(x=>x.id===this.activeTab());
     return t ? t.label : '';
   });
+
+  tabSub = computed(() => {
+    const t = this.tabs.find(x=>x.id===this.activeTab());
+    return t ? t.sub.replace(/^·\s*/, '') : '';
+  });
+
+  onTabClick(id: Tab) {
+    if (id === this.activeTab()) return;
+    this.activeTab.set(id);
+    this.tabLoading.set(true);
+    setTimeout(() => this.tabLoading.set(false), 2000);
+  }
 
   ngOnInit() { this.ds.load(); }
 }

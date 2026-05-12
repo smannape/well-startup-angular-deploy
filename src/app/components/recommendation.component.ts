@@ -222,7 +222,7 @@ export class RecommendationComponent implements OnChanges {
   urgencyBg    = URGENCY_BG;
 
   urgencies  = ['critical','high','medium','low'] as Urgency[];
-  priorities = ['P1','P2','P3','P4','P5'];
+  priorities = ['P1','P2','P3'];
   facilities: string[] = [];
   categories: string[] = [];
 
