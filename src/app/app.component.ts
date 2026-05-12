@@ -389,7 +389,7 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'performance' | 'recommend'
       background-size:36px 36px; }
     .tl-scan { position:absolute; left:0; right:0; height:2px;
       background:linear-gradient(90deg, transparent, #ff7a1a99, transparent);
-      animation: tl-scan 1s linear forwards; box-shadow:0 0 12px #ff7a1a66; }
+      animation: tl-scan 1.5s linear forwards; box-shadow:0 0 12px #ff7a1a66; }
     @keyframes tl-scan {
       0%   { top:0%;   opacity:.0; }
       10%  { opacity:1; }
@@ -452,7 +452,7 @@ type Tab = 'observe' | 'orient' | 'decide' | 'act' | 'performance' | 'recommend'
     .tl-meta .tl-fill {
       height:100%; width:0%;
       background:linear-gradient(90deg, #ff7a1a, #ffb83d, #ff7a1a);
-      animation: tl-fill 1s ease-out forwards;
+      animation: tl-fill 1.5s ease-out forwards;
       box-shadow:0 0 8px #ff7a1a99;
     }
     @keyframes tl-fill { to { width:100%; } }
@@ -537,7 +537,7 @@ export class AppComponent implements OnInit {
     if (id === this.activeTab()) return;
     this.activeTab.set(id);
     this.tabLoading.set(true);
-    setTimeout(() => this.tabLoading.set(false), 1000);
+    setTimeout(() => this.tabLoading.set(false), 1500);
   }
 
   ngOnInit() { this.ds.load(); }
